@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B310FD8D1BAAE78900673EFE /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310FD8C1BAAE78900673EFE /* GoogleCast.framework */; };
 		B310FDB21BAAFABB00673EFE /* libKALTURAPlayerSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B310FDAD1BAAFA8900673EFE /* libKALTURAPlayerSDK.a */; };
 		B310FDB31BAAFAC400673EFE /* KALTURAPlayerSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B310FDAF1BAAFA8900673EFE /* KALTURAPlayerSDKResources.bundle */; };
+		B310FDB81BAAFD0400673EFE /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310FDB71BAAFD0400673EFE /* GoogleCast.framework */; };
+		B310FDB91BAAFDA100673EFE /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38DBB6E1B85EFE1003B7753 /* GoogleMobileAds.framework */; };
 		B3720AFC1B5AC98300983831 /* CollectionOfPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = B3720AFB1B5AC98300983831 /* CollectionOfPlayers.m */; };
-		B38DBB6F1B85EFE1003B7753 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38DBB6E1B85EFE1003B7753 /* GoogleMobileAds.framework */; };
 		B38DBB721B85EFF9003B7753 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38DBB711B85EFF9003B7753 /* GoogleInteractiveMediaAds.framework */; };
 		B38DBB741B85F015003B7753 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38DBB731B85F015003B7753 /* CoreTelephony.framework */; };
 		B38DBB771B85F022003B7753 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38DBB751B85F022003B7753 /* EventKit.framework */; };
@@ -74,8 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B310FD8C1BAAE78900673EFE /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = "../player-sdk-native-ios/PlayerSDK/GoogleCast.framework"; sourceTree = "<group>"; };
 		B310FDA61BAAFA8900673EFE /* KALTURAPlayerSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KALTURAPlayerSDK.xcodeproj; path = "player-sdk-native-ios/PlayerSDK/KALTURAPlayerSDK.xcodeproj"; sourceTree = "<group>"; };
+		B310FDB71BAAFD0400673EFE /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = "player-sdk-native-ios/PlayerSDK/GoogleCast.framework"; sourceTree = "<group>"; };
 		B3720AFA1B5AC98300983831 /* CollectionOfPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionOfPlayers.h; sourceTree = "<group>"; };
 		B3720AFB1B5AC98300983831 /* CollectionOfPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionOfPlayers.m; sourceTree = "<group>"; };
 		B38DBB6E1B85EFE1003B7753 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -123,8 +123,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B310FDB91BAAFDA100673EFE /* GoogleMobileAds.framework in Frameworks */,
+				B310FDB81BAAFD0400673EFE /* GoogleCast.framework in Frameworks */,
 				B310FDB21BAAFABB00673EFE /* libKALTURAPlayerSDK.a in Frameworks */,
-				B310FD8D1BAAE78900673EFE /* GoogleCast.framework in Frameworks */,
 				B3DC7CC11B1B22A400681500 /* MessageUI.framework in Frameworks */,
 				B3F968D71B872619004065CE /* CoreData.framework in Frameworks */,
 				B38DBB7A1B85F040003B7753 /* StoreKit.framework in Frameworks */,
@@ -133,7 +134,6 @@
 				B38DBB741B85F015003B7753 /* CoreTelephony.framework in Frameworks */,
 				B3DC7CC91B1B232300681500 /* MediaAccessibility.framework in Frameworks */,
 				B3DC7CC51B1B22CE00681500 /* MediaPlayer.framework in Frameworks */,
-				B38DBB6F1B85EFE1003B7753 /* GoogleMobileAds.framework in Frameworks */,
 				B3DC7CC31B1B22BC00681500 /* Social.framework in Frameworks */,
 				B3DC7CBF1B1B228400681500 /* libxml2.dylib in Frameworks */,
 				B3DC7CBB1B1B227300681500 /* libstdc++.6.0.9.dylib in Frameworks */,
@@ -171,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				B310FDA61BAAFA8900673EFE /* KALTURAPlayerSDK.xcodeproj */,
-				B310FD8C1BAAE78900673EFE /* GoogleCast.framework */,
 				B3F968D61B872619004065CE /* CoreData.framework */,
 				B38DBB791B85F040003B7753 /* StoreKit.framework */,
 				B38DBB751B85F022003B7753 /* EventKit.framework */,
@@ -192,6 +191,7 @@
 				B3DC7CB41B1B21EB00681500 /* AVFoundation.framework */,
 				B3DC7CB21B1B21CA00681500 /* AdSupport.framework */,
 				B3DC7CB01B1B21BF00681500 /* WebKit.framework */,
+				B310FDB71BAAFD0400673EFE /* GoogleCast.framework */,
 				B3DC7CAE1B1B21AD00681500 /* SystemConfiguration.framework */,
 				B3DC7C6A1B1B07E400681500 /* KalturaPlayerDemo */,
 				B3DC7C841B1B07E400681500 /* KalturaPlayerDemoTests */,
@@ -523,8 +523,8 @@
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/",
-					"../player-sdk-native-ios/PlayerSDK",
+					"$(PROJECT_DIR)/player-sdk-native-ios/PlayerSDK",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = KalturaPlayerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -545,8 +545,8 @@
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/",
-					"../player-sdk-native-ios/PlayerSDK",
+					"$(PROJECT_DIR)/player-sdk-native-ios/PlayerSDK",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = KalturaPlayerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
