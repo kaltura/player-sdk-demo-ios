@@ -1,0 +1,3 @@
+[submodule "player-sdk-native-ios"]
+	path = player-sdk-native-ios
+	url = https://github.com/kaltura/player-sdk-native-ios
