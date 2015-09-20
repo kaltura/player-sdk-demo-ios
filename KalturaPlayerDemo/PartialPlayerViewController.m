@@ -18,7 +18,7 @@
 @implementation PartialPlayerViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(seek) name:KPMediaPlaybackStateDidChangeNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(seek) name:KPMediaPlaybackStateDidChangeNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

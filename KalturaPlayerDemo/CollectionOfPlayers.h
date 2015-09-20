@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CollectionOfPlayers : UICollectionViewController
-
+@property (nonatomic, copy) NSArray *entries;;
 @end

@@ -10,13 +10,11 @@
 #import "VideoCell.h"
 
 @interface CollectionOfPlayers() <UICollectionViewDelegateFlowLayout>{
-    NSMutableArray *players;
     NSInteger index;
-    __weak IBOutlet UIBarButtonItem *leftButton;
+    UIBarButtonItem *leftButton;
     __weak IBOutlet UIBarButtonItem *rightButton;
-    NSArray *entries;
 }
-
+@property (copy, nonatomic) NSMutableSet *players;
 @end
 
 @implementation CollectionOfPlayers
@@ -24,7 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[VideoCell class] forCellWithReuseIdentifier:@"VideoCell"];
-    entries = @[@"1_o426d3i4", @"1_u202oxs5", @"1_iwhl2pu8"];
+    leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(changePlayerPressed:)];
+    leftButton.enabled = NO;
+    NSArray *arr = [self.navigationItem.rightBarButtonItems arrayByAddingObject:leftButton];
+    self.navigationItem.rightBarButtonItems = arr;
+    self.title = @"Player Collection";
 }
 
 - (IBAction)changePlayerPressed:(UIBarButtonItem *)sender {
@@ -40,6 +42,22 @@
                                         animated:YES];
 }
 
+- (IBAction)backPressed:(UIBarButtonItem *)sender {
+    for (KPViewController *player in _players) {
+        [player.playerController pause];
+        [player removePlayer];
+    }
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (NSMutableSet *)players {
+    if (!_players) {
+        _players = [NSMutableSet new];
+    }
+    return _players;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 3;
 }
@@ -50,16 +68,21 @@
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView
+       willDisplayCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath {
     VideoCell *_cell = (VideoCell *)[collectionView visibleCells].firstObject;
     if ([collectionView indexPathForCell:_cell].row != indexPath.row) {
-        [_cell.player sendNotification:@"doPause" withParams:nil];
-        _cell.entryId = entries[[collectionView indexPathForCell:_cell].row];
-        [[(VideoCell *)cell player] sendNotification:@"doPlay" withParams:nil];
+        [_cell.player.playerController pause];
+        _cell.entryId = _entries[[collectionView indexPathForCell:_cell].row];
+        [[(VideoCell *)cell player].playerController play];
+        [self.players addObject:((VideoCell *)cell).player];
     }
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout*)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return (CGSize){self.view.frame.size.width - 20, 376};
 }
 

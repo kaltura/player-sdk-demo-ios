@@ -9,10 +9,16 @@
 #import "ViewController.h"
 #import <KALTURAPlayerSDK/KPViewController.h>
 #import "PartialPlayerViewController.h"
+#import "KPlayerTableViewCell.h"
+#import "KPIconsFetcher.h"
+#import "CollectionOfPlayers.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) KPViewController *player;
 @property (nonatomic, strong) UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UITableView *playerTableView;
+@property (copy, nonatomic) NSDictionary *entries;
+@property (copy, nonatomic) NSString *currentEntryId;
 @end
 
 @implementation ViewController
@@ -20,6 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [_playerTableView registerNib:[UINib nibWithNibName:@"KPlayerTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (_player) {
+        [_player removePlayer];
+        _player = nil;
+    }
 }
 
 - (UIButton *)backButton {
@@ -32,39 +47,35 @@
     return _backButton;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    __weak ViewController *weakSelf = self;
-    [self.player addKPlayerEventListener:@"play" eventID:@"play1" handler:^(NSString *eventName, NSString *params) {
-        weakSelf.backButton.hidden = YES;
-    }];
-    
-    [self.player addKPlayerEventListener:@"pause" eventID:@"pause1" handler:^(NSString *eventName, NSString *params) {
-        weakSelf.backButton.hidden = NO;
-    }];
+- (NSDictionary *)entries {
+    if (!_entries) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"playersParams" ofType:@"plist"];
+        _entries = [NSDictionary dictionaryWithContentsOfFile:path];
+    }
+    return _entries;
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.player removeKPlayerEventListener:@"play" eventID:@"play1"];
-    [self.player removeKPlayerEventListener:@"pause" eventID:@"pause1"];
-    [super viewWillDisappear:animated];
-}
-
-- (IBAction)fullscreenPressed:(UIButton *)sender {
+- (void)fullscreenPressed {
     [self presentViewController:self.player animated:YES completion:nil];
     [self.player.view addSubview:self.backButton];
 }
 
 
-- (IBAction)partialScreenPressed:(UIButton *)sender {
+- (void)partialScreenPressed {
     [self.backButton removeFromSuperview];
     [self performSegueWithIdentifier:@"PartialScreen" sender:nil];
 }
 
+- (void)collectionPlayer {
+    [self performSegueWithIdentifier:@"Collection" sender:nil];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if (segue.identifier) {
-        PartialPlayerViewController *controller = [(UINavigationController *)segue.destinationViewController viewControllers].firstObject;
-        controller.player = self.player;
+    UIViewController *controller = [(UINavigationController *)segue.destinationViewController viewControllers].firstObject;
+    if ([segue.identifier isEqualToString:@"PartialScreen"]) {
+        ((PartialPlayerViewController *)controller).player = self.player;
+    } else {
+        ((CollectionOfPlayers *)controller).entries = _entries.allValues;
     }
 }
 
@@ -78,7 +89,7 @@
         
         
         // Video Entry
-        config.entryId = @"1_o426d3i4";
+        config.entryId = _currentEntryId;
         
         // Setting this property will cache the html pages in the limit size
         config.cacheSize = 0.8;
@@ -97,6 +108,41 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.entries.allKeys.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    KPlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    [KPIconsFetcher fetchIconWithPartnerId:@"1831271"
+                                   entryId:self.entries.allValues[indexPath.row]
+                                completion:^(UIImage *icon, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.icon = icon;
+        });
+    }];
+    cell.playerName = self.entries.allKeys[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    _currentEntryId = _entries.allValues[indexPath.row];
+    void (^switchBlock)() = @{
+                               @"Full Screen Player": ^{
+                                   [self fullscreenPressed];
+                               },
+                               @"Inline Player": ^{
+                                   [self partialScreenPressed];
+                               },
+                               @"Collection Of Players": ^{
+                                   [self collectionPlayer];
+                               }
+                               }[_entries.allKeys[indexPath.row]];
+    switchBlock();
+
 }
 
 @end

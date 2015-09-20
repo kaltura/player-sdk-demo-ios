@@ -11,6 +11,11 @@
 		B310FDB31BAAFAC400673EFE /* KALTURAPlayerSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B310FDAF1BAAFA8900673EFE /* KALTURAPlayerSDKResources.bundle */; };
 		B310FDB81BAAFD0400673EFE /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B310FDB71BAAFD0400673EFE /* GoogleCast.framework */; };
 		B310FDB91BAAFDA100673EFE /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38DBB6E1B85EFE1003B7753 /* GoogleMobileAds.framework */; };
+		B310FDBC1BAB01D600673EFE /* playersParams.plist in Resources */ = {isa = PBXBuildFile; fileRef = B310FDBB1BAB01D600673EFE /* playersParams.plist */; };
+		B310FDC21BAB043800673EFE /* KPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B310FDC01BAB043800673EFE /* KPlayerTableViewCell.m */; };
+		B310FDC31BAB043800673EFE /* KPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B310FDC11BAB043800673EFE /* KPlayerTableViewCell.xib */; };
+		B310FDC61BAB06C100673EFE /* KPIconsFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B310FDC51BAB06C100673EFE /* KPIconsFetcher.m */; };
+		B36314A51BAEC3D400FE6CED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36314A41BAEC3D400FE6CED /* QuartzCore.framework */; };
 		B3720AFC1B5AC98300983831 /* CollectionOfPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = B3720AFB1B5AC98300983831 /* CollectionOfPlayers.m */; };
 		B38DBB721B85EFF9003B7753 /* GoogleInteractiveMediaAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38DBB711B85EFF9003B7753 /* GoogleInteractiveMediaAds.framework */; };
 		B38DBB741B85F015003B7753 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38DBB731B85F015003B7753 /* CoreTelephony.framework */; };
@@ -76,6 +81,13 @@
 /* Begin PBXFileReference section */
 		B310FDA61BAAFA8900673EFE /* KALTURAPlayerSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KALTURAPlayerSDK.xcodeproj; path = "player-sdk-native-ios/PlayerSDK/KALTURAPlayerSDK.xcodeproj"; sourceTree = "<group>"; };
 		B310FDB71BAAFD0400673EFE /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = "player-sdk-native-ios/PlayerSDK/GoogleCast.framework"; sourceTree = "<group>"; };
+		B310FDBB1BAB01D600673EFE /* playersParams.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = playersParams.plist; sourceTree = "<group>"; };
+		B310FDBF1BAB043800673EFE /* KPlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPlayerTableViewCell.h; sourceTree = "<group>"; };
+		B310FDC01BAB043800673EFE /* KPlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPlayerTableViewCell.m; sourceTree = "<group>"; };
+		B310FDC11BAB043800673EFE /* KPlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPlayerTableViewCell.xib; sourceTree = "<group>"; };
+		B310FDC41BAB06C100673EFE /* KPIconsFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIconsFetcher.h; sourceTree = "<group>"; };
+		B310FDC51BAB06C100673EFE /* KPIconsFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPIconsFetcher.m; sourceTree = "<group>"; };
+		B36314A41BAEC3D400FE6CED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B3720AFA1B5AC98300983831 /* CollectionOfPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionOfPlayers.h; sourceTree = "<group>"; };
 		B3720AFB1B5AC98300983831 /* CollectionOfPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionOfPlayers.m; sourceTree = "<group>"; };
 		B38DBB6E1B85EFE1003B7753 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -123,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36314A51BAEC3D400FE6CED /* QuartzCore.framework in Frameworks */,
 				B310FDB91BAAFDA100673EFE /* GoogleMobileAds.framework in Frameworks */,
 				B310FDB81BAAFD0400673EFE /* GoogleCast.framework in Frameworks */,
 				B310FDB21BAAFABB00673EFE /* libKALTURAPlayerSDK.a in Frameworks */,
@@ -170,6 +183,7 @@
 		B3DC7C5F1B1B07E400681500 = {
 			isa = PBXGroup;
 			children = (
+				B36314A41BAEC3D400FE6CED /* QuartzCore.framework */,
 				B310FDA61BAAFA8900673EFE /* KALTURAPlayerSDK.xcodeproj */,
 				B3F968D61B872619004065CE /* CoreData.framework */,
 				B38DBB791B85F040003B7753 /* StoreKit.framework */,
@@ -225,6 +239,12 @@
 				B3720AFB1B5AC98300983831 /* CollectionOfPlayers.m */,
 				B3DBE44D1B6E617900709E00 /* VideoCell.h */,
 				B3DBE44E1B6E617900709E00 /* VideoCell.m */,
+				B310FDBB1BAB01D600673EFE /* playersParams.plist */,
+				B310FDBF1BAB043800673EFE /* KPlayerTableViewCell.h */,
+				B310FDC01BAB043800673EFE /* KPlayerTableViewCell.m */,
+				B310FDC11BAB043800673EFE /* KPlayerTableViewCell.xib */,
+				B310FDC41BAB06C100673EFE /* KPIconsFetcher.h */,
+				B310FDC51BAB06C100673EFE /* KPIconsFetcher.m */,
 			);
 			path = KalturaPlayerDemo;
 			sourceTree = "<group>";
@@ -362,7 +382,9 @@
 			files = (
 				B310FDB31BAAFAC400673EFE /* KALTURAPlayerSDKResources.bundle in Resources */,
 				B3DC7C771B1B07E400681500 /* Main.storyboard in Resources */,
+				B310FDC31BAB043800673EFE /* KPlayerTableViewCell.xib in Resources */,
 				B3DC7C7C1B1B07E400681500 /* LaunchScreen.xib in Resources */,
+				B310FDBC1BAB01D600673EFE /* playersParams.plist in Resources */,
 				B3DC7C791B1B07E400681500 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,8 +406,10 @@
 				B3720AFC1B5AC98300983831 /* CollectionOfPlayers.m in Sources */,
 				B3DBE44F1B6E617900709E00 /* VideoCell.m in Sources */,
 				B3DC7C741B1B07E400681500 /* ViewController.m in Sources */,
+				B310FDC61BAB06C100673EFE /* KPIconsFetcher.m in Sources */,
 				B3DC7CCC1B1C447B00681500 /* PartialPlayerViewController.m in Sources */,
 				B3DC7C711B1B07E400681500 /* AppDelegate.m in Sources */,
+				B310FDC21BAB043800673EFE /* KPlayerTableViewCell.m in Sources */,
 				B3DC7C6E1B1B07E400681500 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

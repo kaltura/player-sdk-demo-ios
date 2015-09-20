@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T4m-UN-vIb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Demo-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -18,63 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sy-hA-cDB">
-                                <rect key="frame" x="98" y="130" width="124" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3rj-ZD-DYv"/>
-                                    <constraint firstAttribute="width" constant="124" id="IW3-Q1-Om6"/>
-                                </constraints>
-                                <state key="normal" title="Full Screen Player">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Beo-J7-of2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="RI9-Be-B6z">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RI9-Be-B6z" id="ADs-vQ-cFj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <action selector="fullscreenPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cON-cG-VyX"/>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="x1G-k3-35c"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="1uV-4r-bWV"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtp-tq-1R3">
-                                <rect key="frame" x="89" y="325" width="143" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="143" id="3ze-YP-nHt"/>
-                                </constraints>
-                                <state key="normal" title="Partial Screen Player">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="partialScreenPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4SO-LD-AI3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eah-4f-sYy">
-                                <rect key="frame" x="88" y="475" width="144" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="144" id="6XY-6g-Nno"/>
-                                </constraints>
-                                <state key="normal" title="Collection Of Players">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="UWW-Bg-RLO" kind="show" id="us5-HF-6Em"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Eah-4f-sYy" secondAttribute="centerX" id="0Nt-4v-LGx"/>
-                            <constraint firstItem="Eah-4f-sYy" firstAttribute="top" secondItem="qtp-tq-1R3" secondAttribute="bottom" constant="120" id="5FQ-Hx-Zfx"/>
-                            <constraint firstItem="qtp-tq-1R3" firstAttribute="top" secondItem="6sy-hA-cDB" secondAttribute="bottom" constant="165" id="CwR-es-10I"/>
-                            <constraint firstItem="6sy-hA-cDB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="110" id="YR1-ef-480"/>
-                            <constraint firstAttribute="centerX" secondItem="qtp-tq-1R3" secondAttribute="centerX" constant="-0.5" id="jfG-PT-4Lo"/>
-                            <constraint firstAttribute="centerX" secondItem="6sy-hA-cDB" secondAttribute="centerX" id="xtp-8Y-vC9"/>
+                            <constraint firstItem="Beo-J7-of2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="3bW-LB-O9J"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Beo-J7-of2" secondAttribute="bottom" id="9dx-gs-wEi"/>
+                            <constraint firstItem="Beo-J7-of2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="UFb-Df-WjH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Beo-J7-of2" secondAttribute="trailing" constant="-16" id="oFl-Ia-M7o"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Demo" id="Pyy-nE-THd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="playerTableView" destination="Beo-J7-of2" id="VaO-2u-hK7"/>
                         <segue destination="g4j-Hh-exQ" kind="presentation" identifier="PartialScreen" id="YjP-Sg-8mq"/>
+                        <segue destination="UWW-Bg-RLO" kind="presentation" identifier="Collection" id="m98-GY-j7F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1244" y="315"/>
         </scene>
-        <!--Partial Player View Controller-->
+        <!--Inline Player-->
         <scene sceneID="Wi2-g5-LZd">
             <objects>
                 <viewController id="dXG-69-AQ0" customClass="PartialPlayerViewController" sceneMemberID="viewController">
@@ -101,7 +83,7 @@
                             <constraint firstItem="LmM-9j-pKI" firstAttribute="leading" secondItem="svp-zS-FpM" secondAttribute="leadingMargin" constant="-16" id="tXA-E8-Gfl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Dhx-JT-h8C">
+                    <navigationItem key="navigationItem" title="Inline Player" id="Dhx-JT-h8C">
                         <barButtonItem key="leftBarButtonItem" title="Done" id="hLX-Re-dSF">
                             <connections>
                                 <action selector="donePressed:" destination="dXG-69-AQ0" id="0vQ-HC-l0W"/>
@@ -114,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qim-uC-qJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1901" y="315"/>
+            <point key="canvasLocation" x="2486" y="315"/>
         </scene>
         <!--Collection Of Players-->
         <scene sceneID="rs1-ze-Swx">
@@ -147,19 +129,18 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="dGx-7L-CWW">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Prev" id="udT-Rf-SkK">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="5k3-7r-ddO">
                             <connections>
-                                <action selector="changePlayerPressed:" destination="4Rq-BH-PTL" id="WBR-2r-4a3"/>
+                                <action selector="backPressed:" destination="4Rq-BH-PTL" id="XxY-M8-Qpa"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" tag="1" title="Next" id="ILj-rT-8wR">
+                        <barButtonItem key="rightBarButtonItem" tag="1" systemItem="fastForward" id="ILj-rT-8wR">
                             <connections>
                                 <action selector="changePlayerPressed:" destination="4Rq-BH-PTL" id="s1H-Ao-ed1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="leftButton" destination="udT-Rf-SkK" id="UGI-Fd-vNH"/>
                         <outlet property="rightButton" destination="ILj-rT-8wR" id="TGS-6x-Vzb"/>
                     </connections>
                 </collectionViewController>
@@ -183,11 +164,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aK-h1-IBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="315"/>
+            <point key="canvasLocation" x="1901" y="315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="epC-h4-lWT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycn-Ho-MDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UWW-Bg-RLO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1BG-QW-WyV">
@@ -199,9 +181,26 @@
                         <segue destination="4Rq-BH-PTL" kind="relationship" relationship="rootViewController" id="OtL-dB-ZIN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ycn-Ho-MDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="1058"/>
+            <point key="canvasLocation" x="1244" y="1058"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9k0-hp-xdF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T4m-UN-vIb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p8b-MI-lp2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="izK-Tj-Y0B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uG6-Gx-DCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432" y="315"/>
         </scene>
     </scenes>
 </document>
