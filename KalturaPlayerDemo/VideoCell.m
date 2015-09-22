@@ -26,7 +26,7 @@
 }
 
 - (void)loadPlayer {
-    KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithDomain:@"http://cdnapi.kaltura.com"
+    KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithDomain:@"https://cdnapisec.kaltura.com"
                                                            uiConfID:@"26698911"
                                                            partnerId:@"1831271"];
     
