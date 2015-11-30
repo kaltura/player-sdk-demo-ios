@@ -1,1 +1,0 @@
-../../../KalturaPlayerSDK/PlayerSDK/KALTURAPlayerSDK/KPLog.h

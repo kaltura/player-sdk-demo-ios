@@ -1,1 +1,0 @@
-../../../KalturaPlayerSDK/PlayerSDK/IMA/IMACompanionAdSlot.h
