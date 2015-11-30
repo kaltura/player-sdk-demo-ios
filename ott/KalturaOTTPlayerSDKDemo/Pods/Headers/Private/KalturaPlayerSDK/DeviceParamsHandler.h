@@ -1,0 +1,1 @@
+../../../KalturaPlayerSDK/PlayerSDK/KALTURAPlayerSDK/DeviceParamsHandler.h

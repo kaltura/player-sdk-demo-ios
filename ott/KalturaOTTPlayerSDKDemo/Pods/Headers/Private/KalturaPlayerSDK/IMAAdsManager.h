@@ -1,0 +1,1 @@
+../../../KalturaPlayerSDK/PlayerSDK/IMA/IMAAdsManager.h
