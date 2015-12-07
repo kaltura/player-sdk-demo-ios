@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4652996D685892A6DE21AC3A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36022823ABEE20FE33478FA5 /* libPods.a */; };
+		BF0EA7531C15887400BD3CD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7521C15887400BD3CD1 /* main.m */; };
+		BF0EA7561C15887400BD3CD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7551C15887400BD3CD1 /* AppDelegate.m */; };
+		BF0EA7591C15887400BD3CD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7581C15887400BD3CD1 /* ViewController.m */; };
+		BF0EA75C1C15887400BD3CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA75A1C15887400BD3CD1 /* Main.storyboard */; };
+		BF0EA75E1C15887400BD3CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA75D1C15887400BD3CD1 /* Assets.xcassets */; };
+		BF0EA7611C15887400BD3CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA75F1C15887400BD3CD1 /* LaunchScreen.storyboard */; };
+		BF0EA76A1C158AA100BD3CD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7581C15887400BD3CD1 /* ViewController.m */; };
+		BF0EA76B1C158AA100BD3CD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7551C15887400BD3CD1 /* AppDelegate.m */; };
+		BF0EA76C1C158AA100BD3CD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EA7521C15887400BD3CD1 /* main.m */; };
+		BF0EA76F1C158AA100BD3CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA75F1C15887400BD3CD1 /* LaunchScreen.storyboard */; };
+		BF0EA7701C158AA100BD3CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA75D1C15887400BD3CD1 /* Assets.xcassets */; };
+		BF0EA7711C158AA100BD3CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0EA75A1C15887400BD3CD1 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		202B5D3AA9A25EE3B2B8EC98 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		36022823ABEE20FE33478FA5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4018F747C88B88FCC7805D55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BF0EA74E1C15887400BD3CD1 /* KChromecastDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KChromecastDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0EA7521C15887400BD3CD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF0EA7541C15887400BD3CD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF0EA7551C15887400BD3CD1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF0EA7571C15887400BD3CD1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BF0EA7581C15887400BD3CD1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BF0EA75B1C15887400BD3CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF0EA75D1C15887400BD3CD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF0EA7601C15887400BD3CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF0EA7621C15887400BD3CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0EA7751C158AA100BD3CD1 /* KChromecastDemo copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KChromecastDemo copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0EA7761C158AA200BD3CD1 /* KChromecastDemo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KChromecastDemo copy-Info.plist"; path = "/Users/elizasapir/Desktop/Kaltura/repos/ovp/ios/player-sdk-demo-ios/ovp/KChromecastDemo/KChromecastDemo copy-Info.plist"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF0EA74B1C15887400BD3CD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4652996D685892A6DE21AC3A /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF0EA76D1C158AA100BD3CD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32648FE9F4257BDF609CF3F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36022823ABEE20FE33478FA5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		333ED0E7627DD0D8A3B36D20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4018F747C88B88FCC7805D55 /* Pods.debug.xcconfig */,
+				202B5D3AA9A25EE3B2B8EC98 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF0EA7451C15887400BD3CD1 = {
+			isa = PBXGroup;
+			children = (
+				BF0EA7501C15887400BD3CD1 /* KChromecastDemo */,
+				BF0EA74F1C15887400BD3CD1 /* Products */,
+				BF0EA7761C158AA200BD3CD1 /* KChromecastDemo copy-Info.plist */,
+				333ED0E7627DD0D8A3B36D20 /* Pods */,
+				32648FE9F4257BDF609CF3F9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF0EA74F1C15887400BD3CD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF0EA74E1C15887400BD3CD1 /* KChromecastDemo.app */,
+				BF0EA7751C158AA100BD3CD1 /* KChromecastDemo copy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF0EA7501C15887400BD3CD1 /* KChromecastDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BF0EA7541C15887400BD3CD1 /* AppDelegate.h */,
+				BF0EA7551C15887400BD3CD1 /* AppDelegate.m */,
+				BF0EA7571C15887400BD3CD1 /* ViewController.h */,
+				BF0EA7581C15887400BD3CD1 /* ViewController.m */,
+				BF0EA75A1C15887400BD3CD1 /* Main.storyboard */,
+				BF0EA75D1C15887400BD3CD1 /* Assets.xcassets */,
+				BF0EA75F1C15887400BD3CD1 /* LaunchScreen.storyboard */,
+				BF0EA7621C15887400BD3CD1 /* Info.plist */,
+				BF0EA7511C15887400BD3CD1 /* Supporting Files */,
+			);
+			path = KChromecastDemo;
+			sourceTree = "<group>";
+		};
+		BF0EA7511C15887400BD3CD1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF0EA7521C15887400BD3CD1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF0EA74D1C15887400BD3CD1 /* KChromecastDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF0EA7651C15887400BD3CD1 /* Build configuration list for PBXNativeTarget "KChromecastDemo" */;
+			buildPhases = (
+				2477170BA7F9095C230A20CF /* Check Pods Manifest.lock */,
+				BF0EA74A1C15887400BD3CD1 /* Sources */,
+				BF0EA74B1C15887400BD3CD1 /* Frameworks */,
+				BF0EA74C1C15887400BD3CD1 /* Resources */,
+				685C0C5B1BFE78E7A5D1AC57 /* Embed Pods Frameworks */,
+				D64B369FB9FD4EDAD88B93A1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KChromecastDemo;
+			productName = KChromecastDemo;
+			productReference = BF0EA74E1C15887400BD3CD1 /* KChromecastDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF0EA7681C158AA100BD3CD1 /* KChromecastDemo copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF0EA7721C158AA100BD3CD1 /* Build configuration list for PBXNativeTarget "KChromecastDemo copy" */;
+			buildPhases = (
+				BF0EA7691C158AA100BD3CD1 /* Sources */,
+				BF0EA76D1C158AA100BD3CD1 /* Frameworks */,
+				BF0EA76E1C158AA100BD3CD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KChromecastDemo copy";
+			productName = KChromecastDemo;
+			productReference = BF0EA7751C158AA100BD3CD1 /* KChromecastDemo copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF0EA7461C15887400BD3CD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Kaltura;
+				TargetAttributes = {
+					BF0EA74D1C15887400BD3CD1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = BF0EA7491C15887400BD3CD1 /* Build configuration list for PBXProject "KChromecastDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF0EA7451C15887400BD3CD1;
+			productRefGroup = BF0EA74F1C15887400BD3CD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF0EA74D1C15887400BD3CD1 /* KChromecastDemo */,
+				BF0EA7681C158AA100BD3CD1 /* KChromecastDemo copy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF0EA74C1C15887400BD3CD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0EA7611C15887400BD3CD1 /* LaunchScreen.storyboard in Resources */,
+				BF0EA75E1C15887400BD3CD1 /* Assets.xcassets in Resources */,
+				BF0EA75C1C15887400BD3CD1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF0EA76E1C158AA100BD3CD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0EA76F1C158AA100BD3CD1 /* LaunchScreen.storyboard in Resources */,
+				BF0EA7701C158AA100BD3CD1 /* Assets.xcassets in Resources */,
+				BF0EA7711C158AA100BD3CD1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2477170BA7F9095C230A20CF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		685C0C5B1BFE78E7A5D1AC57 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D64B369FB9FD4EDAD88B93A1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF0EA74A1C15887400BD3CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0EA7591C15887400BD3CD1 /* ViewController.m in Sources */,
+				BF0EA7561C15887400BD3CD1 /* AppDelegate.m in Sources */,
+				BF0EA7531C15887400BD3CD1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF0EA7691C158AA100BD3CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0EA76A1C158AA100BD3CD1 /* ViewController.m in Sources */,
+				BF0EA76B1C158AA100BD3CD1 /* AppDelegate.m in Sources */,
+				BF0EA76C1C158AA100BD3CD1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF0EA75A1C15887400BD3CD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF0EA75B1C15887400BD3CD1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF0EA75F1C15887400BD3CD1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF0EA7601C15887400BD3CD1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF0EA7631C15887400BD3CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF0EA7641C15887400BD3CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF0EA7661C15887400BD3CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4018F747C88B88FCC7805D55 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = KChromecastDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.KChromecastDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF0EA7671C15887400BD3CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 202B5D3AA9A25EE3B2B8EC98 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = KChromecastDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.KChromecastDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF0EA7731C158AA100BD3CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "KChromecastDemo copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.KChromecastDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF0EA7741C158AA100BD3CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "KChromecastDemo copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.KChromecastDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF0EA7491C15887400BD3CD1 /* Build configuration list for PBXProject "KChromecastDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0EA7631C15887400BD3CD1 /* Debug */,
+				BF0EA7641C15887400BD3CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF0EA7651C15887400BD3CD1 /* Build configuration list for PBXNativeTarget "KChromecastDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0EA7661C15887400BD3CD1 /* Debug */,
+				BF0EA7671C15887400BD3CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF0EA7721C158AA100BD3CD1 /* Build configuration list for PBXNativeTarget "KChromecastDemo copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0EA7731C158AA100BD3CD1 /* Debug */,
+				BF0EA7741C158AA100BD3CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF0EA7461C15887400BD3CD1 /* Project object */;
+}
