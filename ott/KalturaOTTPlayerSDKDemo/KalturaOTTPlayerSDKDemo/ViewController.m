@@ -23,7 +23,15 @@
         
         
         // Kaltura Video Media ID (equals to entry id)
-        config.entryId = @"295868";
+        //HLS Clear Only
+        //config.entryId = @"296115";
+        //config.entryId = @"296110";
+        //config.entryId = @"296114";
+        
+        //WVM only:
+        //config.entryId = @"296119";
+        //config.entryId = @"296120";
+        config.entryId = @"296458";
         
         [config addConfigKey:@"liveCore.disableLiveCheck" withValue:@"true"];
         [config addConfigKey:@"tvpapiGetLicensedLinks.plugin" withValue:@"true"];
@@ -37,7 +45,7 @@
         
         
         [config addConfigKey:@"proxyData" withDictionary:proxyDataDict];
-        [config addConfigKey:@"TVPAPIBaseUrl" withValue:@"http://stg.eu.tvinci.com/tvpapi_v3_3/gateways/jsonpostgw.aspx?m="];
+        [config addConfigKey:@"TVPAPIBaseUrl" withValue:@"http://tvpapi-stg.as.tvinci.com/v3_4/gateways/jsonpostgw.aspx?m="];
         
         // Setting this property will cache the html pages in the limit size
         config.cacheSize = 0.8;
