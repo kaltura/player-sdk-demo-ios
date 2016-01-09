@@ -32,6 +32,8 @@
                                                                        partnerId:@"1831271"];
 
         [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
+        // Set AutoPlay as configuration on player (same like setting a flashvar)
+        [config addConfigKey:@"autoPlay" withValue:@"true"];
         
         // Video Entry
         config.entryId = @"1_1fncksnw";
