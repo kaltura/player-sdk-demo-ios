@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ViewController" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cs6-yP-dm9"/>
+                        <viewControllerLayoutGuide type="bottom" id="yKP-59-Eb2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOr-gC-hI4">
+                                <rect key="frame" x="150" y="200" width="300" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ff-Fa-XEy" customClass="NativeControlsView">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="1Vt-Hn-yba"/>
+                                            <constraint firstAttribute="height" constant="200" id="87f-cc-e2b"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="t0L-jz-cuX"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6Ff-Fa-XEy" firstAttribute="height" secondItem="IOr-gC-hI4" secondAttribute="height" id="4F5-nF-yK0"/>
+                                    <constraint firstAttribute="width" constant="300" id="5QD-aC-TDN"/>
+                                    <constraint firstItem="6Ff-Fa-XEy" firstAttribute="top" secondItem="IOr-gC-hI4" secondAttribute="top" id="MgK-qy-3St"/>
+                                    <constraint firstItem="6Ff-Fa-XEy" firstAttribute="leading" secondItem="IOr-gC-hI4" secondAttribute="leading" id="TQY-RZ-asl"/>
+                                    <constraint firstItem="6Ff-Fa-XEy" firstAttribute="width" secondItem="IOr-gC-hI4" secondAttribute="width" id="mxE-ve-hpC"/>
+                                    <constraint firstAttribute="height" constant="200" id="yXq-63-mun"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IOr-gC-hI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n3q-c6-fBe"/>
+                            <constraint firstItem="IOr-gC-hI4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wnW-dZ-ReY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nativeControlsView" destination="6Ff-Fa-XEy" id="gpx-Nj-UrJ"/>
+                        <outlet property="playerContainer" destination="IOr-gC-hI4" id="Baw-sH-V0C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="356.99999999999989"/>
+        </scene>
+    </scenes>
+</document>
