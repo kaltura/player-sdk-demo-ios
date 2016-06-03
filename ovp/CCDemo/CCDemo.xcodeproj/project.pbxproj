@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F387FF51D002B19001F1928 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387FF41D002B19001F1928 /* main.m */; };
+		5F387FF81D002B19001F1928 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387FF71D002B19001F1928 /* AppDelegate.m */; };
+		5F387FFB1D002B19001F1928 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387FFA1D002B19001F1928 /* ViewController.m */; };
+		5F3880001D002B19001F1928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F387FFF1D002B19001F1928 /* Assets.xcassets */; };
+		5F3880031D002B19001F1928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F3880011D002B19001F1928 /* LaunchScreen.storyboard */; };
+		5F3880101D002B56001F1928 /* CastDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F38800F1D002B56001F1928 /* CastDeviceTableViewCell.m */; };
+		5F3880251D002BA8001F1928 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880241D002BA8001F1928 /* AVFoundation.framework */; };
+		5F38802A1D002BF1001F1928 /* DevicesInRangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3880291D002BF1001F1928 /* DevicesInRangeViewController.m */; };
+		5F38802C1D002C0D001F1928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F38802B1D002C0D001F1928 /* Main.storyboard */; };
+		5F38802E1D002C84001F1928 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38802D1D002C84001F1928 /* libxml2.2.tbd */; };
+		5F3880301D002C97001F1928 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38802F1D002C97001F1928 /* libz.tbd */; };
+		5F3880321D002CA7001F1928 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880311D002CA7001F1928 /* libstdc++.tbd */; };
+		5F3880341D002CF1001F1928 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880331D002CF1001F1928 /* CoreBluetooth.framework */; };
+		5F3880361D002D0B001F1928 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880351D002D0B001F1928 /* AudioToolbox.framework */; };
+		5F3880381D002D32001F1928 /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880371D002D32001F1928 /* MediaToolbox.framework */; };
+		5F38803A1D002D69001F1928 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880391D002D69001F1928 /* Accelerate.framework */; };
+		5F38803C1D002D97001F1928 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F38803B1D002D97001F1928 /* Icons.xcassets */; };
+		5F38803E1D002DC5001F1928 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38803D1D002DC5001F1928 /* SystemConfiguration.framework */; };
+		5F3880401D002DD8001F1928 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */; };
+		5F3880421D002DEB001F1928 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880411D002DEB001F1928 /* libc++.tbd */; };
+		5F3880441D002DFA001F1928 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880431D002DFA001F1928 /* MediaPlayer.framework */; };
+		BFFE00CB1D01B24A007EA45C /* libKALTURAPlayerSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC3679B1D01B20800ADE6DE /* libKALTURAPlayerSDK.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFC3679A1D01B20800ADE6DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BFFFA727182F9E31005B3B24;
+			remoteInfo = KALTURAPlayerSDK;
+		};
+		BFC3679C1D01B20800ADE6DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B372892E1A8787D00076DD33;
+			remoteInfo = KALTURAPlayerSDKResources;
+		};
+		BFFE00C51D01B243007EA45C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BFFFA726182F9E31005B3B24;
+			remoteInfo = KALTURAPlayerSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F387FF01D002B19001F1928 /* CCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F387FF41D002B19001F1928 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F387FF61D002B19001F1928 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5F387FF71D002B19001F1928 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5F387FF91D002B19001F1928 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5F387FFA1D002B19001F1928 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5F387FFF1D002B19001F1928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F3880021D002B19001F1928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5F3880041D002B19001F1928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F38800E1D002B56001F1928 /* CastDeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastDeviceTableViewCell.h; sourceTree = "<group>"; };
+		5F38800F1D002B56001F1928 /* CastDeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastDeviceTableViewCell.m; sourceTree = "<group>"; };
+		5F3880241D002BA8001F1928 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5F3880281D002BF1001F1928 /* DevicesInRangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesInRangeViewController.h; sourceTree = "<group>"; };
+		5F3880291D002BF1001F1928 /* DevicesInRangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesInRangeViewController.m; sourceTree = "<group>"; };
+		5F38802B1D002C0D001F1928 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5F38802D1D002C84001F1928 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		5F38802F1D002C97001F1928 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5F3880311D002CA7001F1928 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		5F3880331D002CF1001F1928 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		5F3880351D002D0B001F1928 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5F3880371D002D32001F1928 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
+		5F3880391D002D69001F1928 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		5F38803B1D002D97001F1928 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		5F38803D1D002DC5001F1928 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		5F3880411D002DEB001F1928 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5F3880431D002DFA001F1928 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KALTURAPlayerSDK.xcodeproj; path = "../../Desktop/Kaltura/repos/ovp/ios/player-sdk-native-ios/KALTURAPlayerSDK.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F387FED1D002B19001F1928 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFFE00CB1D01B24A007EA45C /* libKALTURAPlayerSDK.a in Frameworks */,
+				5F3880441D002DFA001F1928 /* MediaPlayer.framework in Frameworks */,
+				5F3880421D002DEB001F1928 /* libc++.tbd in Frameworks */,
+				5F3880401D002DD8001F1928 /* MediaAccessibility.framework in Frameworks */,
+				5F38803E1D002DC5001F1928 /* SystemConfiguration.framework in Frameworks */,
+				5F38803A1D002D69001F1928 /* Accelerate.framework in Frameworks */,
+				5F3880381D002D32001F1928 /* MediaToolbox.framework in Frameworks */,
+				5F3880361D002D0B001F1928 /* AudioToolbox.framework in Frameworks */,
+				5F3880341D002CF1001F1928 /* CoreBluetooth.framework in Frameworks */,
+				5F3880321D002CA7001F1928 /* libstdc++.tbd in Frameworks */,
+				5F3880301D002C97001F1928 /* libz.tbd in Frameworks */,
+				5F38802E1D002C84001F1928 /* libxml2.2.tbd in Frameworks */,
+				5F3880251D002BA8001F1928 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F387FE71D002B19001F1928 = {
+			isa = PBXGroup;
+			children = (
+				BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */,
+				5F3880431D002DFA001F1928 /* MediaPlayer.framework */,
+				5F3880411D002DEB001F1928 /* libc++.tbd */,
+				5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */,
+				5F38803D1D002DC5001F1928 /* SystemConfiguration.framework */,
+				5F3880391D002D69001F1928 /* Accelerate.framework */,
+				5F3880371D002D32001F1928 /* MediaToolbox.framework */,
+				5F3880351D002D0B001F1928 /* AudioToolbox.framework */,
+				5F3880331D002CF1001F1928 /* CoreBluetooth.framework */,
+				5F3880311D002CA7001F1928 /* libstdc++.tbd */,
+				5F38802F1D002C97001F1928 /* libz.tbd */,
+				5F38802D1D002C84001F1928 /* libxml2.2.tbd */,
+				5F3880241D002BA8001F1928 /* AVFoundation.framework */,
+				5F387FF21D002B19001F1928 /* CCDemo */,
+				5F387FF11D002B19001F1928 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F387FF11D002B19001F1928 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F387FF01D002B19001F1928 /* CCDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F387FF21D002B19001F1928 /* CCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5F3880281D002BF1001F1928 /* DevicesInRangeViewController.h */,
+				5F3880291D002BF1001F1928 /* DevicesInRangeViewController.m */,
+				5F38800E1D002B56001F1928 /* CastDeviceTableViewCell.h */,
+				5F38800F1D002B56001F1928 /* CastDeviceTableViewCell.m */,
+				5F387FF61D002B19001F1928 /* AppDelegate.h */,
+				5F387FF71D002B19001F1928 /* AppDelegate.m */,
+				5F387FF91D002B19001F1928 /* ViewController.h */,
+				5F387FFA1D002B19001F1928 /* ViewController.m */,
+				5F38802B1D002C0D001F1928 /* Main.storyboard */,
+				5F387FFF1D002B19001F1928 /* Assets.xcassets */,
+				5F38803B1D002D97001F1928 /* Icons.xcassets */,
+				5F3880011D002B19001F1928 /* LaunchScreen.storyboard */,
+				5F3880041D002B19001F1928 /* Info.plist */,
+				5F387FF31D002B19001F1928 /* Supporting Files */,
+			);
+			path = CCDemo;
+			sourceTree = "<group>";
+		};
+		5F387FF31D002B19001F1928 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F387FF41D002B19001F1928 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFC367941D01B20800ADE6DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFC3679B1D01B20800ADE6DE /* libKALTURAPlayerSDK.a */,
+				BFC3679D1D01B20800ADE6DE /* KALTURAPlayerSDKResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F387FEF1D002B19001F1928 /* CCDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F3880071D002B19001F1928 /* Build configuration list for PBXNativeTarget "CCDemo" */;
+			buildPhases = (
+				5F387FEC1D002B19001F1928 /* Sources */,
+				5F387FED1D002B19001F1928 /* Frameworks */,
+				5F387FEE1D002B19001F1928 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFFE00C61D01B243007EA45C /* PBXTargetDependency */,
+			);
+			name = CCDemo;
+			productName = CCDemo;
+			productReference = 5F387FF01D002B19001F1928 /* CCDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F387FE81D002B19001F1928 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = kaltura;
+				TargetAttributes = {
+					5F387FEF1D002B19001F1928 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 5F387FEB1D002B19001F1928 /* Build configuration list for PBXProject "CCDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F387FE71D002B19001F1928;
+			productRefGroup = 5F387FF11D002B19001F1928 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BFC367941D01B20800ADE6DE /* Products */;
+					ProjectRef = BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				5F387FEF1D002B19001F1928 /* CCDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BFC3679B1D01B20800ADE6DE /* libKALTURAPlayerSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKALTURAPlayerSDK.a;
+			remoteRef = BFC3679A1D01B20800ADE6DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFC3679D1D01B20800ADE6DE /* KALTURAPlayerSDKResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KALTURAPlayerSDKResources.bundle;
+			remoteRef = BFC3679C1D01B20800ADE6DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F387FEE1D002B19001F1928 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F38802C1D002C0D001F1928 /* Main.storyboard in Resources */,
+				5F3880031D002B19001F1928 /* LaunchScreen.storyboard in Resources */,
+				5F38803C1D002D97001F1928 /* Icons.xcassets in Resources */,
+				5F3880001D002B19001F1928 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F387FEC1D002B19001F1928 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F387FFB1D002B19001F1928 /* ViewController.m in Sources */,
+				5F387FF81D002B19001F1928 /* AppDelegate.m in Sources */,
+				5F38802A1D002BF1001F1928 /* DevicesInRangeViewController.m in Sources */,
+				5F3880101D002B56001F1928 /* CastDeviceTableViewCell.m in Sources */,
+				5F387FF51D002B19001F1928 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFFE00C61D01B243007EA45C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KALTURAPlayerSDK;
+			targetProxy = BFFE00C51D01B243007EA45C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F3880011D002B19001F1928 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F3880021D002B19001F1928 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F3880051D002B19001F1928 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F3880061D002B19001F1928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F3880081D002B19001F1928 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CCDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.CCDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5F3880091D002B19001F1928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CCDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.CCDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F387FEB1D002B19001F1928 /* Build configuration list for PBXProject "CCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F3880051D002B19001F1928 /* Debug */,
+				5F3880061D002B19001F1928 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F3880071D002B19001F1928 /* Build configuration list for PBXNativeTarget "CCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F3880081D002B19001F1928 /* Debug */,
+				5F3880091D002B19001F1928 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F387FE81D002B19001F1928 /* Project object */;
+}
