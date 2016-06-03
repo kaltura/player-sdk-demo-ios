@@ -28,27 +28,28 @@
 		5F3880401D002DD8001F1928 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */; };
 		5F3880421D002DEB001F1928 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880411D002DEB001F1928 /* libc++.tbd */; };
 		5F3880441D002DFA001F1928 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880431D002DFA001F1928 /* MediaPlayer.framework */; };
-		BFFE00CB1D01B24A007EA45C /* libKALTURAPlayerSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFC3679B1D01B20800ADE6DE /* libKALTURAPlayerSDK.a */; };
+		BFFE00DD1D01B5AF007EA45C /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFE00DC1D01B5AE007EA45C /* GoogleCast.framework */; };
+		BFFE00EB1D01B5E1007EA45C /* libKALTURAPlayerSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFE00E61D01B5D4007EA45C /* libKALTURAPlayerSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BFC3679A1D01B20800ADE6DE /* PBXContainerItemProxy */ = {
+		BFFE00E51D01B5D4007EA45C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */;
+			containerPortal = BFFE00DE1D01B5D4007EA45C /* KALTURAPlayerSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BFFFA727182F9E31005B3B24;
 			remoteInfo = KALTURAPlayerSDK;
 		};
-		BFC3679C1D01B20800ADE6DE /* PBXContainerItemProxy */ = {
+		BFFE00E71D01B5D4007EA45C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */;
+			containerPortal = BFFE00DE1D01B5D4007EA45C /* KALTURAPlayerSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B372892E1A8787D00076DD33;
 			remoteInfo = KALTURAPlayerSDKResources;
 		};
-		BFFE00C51D01B243007EA45C /* PBXContainerItemProxy */ = {
+		BFFE00E91D01B5DB007EA45C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */;
+			containerPortal = BFFE00DE1D01B5D4007EA45C /* KALTURAPlayerSDK.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = BFFFA726182F9E31005B3B24;
 			remoteInfo = KALTURAPlayerSDK;
@@ -83,7 +84,8 @@
 		5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		5F3880411D002DEB001F1928 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5F3880431D002DFA001F1928 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KALTURAPlayerSDK.xcodeproj; path = "../../Desktop/Kaltura/repos/ovp/ios/player-sdk-native-ios/KALTURAPlayerSDK.xcodeproj"; sourceTree = "<group>"; };
+		BFFE00DC1D01B5AE007EA45C /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = CCDemo/GoogleCast.framework; sourceTree = "<group>"; };
+		BFFE00DE1D01B5D4007EA45C /* KALTURAPlayerSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KALTURAPlayerSDK.xcodeproj; path = "../../../player-sdk-native-ios/KALTURAPlayerSDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFFE00CB1D01B24A007EA45C /* libKALTURAPlayerSDK.a in Frameworks */,
+				BFFE00EB1D01B5E1007EA45C /* libKALTURAPlayerSDK.a in Frameworks */,
+				BFFE00DD1D01B5AF007EA45C /* GoogleCast.framework in Frameworks */,
 				5F3880441D002DFA001F1928 /* MediaPlayer.framework in Frameworks */,
 				5F3880421D002DEB001F1928 /* libc++.tbd in Frameworks */,
 				5F3880401D002DD8001F1928 /* MediaAccessibility.framework in Frameworks */,
@@ -113,7 +116,8 @@
 		5F387FE71D002B19001F1928 = {
 			isa = PBXGroup;
 			children = (
-				BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */,
+				BFFE00DE1D01B5D4007EA45C /* KALTURAPlayerSDK.xcodeproj */,
+				BFFE00DC1D01B5AE007EA45C /* GoogleCast.framework */,
 				5F3880431D002DFA001F1928 /* MediaPlayer.framework */,
 				5F3880411D002DEB001F1928 /* libc++.tbd */,
 				5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */,
@@ -168,11 +172,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BFC367941D01B20800ADE6DE /* Products */ = {
+		BFFE00DF1D01B5D4007EA45C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFC3679B1D01B20800ADE6DE /* libKALTURAPlayerSDK.a */,
-				BFC3679D1D01B20800ADE6DE /* KALTURAPlayerSDKResources.bundle */,
+				BFFE00E61D01B5D4007EA45C /* libKALTURAPlayerSDK.a */,
+				BFFE00E81D01B5D4007EA45C /* KALTURAPlayerSDKResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,7 +195,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BFFE00C61D01B243007EA45C /* PBXTargetDependency */,
+				BFFE00EA1D01B5DB007EA45C /* PBXTargetDependency */,
 			);
 			name = CCDemo;
 			productName = CCDemo;
@@ -225,8 +229,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BFC367941D01B20800ADE6DE /* Products */;
-					ProjectRef = BFC367931D01B20800ADE6DE /* KALTURAPlayerSDK.xcodeproj */;
+					ProductGroup = BFFE00DF1D01B5D4007EA45C /* Products */;
+					ProjectRef = BFFE00DE1D01B5D4007EA45C /* KALTURAPlayerSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -237,18 +241,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BFC3679B1D01B20800ADE6DE /* libKALTURAPlayerSDK.a */ = {
+		BFFE00E61D01B5D4007EA45C /* libKALTURAPlayerSDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libKALTURAPlayerSDK.a;
-			remoteRef = BFC3679A1D01B20800ADE6DE /* PBXContainerItemProxy */;
+			remoteRef = BFFE00E51D01B5D4007EA45C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BFC3679D1D01B20800ADE6DE /* KALTURAPlayerSDKResources.bundle */ = {
+		BFFE00E81D01B5D4007EA45C /* KALTURAPlayerSDKResources.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = KALTURAPlayerSDKResources.bundle;
-			remoteRef = BFC3679C1D01B20800ADE6DE /* PBXContainerItemProxy */;
+			remoteRef = BFFE00E71D01B5D4007EA45C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -283,10 +287,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BFFE00C61D01B243007EA45C /* PBXTargetDependency */ = {
+		BFFE00EA1D01B5DB007EA45C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KALTURAPlayerSDK;
-			targetProxy = BFFE00C51D01B243007EA45C /* PBXContainerItemProxy */;
+			targetProxy = BFFE00E91D01B5DB007EA45C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,6 +399,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CCDemo",
 				);
 				INFOPLIST_FILE = CCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -413,6 +418,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CCDemo",
 				);
 				INFOPLIST_FILE = CCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
