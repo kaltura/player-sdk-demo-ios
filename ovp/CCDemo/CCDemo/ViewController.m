@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DevicesInRangeViewController.h"
+#import "CastChannel.h"
 
 
 @interface ViewController () <KCastProviderDelegate, DevicesInRangeViewControllerDelegate>
@@ -22,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _castProvider = [KCastProvider new];
+    CastChannel *castChannel = [[CastChannel alloc] initWithNamespace:@"urn:x-cast:com.kaltura.cast.player"];
+    _castProvider = [[KCastProvider alloc] initWithCastChannel:castChannel];
     _castProvider.delegate = self;
     [_castProvider startScan:@"C43947A1"];
 }
@@ -99,15 +101,19 @@
 - (void)castProvider:(KCastProvider *)provider didDeviceComeOnline:(KCastDevice *)device {
     
 }
+
 - (void)castProvider:(KCastProvider *)provider didDeviceGoOffline:(KCastDevice *)device {
     
 }
+
 - (void)didConnectToDevice:(KCastProvider *)provider {
-    
+    _castButton.tintColor = [UIColor blackColor];
 }
+
 - (void)didDisconnectFromDevice:(KCastProvider *)provider {
-    
+    _castButton.tintColor = [UIColor blueColor];
 }
+
 - (void)castProvider:(KCastProvider *)provider didFailToConnectToDevice:(NSError *)error {
     
 }
