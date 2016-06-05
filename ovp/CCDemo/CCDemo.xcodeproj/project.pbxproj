@@ -31,7 +31,6 @@
 		5FD85F541D0186C600CA75D2 /* libKALTURAPlayerSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD85F4F1D0186AE00CA75D2 /* libKALTURAPlayerSDK.a */; };
 		5FD85F551D0186D100CA75D2 /* KALTURAPlayerSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5FD85F511D0186AE00CA75D2 /* KALTURAPlayerSDKResources.bundle */; };
 		5FD85F6D1D01B4F700CA75D2 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD85F6C1D01B4F700CA75D2 /* GoogleCast.framework */; };
-		5FD85F701D01B5E800CA75D2 /* CastChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD85F6F1D01B5E800CA75D2 /* CastChannel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +87,6 @@
 		5F3880431D002DFA001F1928 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		5FD85F471D0186AE00CA75D2 /* KALTURAPlayerSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KALTURAPlayerSDK.xcodeproj; path = "../../../player-sdk-native-ios/KALTURAPlayerSDK.xcodeproj"; sourceTree = "<group>"; };
 		5FD85F6C1D01B4F700CA75D2 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleCast.framework; sourceTree = "<group>"; };
-		5FD85F6E1D01B5E800CA75D2 /* CastChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastChannel.h; sourceTree = "<group>"; };
-		5FD85F6F1D01B5E800CA75D2 /* CastChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastChannel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +161,6 @@
 				5F3880011D002B19001F1928 /* LaunchScreen.storyboard */,
 				5F3880041D002B19001F1928 /* Info.plist */,
 				5F387FF31D002B19001F1928 /* Supporting Files */,
-				5FD85F6E1D01B5E800CA75D2 /* CastChannel.h */,
-				5FD85F6F1D01B5E800CA75D2 /* CastChannel.m */,
 			);
 			path = CCDemo;
 			sourceTree = "<group>";
@@ -285,7 +280,6 @@
 			files = (
 				5F387FFB1D002B19001F1928 /* ViewController.m in Sources */,
 				5F387FF81D002B19001F1928 /* AppDelegate.m in Sources */,
-				5FD85F701D01B5E800CA75D2 /* CastChannel.m in Sources */,
 				5F38802A1D002BF1001F1928 /* DevicesInRangeViewController.m in Sources */,
 				5F3880101D002B56001F1928 /* CastDeviceTableViewCell.m in Sources */,
 				5F387FF51D002B19001F1928 /* main.m in Sources */,

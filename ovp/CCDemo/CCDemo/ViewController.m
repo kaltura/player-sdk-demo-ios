@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "DevicesInRangeViewController.h"
-#import "CastChannel.h"
 
 
 @interface ViewController () <KCastProviderDelegate, DevicesInRangeViewControllerDelegate>
@@ -23,27 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    CastChannel *castChannel = [[CastChannel alloc] initWithNamespace:@"urn:x-cast:com.kaltura.cast.player"];
-    _castProvider = [[KCastProvider alloc] initWithCastChannel:castChannel];
+    _castProvider = [[KCastProvider alloc] init];
     _castProvider.delegate = self;
     [_castProvider startScan:@"C43947A1"];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    //    if (!_player) {
-    //        KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"http://cdnapi.kaltura.com/"
-    //                                                               uiConfID:@"29802711"
-    //                                                              partnerId:@"1831271"];
-    //        config.entryId = @"1_o426d3i4";
-    //        [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
-    //        [config addConfigKey:@"doubleClick.plugin" withValue:@"true"];
-    //        [config addConfigKey:@"doubleClick.adTagUrl" withValue:@"http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]"];
-    //        _player = [[KPViewController alloc] initWithConfiguration:config];
-    //        [self addChildViewController:_player];
-    //        _player.view.frame = _playerHolderView.bounds;
-    //        [_playerHolderView addSubview:_player.view];
-    //    }
 }
 
 - (IBAction)loadPlayer:(UIButton *)sender {
