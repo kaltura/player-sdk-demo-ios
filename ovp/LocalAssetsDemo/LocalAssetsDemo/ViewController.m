@@ -65,12 +65,14 @@
 }
 
 -(KPPlayerConfig *)config {
-    KPPlayerConfig* config = [[KPPlayerConfig alloc] 
-               initWithServer:@"http://cdnapi.kaltura.com"//html5/html5lib/v2.43/mwEmbedFrame.php" 
-               uiConfID:@"31956421" partnerId:@"1851571"];    
+    
+    KPPlayerConfig* config;
+    config = [[KPPlayerConfig alloc] 
+              initWithServer:@"https://cdnapisec.kaltura.com" 
+              uiConfID:@"31956421" partnerId:@"1851571"];    
     
     config.entryId = _entryId;
-    config.localContentId = _localName;
+    config.localContentId = self.downloaded ? _localName : nil;
     
     return config;
 }
@@ -81,13 +83,17 @@
 
 
 -(NSString *)playbackUrl {
-    return self.downloaded ? self.targetFile : nil;
+    if (self.downloaded) {
+        return [NSURL fileURLWithPath:self.targetFile].absoluteString;
+    } else {
+        return self.downloaded ? self.targetFile : nil;
+    }
 
 }
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ %@", _localName, self.downloaded ? @"✔︎" : @"✗"];
+    return [NSString stringWithFormat:@"%@ %@", _localName, self.downloaded ? @"⬇︎" : @"☁︎"];
 }
 
 -(NSString *)targetFile {
@@ -169,10 +175,9 @@
     
     [KPLocalAssetsManager registerAsset:self.selectedAsset.config flavor:self.selectedAsset.flavorId path:self.selectedAsset.targetFile callback:^(NSError *error) {
         NSLog(@"Done:%@", error);
-        button.backgroundColor = [UIColor whiteColor];
+        UIColor* color = error ? [UIColor redColor] : [UIColor whiteColor];
+        [button performSelectorOnMainThread:@selector(setBackgroundColor:) withObject:color waitUntilDone:NO];
     }];
-    
-    
 }
 
 @end
@@ -222,7 +227,7 @@
     
     NSError* moveError;
     if (![[NSFileManager defaultManager] removeItemAtPath:self.selectedAsset.targetFile error:&moveError]) {
-        NSLog(@"Delete error: %@", moveError);
+//        NSLog(@"Delete error: %@", moveError);
     }
     
     if (![[NSFileManager defaultManager] moveItemAtPath:location.path toPath:self.selectedAsset.targetFile error:&moveError]) {
