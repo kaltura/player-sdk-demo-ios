@@ -6,6 +6,9 @@
 //  Copyright © 2016 Kaltura. All rights reserved.
 //
 
+// Note to users of this demo app:
+// Find the places that say TODO to customize the demo.
+
 #import "ViewController.h"
 
 #import <KalturaPlayerSDK/KPPlayerConfig.h>
@@ -66,6 +69,7 @@
 
 -(KPPlayerConfig *)config {
     
+    // TODO: set server, uiconfid, partnerId
     KPPlayerConfig* config;
     config = [[KPPlayerConfig alloc] 
               initWithServer:@"https://cdnapisec.kaltura.com" 
@@ -73,6 +77,7 @@
     
     config.entryId = _entryId;
     config.localContentId = self.downloaded ? _localName : nil;
+    config.cacheSize = 100; // TODO: set cachesize (optional), in MB
     
     return config;
 }
@@ -109,8 +114,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
+    // TODO: modify the array of assets. 
+    // Assets that are not meant to be downloaded can have nil as the flavor and url.
     _assets = @[
                 [Asset assetWithName:@"sintel.wvm" entry:@"0_pl5lbfo0" flavor:@"1_e0qtaj1j" url:@"http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_pl5lbfo0/flavorId/1_e0qtaj1j/format/url/protocol/http/a.wvm"],
                 [Asset assetWithName:@"count.wvm" entry:@"0_uafvpmv8" flavor:@"0_2rl0w6f1" url:@"http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_uafvpmv8/flavorId/0_2rl0w6f1/format/url/protocol/http/a.wvm"],
