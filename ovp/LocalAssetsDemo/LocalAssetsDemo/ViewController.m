@@ -75,9 +75,14 @@
               initWithServer:@"https://cdnapisec.kaltura.com" 
               uiConfID:@"31956421" partnerId:@"1851571"];    
     
+    // TODO: set cachesize (optional), in MB
+    config.cacheSize = 100; 
+    
+    // TODO: set KS, if required
+    //    config.ks = @"KS";
+    
     config.entryId = _entryId;
     config.localContentId = self.downloaded ? _localName : nil;
-    config.cacheSize = 100; // TODO: set cachesize (optional), in MB
     
     return config;
 }
@@ -93,7 +98,6 @@
     } else {
         return self.downloaded ? self.targetFile : nil;
     }
-
 }
 
 - (NSString *)description
