@@ -24,24 +24,25 @@
     // Do any additional setup after loading the view, typically from a nib.
     _castProvider = [[KCastProvider alloc] init];
     _castProvider.delegate = self;
-    [_castProvider startScan:@"C43947A1"];
+    [_castProvider startScan:@"48A28189"];
 }
 
 - (IBAction)loadPlayer:(UIButton *)sender {
         if (!_player) {
-            KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"http://kgit.html5video.org/tags/v2.43.rc11/mwEmbedFrame.php"
+            KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"http://192.168.161.88/html5.kaltura/mwEmbed/mwEmbedFrame.php?debugKalturaPlayer"
                                                                    uiConfID:@"31638861"
                                                                   partnerId:@"1831271"];
             config.entryId = @"1_o426d3i4";
             [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
             [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];
-            [config addConfigKey:@"chromecast.applicationID" withValue:@"C43947A1"];
+            [config addConfigKey:@"chromecast.applicationID" withValue:@"48A28189"];
             [config addConfigKey:@"doubleClick.plugin" withValue:@"false"];
 //            [config addConfigKey:@"doubleClick.adTagUrl" withValue:@"http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]"];
             _player = [[KPViewController alloc] initWithConfiguration:config];
-            _player.castProvider = _castProvider;
+//            _player.castProvider = _castProvider;
             [self addChildViewController:_player];
             _player.view.frame = _playerHolderView.bounds;
+            [_player.playerController play];
             [_playerHolderView addSubview:_player.view];
         }
 }
@@ -49,6 +50,9 @@
 - (IBAction)presentDevice:(UIBarButtonItem *)sender {
     sender.tag = sender.tag ? 0 : 1;
     [self performSegueWithIdentifier:@"PresentDevices" sender:@(sender.tag)];
+}
+- (IBAction)startCasting:(UIBarButtonItem *)sender {
+    _player.castProvider = _castProvider;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -92,7 +96,10 @@
 }
 
 - (void)didDisconnectFromDevice:(KCastProvider *)provider {
-    _castButton.tintColor = [UIColor blueColor];
+    _castButton.tintColor = [UIColor colorWithRed:0
+                                            green:122.0 / 255.0
+                                             blue:1
+                                            alpha:1];
 }
 
 - (void)castProvider:(KCastProvider *)provider didFailToConnectToDevice:(NSError *)error {
