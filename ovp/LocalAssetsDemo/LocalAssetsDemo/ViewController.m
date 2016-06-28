@@ -6,18 +6,55 @@
 //  Copyright © 2016 Kaltura. All rights reserved.
 //
 
+// Note to users of this demo app: customize the demoAssets() and configForDemoAsset() functions.
+
 #import "ViewController.h"
 
-#import <KalturaPlayerSDK/KPPlayerConfig.h>
 #import <KalturaPlayerSDK/KPLocalAssetsManager.h>
-#import <KalturaPlayerSDK/KPURLProtocol.h>
-#import <KalturaPlayerSDK/KCacheManager.h>
-
 #import <KalturaPlayerSDK/KPViewController.h>
-
 #import <DownPicker/DownPicker.h>
 
-@class Asset;
+
+static NSArray<Asset*>* demoAssets() {
+    
+    // TODO: modify the array of assets. 
+    // Assets that are not meant to be downloaded can have nil as the flavor and url.
+    return @[
+             [Asset assetWithName:@"sintel.wvm" entry:@"0_pl5lbfo0" flavor:@"1_e0qtaj1j" url:@"http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_pl5lbfo0/flavorId/1_e0qtaj1j/format/url/protocol/http/a.wvm"],
+             [Asset assetWithName:@"count.wvm" entry:@"0_uafvpmv8" flavor:@"0_2rl0w6f1" url:@"http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_uafvpmv8/flavorId/0_2rl0w6f1/format/url/protocol/http/a.wvm"],
+             [Asset assetWithName:@"cat.mp4" entry:@"1_aegxx56o" flavor:@"1_6dadj61z" url:@"http://cfvod.kaltura.com/pd/p/1851571/sp/185157100/serveFlavor/entryId/1_aegxx56o/v/11/flavorId/1_6dadj61z/name/a.mp4"],
+             ];
+}
+
+static KPPlayerConfig* configForDemoAsset(Asset* asset) {
+    // TODO: set server, uiconfid, partnerId
+    KPPlayerConfig* config;
+    config = [[KPPlayerConfig alloc] 
+              initWithServer:@"https://cdnapisec.kaltura.com" 
+              uiConfID:@"31956421" partnerId:@"1851571"];    
+    
+    // TODO (optional): set cachesize in MB
+    config.cacheSize = 100; 
+    
+    // TODO (optional): set KS, if required
+    //    config.ks = @"KS";
+    
+    // TODO (optional): customize the player some more. 
+    // [config addConfigKey:<#(NSString *)#> withValue:<#(NSString *)#>];
+    // [config addConfigKey:<#(NSString *)#> withDictionary:<#(NSDictionary *)#>];
+
+    
+    // Common
+    config.entryId = asset.entryId;
+    config.localContentId = asset.downloaded ? asset.localName : nil;
+    
+    return config;
+
+}
+
+
+
+
 
 @interface ViewController ()
 @property (nonatomic) KPViewController* kpv;
@@ -37,19 +74,6 @@
 @end
 
 
-@interface Asset : NSObject
-@property (nonatomic, copy) NSString* downloadUrl;
-@property (nonatomic, copy) NSString* localName;
-@property (nonatomic, copy) NSString* entryId;
-@property (nonatomic, copy) NSString* flavorId;
-
-@property (nonatomic, readonly) KPPlayerConfig* config;
-@property (nonatomic, readonly) NSString* targetFile;
-@property (nonatomic, readonly) NSString* playbackUrl;
-@property (readonly) BOOL downloaded;
-
-+(instancetype)assetWithName:(NSString*)localName entry:(NSString*)entryId flavor:(NSString*)flavorId url:(NSString*)url;
-@end
 
 @implementation Asset
 
@@ -64,30 +88,22 @@
     return asset;
 }
 
--(KPPlayerConfig *)config {
-    KPPlayerConfig* config = [[KPPlayerConfig alloc] 
-               initWithServer:@"http://cdnapi.kaltura.com"//html5/html5lib/v2.43/mwEmbedFrame.php" 
-               uiConfID:@"31956421" partnerId:@"1851571"];    
-    
-    config.entryId = _entryId;
-    config.localContentId = _localName;
-    
-    return config;
-}
-
 -(BOOL)downloaded {
     return [[NSFileManager defaultManager] fileExistsAtPath:self.targetFile];
 }
 
 
 -(NSString *)playbackUrl {
-    return self.downloaded ? self.targetFile : nil;
-
+    if (self.downloaded) {
+        return [NSURL fileURLWithPath:self.targetFile].absoluteString;
+    } else {
+        return self.downloaded ? self.targetFile : nil;
+    }
 }
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ %@", _localName, self.downloaded ? @"✔︎" : @"✗"];
+    return [NSString stringWithFormat:@"%@ %@", _localName, self.downloaded ? @"⬇︎" : @"☁︎"];
 }
 
 -(NSString *)targetFile {
@@ -101,19 +117,20 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    _assets = @[
-                [Asset assetWithName:@"sintel.wvm" entry:@"0_pl5lbfo0" flavor:@"1_e0qtaj1j" url:@"http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_pl5lbfo0/flavorId/1_e0qtaj1j/format/url/protocol/http/a.wvm"],
-                [Asset assetWithName:@"count.wvm" entry:@"0_uafvpmv8" flavor:@"0_2rl0w6f1" url:@"http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_uafvpmv8/flavorId/0_2rl0w6f1/format/url/protocol/http/a.wvm"],
-                [Asset assetWithName:@"cat.mp4" entry:@"1_aegxx56o" flavor:@"1_6dadj61z" url:@"http://cfvod.kaltura.com/pd/p/1851571/sp/185157100/serveFlavor/entryId/1_aegxx56o/v/11/flavorId/1_6dadj61z/name/a.mp4"],
-                ];
+-(void)setDownPicker {
+    NSInteger selectedIndex = _picker ? _picker.selectedIndex : 0;
     
     _picker = [[DownPicker alloc] initWithTextField:_assetPicker withData:[_assets valueForKey:@"description"]];
     [_picker addTarget:self action:@selector(assetSelected:) forControlEvents:UIControlEventValueChanged];
-    _picker.selectedIndex = 0;
+    _picker.selectedIndex = selectedIndex;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _assets = demoAssets();
+    
+    [self setDownPicker];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,12 +143,11 @@
 }
 
 -(IBAction)assetSelected:(id)sender {
-    [KCacheManager shared].baseURL = [self.selectedAsset.config server];
 }
 
 -(IBAction)statusTapped:(UIButton*)button {
     
-    [KPLocalAssetsManager checkStatusForAsset:self.selectedAsset.config path:self.selectedAsset.targetFile callback:^(NSError *error, NSTimeInterval expiryTime, NSTimeInterval availableTime) {
+    [KPLocalAssetsManager checkStatusForAsset:configForDemoAsset(self.selectedAsset) path:self.selectedAsset.targetFile callback:^(NSError *error, NSTimeInterval expiryTime, NSTimeInterval availableTime) {
         NSLog(@"status: %d -- %d -- error: %@", (int)expiryTime, (int)availableTime, error);
     }];
 }
@@ -139,7 +155,7 @@
 -(IBAction)playTapped:(UIButton*)button {
     
     if (!_kpv) {
-        KPViewController* kpv = [[KPViewController alloc] initWithConfiguration:self.selectedAsset.config];
+        KPViewController* kpv = [[KPViewController alloc] initWithConfiguration:configForDemoAsset(self.selectedAsset)];
         [kpv setCustomSourceURLProvider:self];
         [kpv setDelegate:self];
         
@@ -149,7 +165,7 @@
         
         _kpv = kpv;
     } else {
-        [_kpv changeConfiguration:self.selectedAsset.config];
+        [_kpv changeConfiguration:configForDemoAsset(self.selectedAsset)];
     }
 }
 
@@ -167,12 +183,11 @@
     
     NSLog(@"file info: %@", [[NSFileManager defaultManager] attributesOfItemAtPath:self.selectedAsset.targetFile error:nil]);
     
-    [KPLocalAssetsManager registerAsset:self.selectedAsset.config flavor:self.selectedAsset.flavorId path:self.selectedAsset.targetFile callback:^(NSError *error) {
+    [KPLocalAssetsManager registerAsset:configForDemoAsset(self.selectedAsset) flavor:self.selectedAsset.flavorId path:self.selectedAsset.targetFile callback:^(NSError *error) {
         NSLog(@"Done:%@", error);
-        button.backgroundColor = [UIColor whiteColor];
+        UIColor* color = error ? [UIColor redColor] : [UIColor whiteColor];
+        [button performSelectorOnMainThread:@selector(setBackgroundColor:) withObject:color waitUntilDone:NO];
     }];
-    
-    
 }
 
 @end
@@ -222,13 +237,15 @@
     
     NSError* moveError;
     if (![[NSFileManager defaultManager] removeItemAtPath:self.selectedAsset.targetFile error:&moveError]) {
-        NSLog(@"Delete error: %@", moveError);
+        //        NSLog(@"Delete error: %@", moveError);
     }
     
     if (![[NSFileManager defaultManager] moveItemAtPath:location.path toPath:self.selectedAsset.targetFile error:&moveError]) {
         NSLog(@"Move error: %@", moveError);
         return;
     }
+    
+    [self setDownPicker];
 }
 
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {

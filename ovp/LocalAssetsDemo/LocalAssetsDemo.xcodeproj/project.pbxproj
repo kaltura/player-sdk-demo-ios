@@ -140,6 +140,8 @@
 				TargetAttributes = {
 					FB1DDC601CECBA5400DDA2BD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X8RDCFJK95;
+						DevelopmentTeamName = "Kaltura, Inc.";
 					};
 				};
 			};
