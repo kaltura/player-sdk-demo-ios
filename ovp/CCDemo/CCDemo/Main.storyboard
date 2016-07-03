@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="357"/>
+            <point key="canvasLocation" x="136" y="355"/>
         </scene>
         <!--Devices In Range View Controller-->
         <scene sceneID="Kga-OF-elx">
@@ -100,7 +100,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1T9-DN-WWB" id="KML-4h-jWM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cast_disconnected_black_512" translatesAutoresizingMaskIntoConstraints="NO" id="4eI-jz-w5t">

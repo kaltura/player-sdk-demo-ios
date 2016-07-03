@@ -47,12 +47,21 @@
         }
 }
 
+- (UIColor *)defaultTint {
+    return [UIColor colorWithRed:0
+                           green:122.0 / 255.0
+                            blue:1
+                           alpha:1];
+}
+
 - (IBAction)presentDevice:(UIBarButtonItem *)sender {
     sender.tag = sender.tag ? 0 : 1;
     [self performSegueWithIdentifier:@"PresentDevices" sender:@(sender.tag)];
 }
 - (IBAction)startCasting:(UIBarButtonItem *)sender {
-    _player.castProvider = _castProvider;
+    sender.tag = sender.tag ? 0 : 1;
+    _player.castProvider = sender.tag ? _castProvider : nil;
+    sender.tintColor = sender.tag ? [UIColor blackColor] : self.defaultTint;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -96,10 +105,7 @@
 }
 
 - (void)didDisconnectFromDevice:(KCastProvider *)provider {
-    _castButton.tintColor = [UIColor colorWithRed:0
-                                            green:122.0 / 255.0
-                                             blue:1
-                                            alpha:1];
+    _castButton.tintColor = self.defaultTint;
 }
 
 - (void)castProvider:(KCastProvider *)provider didFailToConnectToDevice:(NSError *)error {
