@@ -43,6 +43,9 @@ static KPPlayerConfig* configForDemoAsset(Asset* asset) {
     // [config addConfigKey:<#(NSString *)#> withValue:<#(NSString *)#>];
     // [config addConfigKey:<#(NSString *)#> withDictionary:<#(NSDictionary *)#>];
 
+    // TODO (optional): add extra cache inclusion patterns.
+    config.cacheConfig.includePatterns = @[
+                                        ];
     
     // Common
     config.entryId = asset.entryId;
