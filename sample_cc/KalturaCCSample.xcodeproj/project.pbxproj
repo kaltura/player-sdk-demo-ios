@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5601FF1A1D48B58A00D03490 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF191D48B58A00D03490 /* main.m */; };
+		5601FF1D1D48B58A00D03490 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF1C1D48B58A00D03490 /* AppDelegate.m */; };
+		5601FF231D48B58A00D03490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5601FF211D48B58A00D03490 /* Main.storyboard */; };
+		5601FF251D48B58A00D03490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5601FF241D48B58A00D03490 /* Assets.xcassets */; };
+		5601FF281D48B58A00D03490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5601FF261D48B58A00D03490 /* LaunchScreen.storyboard */; };
+		5601FF3C1D48B7BA00D03490 /* KalturaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF3B1D48B7BA00D03490 /* KalturaPlayerViewController.m */; };
+		5601FF3F1D48B81100D03490 /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF3E1D48B81100D03490 /* Asset.m */; };
+		5601FF501D48CF7200D03490 /* MediaListDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF4B1D48CF7200D03490 /* MediaListDataDisplayManager.m */; };
+		5601FF511D48CF7200D03490 /* MediaListInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF4D1D48CF7200D03490 /* MediaListInitializer.m */; };
+		5601FF521D48CF7200D03490 /* MediaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF4F1D48CF7200D03490 /* MediaListViewController.m */; };
+		5601FF551D48D03700D03490 /* MediaPlainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF541D48D03700D03490 /* MediaPlainObject.m */; };
+		5601FF5B1D48D7B600D03490 /* CCDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF581D48D7B600D03490 /* CCDevicesViewController.m */; };
+		5601FF5C1D48D7B600D03490 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF5A1D48D7B600D03490 /* CCViewController.m */; };
+		CE5ADF512C44D3E49F0184F6 /* libPods-KalturaCCSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8252C2A8C5BE466370BFF5A4 /* libPods-KalturaCCSample.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5601FF151D48B58A00D03490 /* KalturaCCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KalturaCCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5601FF191D48B58A00D03490 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5601FF1B1D48B58A00D03490 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5601FF1C1D48B58A00D03490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5601FF221D48B58A00D03490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5601FF241D48B58A00D03490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5601FF271D48B58A00D03490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5601FF291D48B58A00D03490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5601FF3A1D48B7BA00D03490 /* KalturaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalturaPlayerViewController.h; sourceTree = "<group>"; };
+		5601FF3B1D48B7BA00D03490 /* KalturaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalturaPlayerViewController.m; sourceTree = "<group>"; };
+		5601FF3D1D48B81100D03490 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
+		5601FF3E1D48B81100D03490 /* Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Asset.m; sourceTree = "<group>"; };
+		5601FF4A1D48CF7200D03490 /* MediaListDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaListDataDisplayManager.h; sourceTree = "<group>"; };
+		5601FF4B1D48CF7200D03490 /* MediaListDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListDataDisplayManager.m; sourceTree = "<group>"; };
+		5601FF4C1D48CF7200D03490 /* MediaListInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaListInitializer.h; sourceTree = "<group>"; };
+		5601FF4D1D48CF7200D03490 /* MediaListInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListInitializer.m; sourceTree = "<group>"; };
+		5601FF4E1D48CF7200D03490 /* MediaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaListViewController.h; sourceTree = "<group>"; };
+		5601FF4F1D48CF7200D03490 /* MediaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListViewController.m; sourceTree = "<group>"; };
+		5601FF531D48D03700D03490 /* MediaPlainObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlainObject.h; sourceTree = "<group>"; };
+		5601FF541D48D03700D03490 /* MediaPlainObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlainObject.m; sourceTree = "<group>"; };
+		5601FF571D48D7B600D03490 /* CCDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDevicesViewController.h; sourceTree = "<group>"; };
+		5601FF581D48D7B600D03490 /* CCDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDevicesViewController.m; sourceTree = "<group>"; };
+		5601FF591D48D7B600D03490 /* CCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		5601FF5A1D48D7B600D03490 /* CCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		5F1AFF2BBE264F1717F0D1F8 /* Pods-KalturaCCSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaCCSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaCCSample/Pods-KalturaCCSample.debug.xcconfig"; sourceTree = "<group>"; };
+		69CD976E84B3CB5B376DE766 /* Pods-KalturaCCSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaCCSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaCCSample/Pods-KalturaCCSample.release.xcconfig"; sourceTree = "<group>"; };
+		8252C2A8C5BE466370BFF5A4 /* libPods-KalturaCCSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KalturaCCSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5601FF121D48B58A00D03490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5ADF512C44D3E49F0184F6 /* libPods-KalturaCCSample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5601FF0C1D48B58A00D03490 = {
+			isa = PBXGroup;
+			children = (
+				5601FF2F1D48B62800D03490 /* source */,
+				5601FF171D48B58A00D03490 /* KalturaCCSample */,
+				5601FF161D48B58A00D03490 /* Products */,
+				68D7CF342CA4F344DD411B05 /* Pods */,
+				E935432A6DC0FE60A7C9E29A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5601FF161D48B58A00D03490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5601FF151D48B58A00D03490 /* KalturaCCSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5601FF171D48B58A00D03490 /* KalturaCCSample */ = {
+			isa = PBXGroup;
+			children = (
+				5601FF1B1D48B58A00D03490 /* AppDelegate.h */,
+				5601FF1C1D48B58A00D03490 /* AppDelegate.m */,
+				5601FF211D48B58A00D03490 /* Main.storyboard */,
+				5601FF241D48B58A00D03490 /* Assets.xcassets */,
+				5601FF261D48B58A00D03490 /* LaunchScreen.storyboard */,
+				5601FF291D48B58A00D03490 /* Info.plist */,
+				5601FF181D48B58A00D03490 /* Supporting Files */,
+			);
+			path = KalturaCCSample;
+			sourceTree = "<group>";
+		};
+		5601FF181D48B58A00D03490 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5601FF191D48B58A00D03490 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5601FF2F1D48B62800D03490 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				5601FF391D48B7BA00D03490 /* KalturaPlayerHelper */,
+				5601FF561D48D7B600D03490 /* CCModule */,
+				5601FF491D48CF7200D03490 /* MediaListModule */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		5601FF391D48B7BA00D03490 /* KalturaPlayerHelper */ = {
+			isa = PBXGroup;
+			children = (
+				5601FF3D1D48B81100D03490 /* Asset.h */,
+				5601FF3E1D48B81100D03490 /* Asset.m */,
+				5601FF3A1D48B7BA00D03490 /* KalturaPlayerViewController.h */,
+				5601FF3B1D48B7BA00D03490 /* KalturaPlayerViewController.m */,
+			);
+			name = KalturaPlayerHelper;
+			path = KalturaPlayer;
+			sourceTree = "<group>";
+		};
+		5601FF491D48CF7200D03490 /* MediaListModule */ = {
+			isa = PBXGroup;
+			children = (
+				5601FF531D48D03700D03490 /* MediaPlainObject.h */,
+				5601FF541D48D03700D03490 /* MediaPlainObject.m */,
+				5601FF4C1D48CF7200D03490 /* MediaListInitializer.h */,
+				5601FF4D1D48CF7200D03490 /* MediaListInitializer.m */,
+				5601FF4A1D48CF7200D03490 /* MediaListDataDisplayManager.h */,
+				5601FF4B1D48CF7200D03490 /* MediaListDataDisplayManager.m */,
+				5601FF4E1D48CF7200D03490 /* MediaListViewController.h */,
+				5601FF4F1D48CF7200D03490 /* MediaListViewController.m */,
+			);
+			path = MediaListModule;
+			sourceTree = "<group>";
+		};
+		5601FF561D48D7B600D03490 /* CCModule */ = {
+			isa = PBXGroup;
+			children = (
+				5601FF571D48D7B600D03490 /* CCDevicesViewController.h */,
+				5601FF581D48D7B600D03490 /* CCDevicesViewController.m */,
+				5601FF591D48D7B600D03490 /* CCViewController.h */,
+				5601FF5A1D48D7B600D03490 /* CCViewController.m */,
+			);
+			path = CCModule;
+			sourceTree = "<group>";
+		};
+		68D7CF342CA4F344DD411B05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F1AFF2BBE264F1717F0D1F8 /* Pods-KalturaCCSample.debug.xcconfig */,
+				69CD976E84B3CB5B376DE766 /* Pods-KalturaCCSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E935432A6DC0FE60A7C9E29A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8252C2A8C5BE466370BFF5A4 /* libPods-KalturaCCSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5601FF141D48B58A00D03490 /* KalturaCCSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5601FF2C1D48B58A00D03490 /* Build configuration list for PBXNativeTarget "KalturaCCSample" */;
+			buildPhases = (
+				213D4ED778CEC484C675C7F0 /* Check Pods Manifest.lock */,
+				5601FF111D48B58A00D03490 /* Sources */,
+				5601FF121D48B58A00D03490 /* Frameworks */,
+				5601FF131D48B58A00D03490 /* Resources */,
+				03A5F71C6CB60B4E6C719B96 /* Embed Pods Frameworks */,
+				8A0408F15FB5C053E577EFF5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KalturaCCSample;
+			productName = KalturaCCSample;
+			productReference = 5601FF151D48B58A00D03490 /* KalturaCCSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5601FF0D1D48B58A00D03490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Vitaliy Rusinov";
+				TargetAttributes = {
+					5601FF141D48B58A00D03490 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 5601FF101D48B58A00D03490 /* Build configuration list for PBXProject "KalturaCCSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5601FF0C1D48B58A00D03490;
+			productRefGroup = 5601FF161D48B58A00D03490 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5601FF141D48B58A00D03490 /* KalturaCCSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5601FF131D48B58A00D03490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601FF281D48B58A00D03490 /* LaunchScreen.storyboard in Resources */,
+				5601FF251D48B58A00D03490 /* Assets.xcassets in Resources */,
+				5601FF231D48B58A00D03490 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03A5F71C6CB60B4E6C719B96 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaCCSample/Pods-KalturaCCSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		213D4ED778CEC484C675C7F0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A0408F15FB5C053E577EFF5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaCCSample/Pods-KalturaCCSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5601FF111D48B58A00D03490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5601FF5C1D48D7B600D03490 /* CCViewController.m in Sources */,
+				5601FF3C1D48B7BA00D03490 /* KalturaPlayerViewController.m in Sources */,
+				5601FF511D48CF7200D03490 /* MediaListInitializer.m in Sources */,
+				5601FF3F1D48B81100D03490 /* Asset.m in Sources */,
+				5601FF521D48CF7200D03490 /* MediaListViewController.m in Sources */,
+				5601FF551D48D03700D03490 /* MediaPlainObject.m in Sources */,
+				5601FF1D1D48B58A00D03490 /* AppDelegate.m in Sources */,
+				5601FF5B1D48D7B600D03490 /* CCDevicesViewController.m in Sources */,
+				5601FF1A1D48B58A00D03490 /* main.m in Sources */,
+				5601FF501D48CF7200D03490 /* MediaListDataDisplayManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5601FF211D48B58A00D03490 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5601FF221D48B58A00D03490 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5601FF261D48B58A00D03490 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5601FF271D48B58A00D03490 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5601FF2A1D48B58A00D03490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5601FF2B1D48B58A00D03490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5601FF2D1D48B58A00D03490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1AFF2BBE264F1717F0D1F8 /* Pods-KalturaCCSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KalturaCCSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaCCSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5601FF2E1D48B58A00D03490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69CD976E84B3CB5B376DE766 /* Pods-KalturaCCSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KalturaCCSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaCCSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5601FF101D48B58A00D03490 /* Build configuration list for PBXProject "KalturaCCSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5601FF2A1D48B58A00D03490 /* Debug */,
+				5601FF2B1D48B58A00D03490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5601FF2C1D48B58A00D03490 /* Build configuration list for PBXNativeTarget "KalturaCCSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5601FF2D1D48B58A00D03490 /* Debug */,
+				5601FF2E1D48B58A00D03490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5601FF0D1D48B58A00D03490 /* Project object */;
+}
