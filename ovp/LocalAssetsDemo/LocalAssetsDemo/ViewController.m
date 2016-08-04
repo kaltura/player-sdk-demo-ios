@@ -168,6 +168,7 @@ static KPPlayerConfig* configForDemoAsset(Asset* asset) {
         
         _kpv = kpv;
     } else {
+        [_kpv resetPlayer];
         [_kpv changeConfiguration:configForDemoAsset(self.selectedAsset)];
     }
 }
