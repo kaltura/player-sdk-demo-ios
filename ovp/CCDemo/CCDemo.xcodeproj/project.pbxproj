@@ -28,36 +28,12 @@
 		5F3880401D002DD8001F1928 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */; };
 		5F3880421D002DEB001F1928 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880411D002DEB001F1928 /* libc++.tbd */; };
 		5F3880441D002DFA001F1928 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880431D002DFA001F1928 /* MediaPlayer.framework */; };
-		5FD85F541D0186C600CA75D2 /* libKALTURAPlayerSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD85F4F1D0186AE00CA75D2 /* libKALTURAPlayerSDK.a */; };
-		5FD85F551D0186D100CA75D2 /* KALTURAPlayerSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5FD85F511D0186AE00CA75D2 /* KALTURAPlayerSDKResources.bundle */; };
-		5FD85F6D1D01B4F700CA75D2 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD85F6C1D01B4F700CA75D2 /* GoogleCast.framework */; };
+		84180E229471444BD80D2803 /* libPods-CCDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C6BCB72C04F65032CF3302 /* libPods-CCDemo.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5FD85F4E1D0186AE00CA75D2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5FD85F471D0186AE00CA75D2 /* KALTURAPlayerSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BFFFA727182F9E31005B3B24;
-			remoteInfo = KALTURAPlayerSDK;
-		};
-		5FD85F501D0186AE00CA75D2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5FD85F471D0186AE00CA75D2 /* KALTURAPlayerSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B372892E1A8787D00076DD33;
-			remoteInfo = KALTURAPlayerSDKResources;
-		};
-		5FD85F521D0186BE00CA75D2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5FD85F471D0186AE00CA75D2 /* KALTURAPlayerSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BFFFA726182F9E31005B3B24;
-			remoteInfo = KALTURAPlayerSDK;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		2DE87E4CF03BFC0B724869ED /* Pods-CCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCDemo/Pods-CCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		30C6BCB72C04F65032CF3302 /* libPods-CCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F387FF01D002B19001F1928 /* CCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F387FF41D002B19001F1928 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F387FF61D002B19001F1928 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,8 +61,8 @@
 		5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		5F3880411D002DEB001F1928 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5F3880431D002DFA001F1928 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		5FD85F471D0186AE00CA75D2 /* KALTURAPlayerSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KALTURAPlayerSDK.xcodeproj; path = "../../../player-sdk-native-ios/KALTURAPlayerSDK.xcodeproj"; sourceTree = "<group>"; };
 		5FD85F6C1D01B4F700CA75D2 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleCast.framework; sourceTree = "<group>"; };
+		F94A1947C38A47FF2A9F7661 /* Pods-CCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCDemo/Pods-CCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FD85F6D1D01B4F700CA75D2 /* GoogleCast.framework in Frameworks */,
-				5FD85F541D0186C600CA75D2 /* libKALTURAPlayerSDK.a in Frameworks */,
 				5F3880441D002DFA001F1928 /* MediaPlayer.framework in Frameworks */,
 				5F3880421D002DEB001F1928 /* libc++.tbd in Frameworks */,
 				5F3880401D002DD8001F1928 /* MediaAccessibility.framework in Frameworks */,
@@ -108,17 +82,25 @@
 				5F3880301D002C97001F1928 /* libz.tbd in Frameworks */,
 				5F38802E1D002C84001F1928 /* libxml2.2.tbd in Frameworks */,
 				5F3880251D002BA8001F1928 /* AVFoundation.framework in Frameworks */,
+				84180E229471444BD80D2803 /* libPods-CCDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3645E93648BBA08C8FA6BF30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C6BCB72C04F65032CF3302 /* libPods-CCDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F387FE71D002B19001F1928 = {
 			isa = PBXGroup;
 			children = (
 				5FD85F6C1D01B4F700CA75D2 /* GoogleCast.framework */,
-				5FD85F471D0186AE00CA75D2 /* KALTURAPlayerSDK.xcodeproj */,
 				5F3880431D002DFA001F1928 /* MediaPlayer.framework */,
 				5F3880411D002DEB001F1928 /* libc++.tbd */,
 				5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */,
@@ -133,6 +115,8 @@
 				5F3880241D002BA8001F1928 /* AVFoundation.framework */,
 				5F387FF21D002B19001F1928 /* CCDemo */,
 				5F387FF11D002B19001F1928 /* Products */,
+				65FD4D826185821E2521A12E /* Pods */,
+				3645E93648BBA08C8FA6BF30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,13 +157,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5FD85F481D0186AE00CA75D2 /* Products */ = {
+		65FD4D826185821E2521A12E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5FD85F4F1D0186AE00CA75D2 /* libKALTURAPlayerSDK.a */,
-				5FD85F511D0186AE00CA75D2 /* KALTURAPlayerSDKResources.bundle */,
+				F94A1947C38A47FF2A9F7661 /* Pods-CCDemo.debug.xcconfig */,
+				2DE87E4CF03BFC0B724869ED /* Pods-CCDemo.release.xcconfig */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,14 +173,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F3880071D002B19001F1928 /* Build configuration list for PBXNativeTarget "CCDemo" */;
 			buildPhases = (
+				50658791AAC0724D6FFC4768 /* [CP] Check Pods Manifest.lock */,
 				5F387FEC1D002B19001F1928 /* Sources */,
 				5F387FED1D002B19001F1928 /* Frameworks */,
 				5F387FEE1D002B19001F1928 /* Resources */,
+				3BE639426B0C8E19BD3FA816 /* [CP] Embed Pods Frameworks */,
+				B24B7D511646237B77C7C571 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FD85F531D0186BE00CA75D2 /* PBXTargetDependency */,
 			);
 			name = CCDemo;
 			productName = CCDemo;
@@ -229,12 +215,6 @@
 			mainGroup = 5F387FE71D002B19001F1928;
 			productRefGroup = 5F387FF11D002B19001F1928 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5FD85F481D0186AE00CA75D2 /* Products */;
-					ProjectRef = 5FD85F471D0186AE00CA75D2 /* KALTURAPlayerSDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5F387FEF1D002B19001F1928 /* CCDemo */,
@@ -242,29 +222,11 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		5FD85F4F1D0186AE00CA75D2 /* libKALTURAPlayerSDK.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKALTURAPlayerSDK.a;
-			remoteRef = 5FD85F4E1D0186AE00CA75D2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5FD85F511D0186AE00CA75D2 /* KALTURAPlayerSDKResources.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = KALTURAPlayerSDKResources.bundle;
-			remoteRef = 5FD85F501D0186AE00CA75D2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		5F387FEE1D002B19001F1928 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FD85F551D0186D100CA75D2 /* KALTURAPlayerSDKResources.bundle in Resources */,
 				5F38802C1D002C0D001F1928 /* Main.storyboard in Resources */,
 				5F3880031D002B19001F1928 /* LaunchScreen.storyboard in Resources */,
 				5F38803C1D002D97001F1928 /* Icons.xcassets in Resources */,
@@ -273,6 +235,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BE639426B0C8E19BD3FA816 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCDemo/Pods-CCDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50658791AAC0724D6FFC4768 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B24B7D511646237B77C7C571 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCDemo/Pods-CCDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F387FEC1D002B19001F1928 /* Sources */ = {
@@ -288,14 +298,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5FD85F531D0186BE00CA75D2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KALTURAPlayerSDK;
-			targetProxy = 5FD85F521D0186BE00CA75D2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F3880011D002B19001F1928 /* LaunchScreen.storyboard */ = {
@@ -395,6 +397,7 @@
 		};
 		5F3880081D002B19001F1928 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F94A1947C38A47FF2A9F7661 /* Pods-CCDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -407,7 +410,7 @@
 				);
 				INFOPLIST_FILE = CCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.CCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -416,6 +419,7 @@
 		};
 		5F3880091D002B19001F1928 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE87E4CF03BFC0B724869ED /* Pods-CCDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -428,7 +432,7 @@
 				);
 				INFOPLIST_FILE = CCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.CCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

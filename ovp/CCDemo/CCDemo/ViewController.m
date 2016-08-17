@@ -29,7 +29,7 @@
 
 - (IBAction)loadPlayer:(UIButton *)sender {
         if (!_player) {
-            KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"http://192.168.161.88/html5.kaltura/mwEmbed/mwEmbedFrame.php?debugKalturaPlayer"
+            KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"http://cdnapi.kaltura.com"
                                                                    uiConfID:@"31638861"
                                                                   partnerId:@"1831271"];
             config.entryId = @"1_o426d3i4";
