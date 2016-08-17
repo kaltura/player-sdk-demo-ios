@@ -1,0 +1,10 @@
+PODS:
+  - KalturaPlayerSDK (2.3.5)
+
+DEPENDENCIES:
+  - KalturaPlayerSDK
+
+SPEC CHECKSUMS:
+  KalturaPlayerSDK: fa1f7619cce1e28e02a5c8fc6f00747affce0f4b
+
+COCOAPODS: 0.39.0
