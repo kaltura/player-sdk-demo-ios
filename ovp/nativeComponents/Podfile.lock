@@ -1,0 +1,25 @@
+PODS:
+  - google-cast-sdk (2.10.4.1):
+    - google-cast-sdk/Assets (= 2.10.4.1)
+    - google-cast-sdk/Core (= 2.10.4.1)
+  - google-cast-sdk/Assets (2.10.4.1):
+    - google-cast-sdk/Core
+  - google-cast-sdk/Core (2.10.4.1)
+  - Google-Mobile-Ads-SDK (7.8.1)
+  - GoogleAds-IMA-iOS-SDK-For-AdMob (3.2.1):
+    - Google-Mobile-Ads-SDK (~> 7.0)
+  - KalturaPlayerSDK (2.3.5)
+
+DEPENDENCIES:
+  - google-cast-sdk
+  - Google-Mobile-Ads-SDK
+  - GoogleAds-IMA-iOS-SDK-For-AdMob (~> 3.0.beta.16)
+  - KalturaPlayerSDK
+
+SPEC CHECKSUMS:
+  google-cast-sdk: 30f3b61691d833024c10c78811f6d96a831e754a
+  Google-Mobile-Ads-SDK: 3c2a6656117989469bfe7645640aa1de024a4c6c
+  GoogleAds-IMA-iOS-SDK-For-AdMob: 27e9733127235d4343205576f91d8afeb84aaa3a
+  KalturaPlayerSDK: fa1f7619cce1e28e02a5c8fc6f00747affce0f4b
+
+COCOAPODS: 0.39.0
