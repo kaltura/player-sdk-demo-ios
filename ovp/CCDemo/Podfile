@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'CCDemo' do
-pod 'KalturaPlayerSDK'      , :path => '../../../player-sdk-native-ios'
+pod 'KalturaPlayerSDK'     # , :path => '../../../player-sdk-native-ios'
 pod 'google-cast-sdk' , '~> 2.10.4’
 end
 
