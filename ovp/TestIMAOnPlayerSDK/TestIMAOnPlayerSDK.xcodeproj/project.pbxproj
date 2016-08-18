@@ -157,6 +157,7 @@
 				TargetAttributes = {
 					BF930F171C0D04400075EDE8 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = AMGTA68RNT;
 					};
 				};
 			};
@@ -359,11 +360,13 @@
 			baseConfigurationReference = A0AFEA0E4247E8AFF8580F7C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TestIMAOnPlayerSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.TestIMAOnPlayerSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -372,11 +375,13 @@
 			baseConfigurationReference = 7F38393F9A0D2D30E44CB22B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TestIMAOnPlayerSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.TestIMAOnPlayerSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

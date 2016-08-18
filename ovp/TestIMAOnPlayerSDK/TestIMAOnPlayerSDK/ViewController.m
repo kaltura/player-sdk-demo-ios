@@ -26,23 +26,20 @@
 
 - (KPViewController *)player {
     if (!_player) {
-        NSString *adTagUrl = @"http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator=[timestamp]";
         
         // Account Params
-        KPPlayerConfig *config = config = [[KPPlayerConfig alloc] initWithDomain:@"http://cdnapi.kaltura.com"
-                                                                        uiConfID:@"26698911"
-                                                                       partnerId:@"1831271"];
+        KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer: @"http://cdnapi.kaltura.com"
+                                                               uiConfID: @"35815611"
+                                                              partnerId: @"2164401"];
         
-        [config addConfigKey:@"doubleClick.adTagUrl"        withValue:adTagUrl];
-        [config addConfigKey:@"doubleClick.plugin"          withValue:@"true"];
-        [config addConfigKey:@"doubleClick.leadWithFlash"   withValue:@"false"];
+        NSString *adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
         
-        
+        [config addConfigKey:@"doubleClick.adTagUrl" withValue:adTagUrl];
+        [config addConfigKey:@"doubleClick.plugin" withValue:@"true"];
+
         // Video Entry
-        config.entryId = @"1_1fncksnw";
+        config.entryId = @"1_jqt5xrs1";
         
-        // Setting this property will cache the html pages in the limit size
-        config.cacheSize = 0.8;
         _player = [[KPViewController alloc] initWithConfiguration:config];
     }
     return _player;

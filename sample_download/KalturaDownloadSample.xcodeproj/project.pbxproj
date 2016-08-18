@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36A2319A9947F028F59E9111 /* libPods-KalturaDownloadSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A638FA1D4FD0EA058158BF6 /* libPods-KalturaDownloadSample.a */; };
+		56B0D6F91D65EB9400E0F59A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0D6F81D65EB9400E0F59A /* main.m */; };
+		56B0D6FC1D65EB9400E0F59A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0D6FB1D65EB9400E0F59A /* AppDelegate.m */; };
+		56B0D6FF1D65EB9400E0F59A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0D6FE1D65EB9400E0F59A /* ViewController.m */; };
+		56B0D7021D65EB9400E0F59A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B0D7001D65EB9400E0F59A /* Main.storyboard */; };
+		56B0D7041D65EB9400E0F59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B0D7031D65EB9400E0F59A /* Assets.xcassets */; };
+		56B0D7071D65EB9400E0F59A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B0D7051D65EB9400E0F59A /* LaunchScreen.storyboard */; };
+		56B0D7201D65F22500E0F59A /* MediaListDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0D7191D65F22500E0F59A /* MediaListDataDisplayManager.m */; };
+		56B0D7211D65F22500E0F59A /* MediaListInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0D71B1D65F22500E0F59A /* MediaListInitializer.m */; };
+		56B0D7221D65F22500E0F59A /* MediaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0D71D1D65F22500E0F59A /* MediaListViewController.m */; };
+		56B0D7231D65F22500E0F59A /* MediaPlainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0D71F1D65F22500E0F59A /* MediaPlainObject.m */; };
+		56B0D7261D65FD3D00E0F59A /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0D7251D65FD3D00E0F59A /* PlayerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		56B0D6F41D65EB9400E0F59A /* KalturaDownloadSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KalturaDownloadSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B0D6F81D65EB9400E0F59A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56B0D6FA1D65EB9400E0F59A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		56B0D6FB1D65EB9400E0F59A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		56B0D6FD1D65EB9400E0F59A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		56B0D6FE1D65EB9400E0F59A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		56B0D7011D65EB9400E0F59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56B0D7031D65EB9400E0F59A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56B0D7061D65EB9400E0F59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56B0D7081D65EB9400E0F59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B0D7181D65F22500E0F59A /* MediaListDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaListDataDisplayManager.h; sourceTree = "<group>"; };
+		56B0D7191D65F22500E0F59A /* MediaListDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListDataDisplayManager.m; sourceTree = "<group>"; };
+		56B0D71A1D65F22500E0F59A /* MediaListInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaListInitializer.h; sourceTree = "<group>"; };
+		56B0D71B1D65F22500E0F59A /* MediaListInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListInitializer.m; sourceTree = "<group>"; };
+		56B0D71C1D65F22500E0F59A /* MediaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaListViewController.h; sourceTree = "<group>"; };
+		56B0D71D1D65F22500E0F59A /* MediaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListViewController.m; sourceTree = "<group>"; };
+		56B0D71E1D65F22500E0F59A /* MediaPlainObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlainObject.h; sourceTree = "<group>"; };
+		56B0D71F1D65F22500E0F59A /* MediaPlainObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlainObject.m; sourceTree = "<group>"; };
+		56B0D7241D65FD3D00E0F59A /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		56B0D7251D65FD3D00E0F59A /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		8A638FA1D4FD0EA058158BF6 /* libPods-KalturaDownloadSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KalturaDownloadSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B485B9FB021CC5345116362F /* Pods-KalturaDownloadSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaDownloadSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaDownloadSample/Pods-KalturaDownloadSample.debug.xcconfig"; sourceTree = "<group>"; };
+		D2AD3DD302745AEA801E73B0 /* Pods-KalturaDownloadSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaDownloadSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaDownloadSample/Pods-KalturaDownloadSample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56B0D6F11D65EB9400E0F59A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A2319A9947F028F59E9111 /* libPods-KalturaDownloadSample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32325915A53F4245EDE4BD9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A638FA1D4FD0EA058158BF6 /* libPods-KalturaDownloadSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56B0D6EB1D65EB9400E0F59A = {
+			isa = PBXGroup;
+			children = (
+				56B0D70E1D65EF2A00E0F59A /* source */,
+				56B0D6F61D65EB9400E0F59A /* KalturaDownloadSample */,
+				56B0D6F51D65EB9400E0F59A /* Products */,
+				C4BF0EB781AF6EA3EF48110F /* Pods */,
+				32325915A53F4245EDE4BD9D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		56B0D6F51D65EB9400E0F59A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56B0D6F41D65EB9400E0F59A /* KalturaDownloadSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56B0D6F61D65EB9400E0F59A /* KalturaDownloadSample */ = {
+			isa = PBXGroup;
+			children = (
+				56B0D6FA1D65EB9400E0F59A /* AppDelegate.h */,
+				56B0D6FB1D65EB9400E0F59A /* AppDelegate.m */,
+				56B0D6FD1D65EB9400E0F59A /* ViewController.h */,
+				56B0D6FE1D65EB9400E0F59A /* ViewController.m */,
+				56B0D7001D65EB9400E0F59A /* Main.storyboard */,
+				56B0D7031D65EB9400E0F59A /* Assets.xcassets */,
+				56B0D7051D65EB9400E0F59A /* LaunchScreen.storyboard */,
+				56B0D7081D65EB9400E0F59A /* Info.plist */,
+				56B0D6F71D65EB9400E0F59A /* Supporting Files */,
+			);
+			path = KalturaDownloadSample;
+			sourceTree = "<group>";
+		};
+		56B0D6F71D65EB9400E0F59A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56B0D6F81D65EB9400E0F59A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56B0D70E1D65EF2A00E0F59A /* source */ = {
+			isa = PBXGroup;
+			children = (
+				56B0D7171D65F22500E0F59A /* MediaListModule */,
+				56B0D7101D65EF2A00E0F59A /* PlayerModule */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		56B0D7101D65EF2A00E0F59A /* PlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				56B0D7241D65FD3D00E0F59A /* PlayerViewController.h */,
+				56B0D7251D65FD3D00E0F59A /* PlayerViewController.m */,
+			);
+			path = PlayerModule;
+			sourceTree = "<group>";
+		};
+		56B0D7171D65F22500E0F59A /* MediaListModule */ = {
+			isa = PBXGroup;
+			children = (
+				56B0D7181D65F22500E0F59A /* MediaListDataDisplayManager.h */,
+				56B0D7191D65F22500E0F59A /* MediaListDataDisplayManager.m */,
+				56B0D71A1D65F22500E0F59A /* MediaListInitializer.h */,
+				56B0D71B1D65F22500E0F59A /* MediaListInitializer.m */,
+				56B0D71C1D65F22500E0F59A /* MediaListViewController.h */,
+				56B0D71D1D65F22500E0F59A /* MediaListViewController.m */,
+				56B0D71E1D65F22500E0F59A /* MediaPlainObject.h */,
+				56B0D71F1D65F22500E0F59A /* MediaPlainObject.m */,
+			);
+			path = MediaListModule;
+			sourceTree = "<group>";
+		};
+		C4BF0EB781AF6EA3EF48110F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B485B9FB021CC5345116362F /* Pods-KalturaDownloadSample.debug.xcconfig */,
+				D2AD3DD302745AEA801E73B0 /* Pods-KalturaDownloadSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56B0D6F31D65EB9400E0F59A /* KalturaDownloadSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56B0D70B1D65EB9400E0F59A /* Build configuration list for PBXNativeTarget "KalturaDownloadSample" */;
+			buildPhases = (
+				130989776E884788FFF3C184 /* Check Pods Manifest.lock */,
+				56B0D6F01D65EB9400E0F59A /* Sources */,
+				56B0D6F11D65EB9400E0F59A /* Frameworks */,
+				56B0D6F21D65EB9400E0F59A /* Resources */,
+				AEDB083739BFE5AD24FAE9B1 /* Embed Pods Frameworks */,
+				1E077F101ECA906E4C5B1FDC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KalturaDownloadSample;
+			productName = KalturaDownloadSample;
+			productReference = 56B0D6F41D65EB9400E0F59A /* KalturaDownloadSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56B0D6EC1D65EB9400E0F59A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Vitaliy Rusinov";
+				TargetAttributes = {
+					56B0D6F31D65EB9400E0F59A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 56B0D6EF1D65EB9400E0F59A /* Build configuration list for PBXProject "KalturaDownloadSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56B0D6EB1D65EB9400E0F59A;
+			productRefGroup = 56B0D6F51D65EB9400E0F59A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56B0D6F31D65EB9400E0F59A /* KalturaDownloadSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56B0D6F21D65EB9400E0F59A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B0D7071D65EB9400E0F59A /* LaunchScreen.storyboard in Resources */,
+				56B0D7041D65EB9400E0F59A /* Assets.xcassets in Resources */,
+				56B0D7021D65EB9400E0F59A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		130989776E884788FFF3C184 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1E077F101ECA906E4C5B1FDC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaDownloadSample/Pods-KalturaDownloadSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEDB083739BFE5AD24FAE9B1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaDownloadSample/Pods-KalturaDownloadSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56B0D6F01D65EB9400E0F59A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B0D6FF1D65EB9400E0F59A /* ViewController.m in Sources */,
+				56B0D6FC1D65EB9400E0F59A /* AppDelegate.m in Sources */,
+				56B0D6F91D65EB9400E0F59A /* main.m in Sources */,
+				56B0D7221D65F22500E0F59A /* MediaListViewController.m in Sources */,
+				56B0D7231D65F22500E0F59A /* MediaPlainObject.m in Sources */,
+				56B0D7261D65FD3D00E0F59A /* PlayerViewController.m in Sources */,
+				56B0D7201D65F22500E0F59A /* MediaListDataDisplayManager.m in Sources */,
+				56B0D7211D65F22500E0F59A /* MediaListInitializer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		56B0D7001D65EB9400E0F59A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56B0D7011D65EB9400E0F59A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		56B0D7051D65EB9400E0F59A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56B0D7061D65EB9400E0F59A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56B0D7091D65EB9400E0F59A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56B0D70A1D65EB9400E0F59A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56B0D70C1D65EB9400E0F59A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B485B9FB021CC5345116362F /* Pods-KalturaDownloadSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KalturaDownloadSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaDownloadSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		56B0D70D1D65EB9400E0F59A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2AD3DD302745AEA801E73B0 /* Pods-KalturaDownloadSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KalturaDownloadSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaDownloadSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56B0D6EF1D65EB9400E0F59A /* Build configuration list for PBXProject "KalturaDownloadSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56B0D7091D65EB9400E0F59A /* Debug */,
+				56B0D70A1D65EB9400E0F59A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56B0D70B1D65EB9400E0F59A /* Build configuration list for PBXNativeTarget "KalturaDownloadSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56B0D70C1D65EB9400E0F59A /* Debug */,
+				56B0D70D1D65EB9400E0F59A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56B0D6EC1D65EB9400E0F59A /* Project object */;
+}

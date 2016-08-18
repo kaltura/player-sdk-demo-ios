@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EAA31AC7D969C481D162371 /* libPods-KalturaSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F11D1A98D5AEF3EF78BD193 /* libPods-KalturaSample.a */; };
+		DF5CCFFA1D3F9EBC0004DB8C /* CCDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5CCFF91D3F9EBC0004DB8C /* CCDevicesViewController.m */; };
+		DFAA47491D3F5EE80098E78D /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAA47481D3F5EE80098E78D /* CCViewController.m */; };
+		DFE62BEA1D3D08E200DE0529 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62BE91D3D08E200DE0529 /* main.m */; };
+		DFE62BED1D3D08E200DE0529 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62BEC1D3D08E200DE0529 /* AppDelegate.m */; };
+		DFE62BF01D3D08E200DE0529 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62BEF1D3D08E200DE0529 /* ViewController.m */; };
+		DFE62BF31D3D08E200DE0529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE62BF11D3D08E200DE0529 /* Main.storyboard */; };
+		DFE62BF51D3D08E200DE0529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE62BF41D3D08E200DE0529 /* Assets.xcassets */; };
+		DFE62BF81D3D08E200DE0529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE62BF61D3D08E200DE0529 /* LaunchScreen.storyboard */; };
+		DFE62C031D3D08E200DE0529 /* KalturaSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62C021D3D08E200DE0529 /* KalturaSampleTests.m */; };
+		DFE62C0E1D3D08E200DE0529 /* KalturaSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62C0D1D3D08E200DE0529 /* KalturaSampleUITests.m */; };
+		DFE62C1F1D3D091B00DE0529 /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62C1C1D3D091B00DE0529 /* Asset.m */; };
+		DFE62C201D3D091B00DE0529 /* OfflineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62C1E1D3D091B00DE0529 /* OfflineViewController.m */; };
+		DFE62C271D3E27F900DE0529 /* HTMLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62C221D3E27F900DE0529 /* HTMLPlayerViewController.m */; };
+		DFE62C281D3E27F900DE0529 /* KalturaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62C241D3E27F900DE0529 /* KalturaPlayerViewController.m */; };
+		DFE62C291D3E27F900DE0529 /* NativePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE62C261D3E27F900DE0529 /* NativePlayerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFE62BFF1D3D08E200DE0529 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE62BDD1D3D08E200DE0529 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFE62BE41D3D08E200DE0529;
+			remoteInfo = KalturaSample;
+		};
+		DFE62C0A1D3D08E200DE0529 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE62BDD1D3D08E200DE0529 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFE62BE41D3D08E200DE0529;
+			remoteInfo = KalturaSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F11D1A98D5AEF3EF78BD193 /* libPods-KalturaSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KalturaSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20913759567B80545980ADFB /* Pods-KalturaSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaSample/Pods-KalturaSample.release.xcconfig"; sourceTree = "<group>"; };
+		77B72DC53F1A9ACD20D306E6 /* Pods-KalturaSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaSample/Pods-KalturaSample.debug.xcconfig"; sourceTree = "<group>"; };
+		DF5CCFF81D3F9EBC0004DB8C /* CCDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDevicesViewController.h; sourceTree = "<group>"; };
+		DF5CCFF91D3F9EBC0004DB8C /* CCDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDevicesViewController.m; sourceTree = "<group>"; };
+		DFAA47471D3F5EE80098E78D /* CCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		DFAA47481D3F5EE80098E78D /* CCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		DFE62BE51D3D08E200DE0529 /* KalturaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KalturaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE62BE91D3D08E200DE0529 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DFE62BEB1D3D08E200DE0529 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DFE62BEC1D3D08E200DE0529 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DFE62BEE1D3D08E200DE0529 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DFE62BEF1D3D08E200DE0529 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DFE62BF21D3D08E200DE0529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFE62BF41D3D08E200DE0529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFE62BF71D3D08E200DE0529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFE62BF91D3D08E200DE0529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE62BFE1D3D08E200DE0529 /* KalturaSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KalturaSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE62C021D3D08E200DE0529 /* KalturaSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KalturaSampleTests.m; sourceTree = "<group>"; };
+		DFE62C041D3D08E200DE0529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE62C091D3D08E200DE0529 /* KalturaSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KalturaSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE62C0D1D3D08E200DE0529 /* KalturaSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KalturaSampleUITests.m; sourceTree = "<group>"; };
+		DFE62C0F1D3D08E200DE0529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE62C1B1D3D091B00DE0529 /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
+		DFE62C1C1D3D091B00DE0529 /* Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Asset.m; sourceTree = "<group>"; };
+		DFE62C1D1D3D091B00DE0529 /* OfflineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineViewController.h; sourceTree = "<group>"; };
+		DFE62C1E1D3D091B00DE0529 /* OfflineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineViewController.m; sourceTree = "<group>"; };
+		DFE62C211D3E27F900DE0529 /* HTMLPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLPlayerViewController.h; sourceTree = "<group>"; };
+		DFE62C221D3E27F900DE0529 /* HTMLPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLPlayerViewController.m; sourceTree = "<group>"; };
+		DFE62C231D3E27F900DE0529 /* KalturaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalturaPlayerViewController.h; sourceTree = "<group>"; };
+		DFE62C241D3E27F900DE0529 /* KalturaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalturaPlayerViewController.m; sourceTree = "<group>"; };
+		DFE62C251D3E27F900DE0529 /* NativePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativePlayerViewController.h; sourceTree = "<group>"; };
+		DFE62C261D3E27F900DE0529 /* NativePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativePlayerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFE62BE21D3D08E200DE0529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EAA31AC7D969C481D162371 /* libPods-KalturaSample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE62BFB1D3D08E200DE0529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE62C061D3D08E200DE0529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54946FB40B52B17C3DB169D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F11D1A98D5AEF3EF78BD193 /* libPods-KalturaSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5EA26E49B6BEBF4A3A21566 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77B72DC53F1A9ACD20D306E6 /* Pods-KalturaSample.debug.xcconfig */,
+				20913759567B80545980ADFB /* Pods-KalturaSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFE62BDC1D3D08E200DE0529 = {
+			isa = PBXGroup;
+			children = (
+				DFE62BE71D3D08E200DE0529 /* KalturaSample */,
+				DFE62C011D3D08E200DE0529 /* KalturaSampleTests */,
+				DFE62C0C1D3D08E200DE0529 /* KalturaSampleUITests */,
+				DFE62BE61D3D08E200DE0529 /* Products */,
+				C5EA26E49B6BEBF4A3A21566 /* Pods */,
+				54946FB40B52B17C3DB169D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DFE62BE61D3D08E200DE0529 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFE62BE51D3D08E200DE0529 /* KalturaSample.app */,
+				DFE62BFE1D3D08E200DE0529 /* KalturaSampleTests.xctest */,
+				DFE62C091D3D08E200DE0529 /* KalturaSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFE62BE71D3D08E200DE0529 /* KalturaSample */ = {
+			isa = PBXGroup;
+			children = (
+				DFE62BEB1D3D08E200DE0529 /* AppDelegate.h */,
+				DFE62BEC1D3D08E200DE0529 /* AppDelegate.m */,
+				DFE62BEE1D3D08E200DE0529 /* ViewController.h */,
+				DFE62BEF1D3D08E200DE0529 /* ViewController.m */,
+				DFE62C1B1D3D091B00DE0529 /* Asset.h */,
+				DFE62C1C1D3D091B00DE0529 /* Asset.m */,
+				DFE62C231D3E27F900DE0529 /* KalturaPlayerViewController.h */,
+				DFE62C241D3E27F900DE0529 /* KalturaPlayerViewController.m */,
+				DFE62C1D1D3D091B00DE0529 /* OfflineViewController.h */,
+				DFE62C1E1D3D091B00DE0529 /* OfflineViewController.m */,
+				DFE62C251D3E27F900DE0529 /* NativePlayerViewController.h */,
+				DFE62C261D3E27F900DE0529 /* NativePlayerViewController.m */,
+				DFE62C211D3E27F900DE0529 /* HTMLPlayerViewController.h */,
+				DFE62C221D3E27F900DE0529 /* HTMLPlayerViewController.m */,
+				DFAA47471D3F5EE80098E78D /* CCViewController.h */,
+				DFAA47481D3F5EE80098E78D /* CCViewController.m */,
+				DF5CCFF81D3F9EBC0004DB8C /* CCDevicesViewController.h */,
+				DF5CCFF91D3F9EBC0004DB8C /* CCDevicesViewController.m */,
+				DFE62BF11D3D08E200DE0529 /* Main.storyboard */,
+				DFE62BF41D3D08E200DE0529 /* Assets.xcassets */,
+				DFE62BF61D3D08E200DE0529 /* LaunchScreen.storyboard */,
+				DFE62BF91D3D08E200DE0529 /* Info.plist */,
+				DFE62BE81D3D08E200DE0529 /* Supporting Files */,
+			);
+			path = KalturaSample;
+			sourceTree = "<group>";
+		};
+		DFE62BE81D3D08E200DE0529 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFE62BE91D3D08E200DE0529 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFE62C011D3D08E200DE0529 /* KalturaSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFE62C021D3D08E200DE0529 /* KalturaSampleTests.m */,
+				DFE62C041D3D08E200DE0529 /* Info.plist */,
+			);
+			path = KalturaSampleTests;
+			sourceTree = "<group>";
+		};
+		DFE62C0C1D3D08E200DE0529 /* KalturaSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DFE62C0D1D3D08E200DE0529 /* KalturaSampleUITests.m */,
+				DFE62C0F1D3D08E200DE0529 /* Info.plist */,
+			);
+			path = KalturaSampleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFE62BE41D3D08E200DE0529 /* KalturaSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE62C121D3D08E200DE0529 /* Build configuration list for PBXNativeTarget "KalturaSample" */;
+			buildPhases = (
+				5677CF0B3EB4EE6D1ADE7A03 /* Check Pods Manifest.lock */,
+				DFE62BE11D3D08E200DE0529 /* Sources */,
+				DFE62BE21D3D08E200DE0529 /* Frameworks */,
+				DFE62BE31D3D08E200DE0529 /* Resources */,
+				E0D4E66D78A353CEDFDF2F4C /* Embed Pods Frameworks */,
+				AC4BBCCE88E7C765BD911ECA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KalturaSample;
+			productName = KalturaSample;
+			productReference = DFE62BE51D3D08E200DE0529 /* KalturaSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFE62BFD1D3D08E200DE0529 /* KalturaSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE62C151D3D08E200DE0529 /* Build configuration list for PBXNativeTarget "KalturaSampleTests" */;
+			buildPhases = (
+				DFE62BFA1D3D08E200DE0529 /* Sources */,
+				DFE62BFB1D3D08E200DE0529 /* Frameworks */,
+				DFE62BFC1D3D08E200DE0529 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFE62C001D3D08E200DE0529 /* PBXTargetDependency */,
+			);
+			name = KalturaSampleTests;
+			productName = KalturaSampleTests;
+			productReference = DFE62BFE1D3D08E200DE0529 /* KalturaSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DFE62C081D3D08E200DE0529 /* KalturaSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE62C181D3D08E200DE0529 /* Build configuration list for PBXNativeTarget "KalturaSampleUITests" */;
+			buildPhases = (
+				DFE62C051D3D08E200DE0529 /* Sources */,
+				DFE62C061D3D08E200DE0529 /* Frameworks */,
+				DFE62C071D3D08E200DE0529 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFE62C0B1D3D08E200DE0529 /* PBXTargetDependency */,
+			);
+			name = KalturaSampleUITests;
+			productName = KalturaSampleUITests;
+			productReference = DFE62C091D3D08E200DE0529 /* KalturaSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFE62BDD1D3D08E200DE0529 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Vitaliy Rusinov";
+				TargetAttributes = {
+					DFE62BE41D3D08E200DE0529 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					DFE62BFD1D3D08E200DE0529 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DFE62BE41D3D08E200DE0529;
+					};
+					DFE62C081D3D08E200DE0529 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DFE62BE41D3D08E200DE0529;
+					};
+				};
+			};
+			buildConfigurationList = DFE62BE01D3D08E200DE0529 /* Build configuration list for PBXProject "KalturaSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFE62BDC1D3D08E200DE0529;
+			productRefGroup = DFE62BE61D3D08E200DE0529 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFE62BE41D3D08E200DE0529 /* KalturaSample */,
+				DFE62BFD1D3D08E200DE0529 /* KalturaSampleTests */,
+				DFE62C081D3D08E200DE0529 /* KalturaSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFE62BE31D3D08E200DE0529 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE62BF81D3D08E200DE0529 /* LaunchScreen.storyboard in Resources */,
+				DFE62BF51D3D08E200DE0529 /* Assets.xcassets in Resources */,
+				DFE62BF31D3D08E200DE0529 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE62BFC1D3D08E200DE0529 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE62C071D3D08E200DE0529 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5677CF0B3EB4EE6D1ADE7A03 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC4BBCCE88E7C765BD911ECA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaSample/Pods-KalturaSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0D4E66D78A353CEDFDF2F4C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaSample/Pods-KalturaSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFE62BE11D3D08E200DE0529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE62BF01D3D08E200DE0529 /* ViewController.m in Sources */,
+				DFE62C291D3E27F900DE0529 /* NativePlayerViewController.m in Sources */,
+				DFAA47491D3F5EE80098E78D /* CCViewController.m in Sources */,
+				DFE62BED1D3D08E200DE0529 /* AppDelegate.m in Sources */,
+				DFE62C271D3E27F900DE0529 /* HTMLPlayerViewController.m in Sources */,
+				DFE62C201D3D091B00DE0529 /* OfflineViewController.m in Sources */,
+				DF5CCFFA1D3F9EBC0004DB8C /* CCDevicesViewController.m in Sources */,
+				DFE62C1F1D3D091B00DE0529 /* Asset.m in Sources */,
+				DFE62C281D3E27F900DE0529 /* KalturaPlayerViewController.m in Sources */,
+				DFE62BEA1D3D08E200DE0529 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE62BFA1D3D08E200DE0529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE62C031D3D08E200DE0529 /* KalturaSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE62C051D3D08E200DE0529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE62C0E1D3D08E200DE0529 /* KalturaSampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFE62C001D3D08E200DE0529 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFE62BE41D3D08E200DE0529 /* KalturaSample */;
+			targetProxy = DFE62BFF1D3D08E200DE0529 /* PBXContainerItemProxy */;
+		};
+		DFE62C0B1D3D08E200DE0529 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFE62BE41D3D08E200DE0529 /* KalturaSample */;
+			targetProxy = DFE62C0A1D3D08E200DE0529 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFE62BF11D3D08E200DE0529 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFE62BF21D3D08E200DE0529 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DFE62BF61D3D08E200DE0529 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFE62BF71D3D08E200DE0529 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFE62C101D3D08E200DE0529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFE62C111D3D08E200DE0529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFE62C131D3D08E200DE0529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77B72DC53F1A9ACD20D306E6 /* Pods-KalturaSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = KalturaSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DFE62C141D3D08E200DE0529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20913759567B80545980ADFB /* Pods-KalturaSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = KalturaSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DFE62C161D3D08E200DE0529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KalturaSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KalturaSample.app/KalturaSample";
+			};
+			name = Debug;
+		};
+		DFE62C171D3D08E200DE0529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KalturaSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KalturaSample.app/KalturaSample";
+			};
+			name = Release;
+		};
+		DFE62C191D3D08E200DE0529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KalturaSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KalturaSample;
+			};
+			name = Debug;
+		};
+		DFE62C1A1D3D08E200DE0529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KalturaSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KalturaSample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFE62BE01D3D08E200DE0529 /* Build configuration list for PBXProject "KalturaSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE62C101D3D08E200DE0529 /* Debug */,
+				DFE62C111D3D08E200DE0529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE62C121D3D08E200DE0529 /* Build configuration list for PBXNativeTarget "KalturaSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE62C131D3D08E200DE0529 /* Debug */,
+				DFE62C141D3D08E200DE0529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE62C151D3D08E200DE0529 /* Build configuration list for PBXNativeTarget "KalturaSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE62C161D3D08E200DE0529 /* Debug */,
+				DFE62C171D3D08E200DE0529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE62C181D3D08E200DE0529 /* Build configuration list for PBXNativeTarget "KalturaSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE62C191D3D08E200DE0529 /* Debug */,
+				DFE62C1A1D3D08E200DE0529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFE62BDD1D3D08E200DE0529 /* Project object */;
+}
