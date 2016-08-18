@@ -572,7 +572,7 @@ static NSString * const kKalturaPlayerViewControllerEvent_adClick = @"adClick";
     }
 }
 
-- (void)initializeCastProvider:(KCastProvider *)provider {
+- (void) initializeCastProvider:(KCastProvider *)provider {
     
     self.playerViewController.castProvider = provider;
 }
@@ -606,17 +606,17 @@ static NSString * const kKalturaPlayerViewControllerEvent_adClick = @"adClick";
 
 #pragma mark - NSURLSessionDelegate
 
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
+- (void) URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     
     NSString *percent = [NSString stringWithFormat:@"%lld%%", 100 * totalBytesWritten/totalBytesExpectedToWrite];
     NSLog(@"downloaded %@", percent);
 }
 
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes {
+- (void) URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes {
     // unused in this example
 }
 
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
+- (void) URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
     
     NSError *moveError;
     if (![[NSFileManager defaultManager] removeItemAtPath:self.localAsset.targetFile error:&moveError]) {
@@ -629,7 +629,7 @@ static NSString * const kKalturaPlayerViewControllerEvent_adClick = @"adClick";
     }
 }
 
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+- (void) URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     
     if (!error) {
         
@@ -644,7 +644,7 @@ static NSString * const kKalturaPlayerViewControllerEvent_adClick = @"adClick";
 
 #pragma mark - KPSourceURLProvider
 
-- (NSString *)urlForEntryId:(NSString *)entryId currentURL:(NSString*)current {
+- (NSString *) urlForEntryId:(NSString *)entryId currentURL:(NSString*)current {
     
     return [_localAsset playbackUrl];
 }

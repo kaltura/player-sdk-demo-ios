@@ -9,7 +9,7 @@
 #import "HTMLPlayerViewController.h"
 #import "KalturaPlayerViewController.h"
 
-static NSString * const kFirstUIConfigurationViewControllerUIConfId = @"35750171";
+static NSString * const kFirstUIConfigurationViewControllerUIConfId = @"35815611";
 static NSString * const kFirstUIConfigurationViewControllerPartnerId = @"2164401";
 static NSString * const kFirstUIConfigurationViewControllerEntryId = @"1_jqt5xrs1";
 

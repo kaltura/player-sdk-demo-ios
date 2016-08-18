@@ -8,18 +8,27 @@
 
 #import "CCViewController.h"
 #import "KalturaPlayerViewController.h"
-#import "CCDevicesViewController.h"
 
 static NSString * const kCCViewControllerUIConfId = @"35815611";
 static NSString * const kCCViewControllerPartnerId = @"2164401";
 static NSString * const kCCViewControllerCCApplicationId = @"C43947A1";
 
-@interface CCViewController () <KCastProviderDelegate, CCDevicesViewControllerDelegate>
+//static NSString * const kCCViewControllerUIConfId = @"32626752";
+//static NSString * const kCCViewControllerPartnerId = @"1982551";
+//static NSString * const kCCViewControllerCCApplicationId = @"C43947A1";
+
+//static NSString * const kCCViewControllerUIConfId = @"34339251";
+//static NSString * const kCCViewControllerPartnerId = @"2093031";
+//static NSString * const kCCViewControllerCCApplicationId = @"C43947A1";
+
+
+@interface CCViewController () <KCastProviderDelegate>
 
 @property (nonatomic, strong) KalturaPlayerViewController *kalturaPlayerViewController;
 @property (nonatomic, strong) KCastProvider *castProvider;
 
 @property (weak, nonatomic) IBOutlet UIButton *castButton;
+@property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
 
 @property (nonatomic, strong) NSMutableDictionary *devices;
 
@@ -54,6 +63,12 @@ static NSString * const kCCViewControllerCCApplicationId = @"C43947A1";
                                                      
                                                      [config addConfigKey: @"chromecast.plugin" withValue: @"true"];
                                                      [config addConfigKey: @"chromecast.useKalturaPlayer" withValue: @"true"];
+                                                     
+                                                     NSString *adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
+                                                     
+                                                     [config addConfigKey:@"doubleClick.adTagUrl" withValue:adTagUrl];
+                                                     [config addConfigKey:@"doubleClick.plugin" withValue:@"true"];
+
                                                  }];
     }
     
@@ -64,6 +79,8 @@ static NSString * const kCCViewControllerCCApplicationId = @"C43947A1";
         
         [self.view bringSubviewToFront: _castButton];
     }
+    
+    [self.view bringSubviewToFront: _playPauseButton];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -90,17 +107,6 @@ static NSString * const kCCViewControllerCCApplicationId = @"C43947A1";
     
     [self.kalturaPlayerViewController.view removeFromSuperview];
     [self.kalturaPlayerViewController removeFromParentViewController];
-}
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    UIViewController *destination = segue.destinationViewController;
-    if ([destination isKindOfClass: [CCDevicesViewController class]]) {
-        
-        CCDevicesViewController *devicesViewController = (CCDevicesViewController *)destination;
-        devicesViewController.delegate = self;
-        [devicesViewController shouldUpdateWithListOfDevices: [_castProvider devices]];
-    }
 }
 
 - (IBAction)didClickCastButton:(id)sender {
@@ -166,11 +172,17 @@ static NSString * const kCCViewControllerCCApplicationId = @"C43947A1";
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-#pragma CCDevicesViewControllerDelegate
-
-- (void) devicesViewControler:(CCDevicesViewController *)viewController didSelectDevice: (KCastDevice *)device {
+- (IBAction) didClickPlayPauseButton:(id)sender {
     
-    [self.castProvider connectToDevice: device];
+    if (_playPauseButton.selected) {
+        
+        [_kalturaPlayerViewController pause];
+    } else {
+        
+        [_kalturaPlayerViewController play];
+    }
+    
+    _playPauseButton.selected = !_playPauseButton.selected;
 }
 
 #pragma mark - KCastProviderDelegate
@@ -191,6 +203,11 @@ static NSString * const kCCViewControllerCCApplicationId = @"C43947A1";
 - (void) didConnectToDevice:(KCastProvider *)provider {
     
     [_kalturaPlayerViewController initializeCastProvider: _castProvider];
+}
+
+- (void) didDisconnectFromDevice:(KCastProvider *)provider {
+    
+    NSLog(@"didDisconnectFromDevice");
 }
 
 @end

@@ -18,7 +18,6 @@
 		5601FF511D48CF7200D03490 /* MediaListInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF4D1D48CF7200D03490 /* MediaListInitializer.m */; };
 		5601FF521D48CF7200D03490 /* MediaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF4F1D48CF7200D03490 /* MediaListViewController.m */; };
 		5601FF551D48D03700D03490 /* MediaPlainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF541D48D03700D03490 /* MediaPlainObject.m */; };
-		5601FF5B1D48D7B600D03490 /* CCDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF581D48D7B600D03490 /* CCDevicesViewController.m */; };
 		5601FF5C1D48D7B600D03490 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5601FF5A1D48D7B600D03490 /* CCViewController.m */; };
 		CE5ADF512C44D3E49F0184F6 /* libPods-KalturaCCSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8252C2A8C5BE466370BFF5A4 /* libPods-KalturaCCSample.a */; };
 /* End PBXBuildFile section */
@@ -44,8 +43,6 @@
 		5601FF4F1D48CF7200D03490 /* MediaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListViewController.m; sourceTree = "<group>"; };
 		5601FF531D48D03700D03490 /* MediaPlainObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlainObject.h; sourceTree = "<group>"; };
 		5601FF541D48D03700D03490 /* MediaPlainObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlainObject.m; sourceTree = "<group>"; };
-		5601FF571D48D7B600D03490 /* CCDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDevicesViewController.h; sourceTree = "<group>"; };
-		5601FF581D48D7B600D03490 /* CCDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDevicesViewController.m; sourceTree = "<group>"; };
 		5601FF591D48D7B600D03490 /* CCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
 		5601FF5A1D48D7B600D03490 /* CCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
 		5F1AFF2BBE264F1717F0D1F8 /* Pods-KalturaCCSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaCCSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaCCSample/Pods-KalturaCCSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,8 +143,6 @@
 		5601FF561D48D7B600D03490 /* CCModule */ = {
 			isa = PBXGroup;
 			children = (
-				5601FF571D48D7B600D03490 /* CCDevicesViewController.h */,
-				5601FF581D48D7B600D03490 /* CCDevicesViewController.m */,
 				5601FF591D48D7B600D03490 /* CCViewController.h */,
 				5601FF5A1D48D7B600D03490 /* CCViewController.m */,
 			);
@@ -299,7 +294,6 @@
 				5601FF521D48CF7200D03490 /* MediaListViewController.m in Sources */,
 				5601FF551D48D03700D03490 /* MediaPlainObject.m in Sources */,
 				5601FF1D1D48B58A00D03490 /* AppDelegate.m in Sources */,
-				5601FF5B1D48D7B600D03490 /* CCDevicesViewController.m in Sources */,
 				5601FF1A1D48B58A00D03490 /* main.m in Sources */,
 				5601FF501D48CF7200D03490 /* MediaListDataDisplayManager.m in Sources */,
 			);
@@ -416,10 +410,13 @@
 			baseConfigurationReference = 5F1AFF2BBE264F1717F0D1F8 /* Pods-KalturaCCSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vitaliy Rusinov (WK79HWDMDH)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = KalturaCCSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaCCSample;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.ccSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "66ef9e85-43ae-4852-9bf2-e06a5bb475f9";
 			};
 			name = Debug;
 		};
@@ -428,10 +425,13 @@
 			baseConfigurationReference = 69CD976E84B3CB5B376DE766 /* Pods-KalturaCCSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vitaliy Rusinov (WK79HWDMDH)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = KalturaCCSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.KalturaCCSample;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.ccSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "66ef9e85-43ae-4852-9bf2-e06a5bb475f9";
 			};
 			name = Release;
 		};

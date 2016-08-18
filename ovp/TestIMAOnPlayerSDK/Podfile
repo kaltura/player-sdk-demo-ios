@@ -1,4 +1,2 @@
-pod 'KalturaPlayerSDK’ 
-pod 'Google-Mobile-Ads-SDK'
-pod 'google-cast-sdk'
-pod 'GoogleAds-IMA-iOS-SDK-For-AdMob', '~> 3.0.beta.16'
+pod 'KalturaPlayerSDK’ , '~> 2.3.5’
+pod 'GoogleAds-IMA-iOS-SDK’ , '~> 3.1.0’

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rvq-xA-6Tz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pk8-Ab-Xrs">
+            <objects>
+                <navigationController id="Rvq-xA-6Tz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HBJ-uH-7e5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vJD-AN-aPt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pib-DW-ids" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772" y="379"/>
+        </scene>
+        <!--Media List View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MediaListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8NW-uh-0eM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8sL-KW-lPN">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8sL-KW-lPN" id="fZT-eP-Ah7">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="HdD-bj-Y7v" kind="show" identifier="ShowDetailPlayerViewController" id="2if-tu-j8c"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8NW-uh-0eM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LdF-8r-G7a"/>
+                            <constraint firstItem="8NW-uh-0eM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X2Z-nF-wJb"/>
+                            <constraint firstAttribute="bottom" secondItem="8NW-uh-0eM" secondAttribute="bottom" id="eTh-PB-2Kv"/>
+                            <constraint firstAttribute="trailing" secondItem="8NW-uh-0eM" secondAttribute="trailing" id="zJq-kW-bJd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZQj-Gs-lEn"/>
+                    <connections>
+                        <outlet property="tableView" destination="8NW-uh-0eM" id="Y1a-hu-mfh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="tYo-cu-dfx" customClass="MediaListInitializer">
+                    <connections>
+                        <outlet property="mediaListView" destination="BYZ-38-t0r" id="0Cn-2k-2Ux"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-45" y="379"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="THk-GH-DWz">
+            <objects>
+                <viewController id="HdD-bj-Y7v" customClass="PlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7gh-kQ-NFe"/>
+                        <viewControllerLayoutGuide type="bottom" id="uxY-tD-bbd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vn3-Jt-UfA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSz-gi-YeK">
+                                <rect key="frame" x="510" y="28" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Grp-7e-qIh"/>
+                                    <constraint firstAttribute="width" constant="70" id="SP7-L3-Sqi"/>
+                                </constraints>
+                                <state key="normal" image="downloadIcon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickDownload:" destination="HdD-bj-Y7v" eventType="touchUpInside" id="oIv-w9-dbT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oSz-gi-YeK" firstAttribute="centerY" secondItem="Vn3-Jt-UfA" secondAttribute="centerY" id="8c3-bb-pPi"/>
+                            <constraint firstItem="oSz-gi-YeK" firstAttribute="centerX" secondItem="Vn3-Jt-UfA" secondAttribute="centerX" id="Ezo-BV-dmd"/>
+                            <constraint firstItem="oSz-gi-YeK" firstAttribute="top" secondItem="7gh-kQ-NFe" secondAttribute="bottom" constant="8" id="eE3-T4-BN2"/>
+                            <constraint firstItem="oSz-gi-YeK" firstAttribute="trailing" secondItem="Vn3-Jt-UfA" secondAttribute="trailingMargin" id="qjU-f8-Pkw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8c3-bb-pPi"/>
+                                <exclude reference="Ezo-BV-dmd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="oSz-gi-YeK" id="ML9-d4-GBZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKQ-uJ-TVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="379"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="downloadIcon" width="128" height="128"/>
+    </resources>
+</document>
