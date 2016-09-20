@@ -1,0 +1,19 @@
+PODS:
+  - DownPicker (0.1.34)
+  - KalturaPlayerSDK (2.4.7):
+    - KalturaPlayerSDK/Core (= 2.4.7)
+    - KalturaPlayerSDK/Widevine (= 2.4.7)
+  - KalturaPlayerSDK/Core (2.4.7)
+  - KalturaPlayerSDK/Widevine (2.4.7)
+
+DEPENDENCIES:
+  - DownPicker
+  - KalturaPlayerSDK
+
+SPEC CHECKSUMS:
+  DownPicker: c00ea63f08ae82116cc93d0eba74e86bf3d4c68e
+  KalturaPlayerSDK: 318d71596773ad9dd2d6cc818bae3bb32e1d451a
+
+PODFILE CHECKSUM: 5d83e3fe0fee99884d43148ac66bf9ecb8d0c8fb
+
+COCOAPODS: 1.0.1
