@@ -26,6 +26,7 @@
 @property (nonatomic, copy) NSString* entryId;
 @property (nonatomic, copy) NSString* flavorId;
 
+@property (nonatomic, readonly) NSURL* targetURL;
 @property (nonatomic, readonly) NSString* targetFile;
 @property (nonatomic, readonly) NSString* playbackUrl;
 @property (readonly) BOOL downloaded;
