@@ -44,8 +44,23 @@
             _player.view.frame = _playerHolderView.bounds;
             [_player.playerController play];
             [_playerHolderView addSubview:_player.view];
+            
+            
+            [[NSNotificationCenter defaultCenter]   addObserver:self
+                                                       selector:@selector(appWillTerminate:)
+                                                           name:UIApplicationWillTerminateNotification
+                                                         object:[UIApplication sharedApplication]];
         }
 }
+
+
+- (void)appWillTerminate:(NSNotification *)note {
+    NSLog(@"terminate");
+    if (_player && _player.castProvider) {
+        [_player.castProvider disconnectFromDeviceWithLeave];
+    }
+}
+
 
 - (UIColor *)defaultTint {
     return [UIColor colorWithRed:0
