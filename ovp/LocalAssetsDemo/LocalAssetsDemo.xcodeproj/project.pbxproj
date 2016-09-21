@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6D292C8F515705C40B5E325A /* libPods-LocalAssetsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A3428F7E03955CEC0FAC17 /* libPods-LocalAssetsDemo.a */; };
+		FB19E9791D926CC000AC717F /* AssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9781D926CC000AC717F /* AssetDownloader.m */; };
+		FB19E97C1D927F6E00AC717F /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E97B1D927F6E00AC717F /* Asset.m */; };
+		FB19E97E1D928F1500AC717F /* AVAssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */; };
 		FB1DDC661CECBA5400DDA2BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC651CECBA5400DDA2BD /* main.m */; };
 		FB1DDC691CECBA5400DDA2BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC681CECBA5400DDA2BD /* AppDelegate.m */; };
 		FB1DDC6C1CECBA5400DDA2BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC6B1CECBA5400DDA2BD /* ViewController.m */; };
@@ -20,6 +23,12 @@
 		68A3428F7E03955CEC0FAC17 /* libPods-LocalAssetsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalAssetsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0006F657BF3246CC15B4475 /* Pods-LocalAssetsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalAssetsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalAssetsDemo/Pods-LocalAssetsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0BF47E2269108B65C8E005 /* Pods-LocalAssetsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalAssetsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalAssetsDemo/Pods-LocalAssetsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FB19E9501D91BA2F00AC717F /* AVAssetDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAssetDownloader.h; sourceTree = "<group>"; };
+		FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAssetDownloader.m; sourceTree = "<group>"; };
+		FB19E9771D926CC000AC717F /* AssetDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetDownloader.h; sourceTree = "<group>"; };
+		FB19E9781D926CC000AC717F /* AssetDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetDownloader.m; sourceTree = "<group>"; };
+		FB19E97A1D927F6E00AC717F /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
+		FB19E97B1D927F6E00AC717F /* Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Asset.m; sourceTree = "<group>"; };
 		FB1DDC611CECBA5400DDA2BD /* LocalAssetsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalAssetsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1DDC651CECBA5400DDA2BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB1DDC671CECBA5400DDA2BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +95,12 @@
 				FB1DDC681CECBA5400DDA2BD /* AppDelegate.m */,
 				FB1DDC6A1CECBA5400DDA2BD /* ViewController.h */,
 				FB1DDC6B1CECBA5400DDA2BD /* ViewController.m */,
+				FB19E9501D91BA2F00AC717F /* AVAssetDownloader.h */,
+				FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */,
+				FB19E9771D926CC000AC717F /* AssetDownloader.h */,
+				FB19E9781D926CC000AC717F /* AssetDownloader.m */,
+				FB19E97A1D927F6E00AC717F /* Asset.h */,
+				FB19E97B1D927F6E00AC717F /* Asset.m */,
 				FB1DDC6D1CECBA5400DDA2BD /* Main.storyboard */,
 				FB1DDC701CECBA5400DDA2BD /* Assets.xcassets */,
 				FB1DDC721CECBA5400DDA2BD /* LaunchScreen.storyboard */,
@@ -229,9 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB19E97C1D927F6E00AC717F /* Asset.m in Sources */,
 				FB1DDC6C1CECBA5400DDA2BD /* ViewController.m in Sources */,
 				FB1DDC691CECBA5400DDA2BD /* AppDelegate.m in Sources */,
 				FB1DDC661CECBA5400DDA2BD /* main.m in Sources */,
+				FB19E97E1D928F1500AC717F /* AVAssetDownloader.m in Sources */,
+				FB19E9791D926CC000AC717F /* AssetDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
