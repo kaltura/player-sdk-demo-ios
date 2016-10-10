@@ -1,0 +1,24 @@
+PODS:
+  - google-cast-sdk (3.2.0):
+    - google-cast-sdk/Core (= 3.2.0)
+  - google-cast-sdk/Core (3.2.0)
+  - GoogleAds-IMA-iOS-SDK (3.2.1)
+  - KalturaPlayerSDK (2.4.9):
+    - KalturaPlayerSDK/Core (= 2.4.9)
+    - KalturaPlayerSDK/Widevine (= 2.4.9)
+  - KalturaPlayerSDK/Core (2.4.9)
+  - KalturaPlayerSDK/Widevine (2.4.9)
+
+DEPENDENCIES:
+  - google-cast-sdk
+  - GoogleAds-IMA-iOS-SDK (~> 3.2.1)
+  - KalturaPlayerSDK
+
+SPEC CHECKSUMS:
+  google-cast-sdk: f4c2a14214ad486cc26a8f8837e8481c906a0ea8
+  GoogleAds-IMA-iOS-SDK: 33d54c3c2e56ab6f03255709ec4336174b420860
+  KalturaPlayerSDK: d999e35945271fb8d6ad4dc682c8c2259a854283
+
+PODFILE CHECKSUM: 55586360431fd27be2ef2d23b6144052a610c290
+
+COCOAPODS: 1.1.0.rc.2

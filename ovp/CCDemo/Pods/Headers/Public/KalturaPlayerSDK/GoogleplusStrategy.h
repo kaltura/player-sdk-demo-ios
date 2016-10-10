@@ -1,0 +1,1 @@
+../../../../../../../player-sdk-native-ios/KALTURAPlayerSDK/GoogleplusStrategy.h

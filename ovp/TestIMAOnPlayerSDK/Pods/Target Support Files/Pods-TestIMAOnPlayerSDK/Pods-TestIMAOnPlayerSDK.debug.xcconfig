@@ -1,0 +1,10 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds/GoogleInteractiveMediaAds-GoogleIMA3"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAds-IMA-iOS-SDK" "${PODS_ROOT}/Headers/Public/KalturaPlayerSDK"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/KalturaPlayerSDK" $(inherited) "${PODS_ROOT}/KalturaPlayerSDK"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GoogleAds-IMA-iOS-SDK" -isystem "${PODS_ROOT}/Headers/Public/KalturaPlayerSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"KalturaPlayerSDK" -l"System" -l"WViPhoneAPI" -l"c++" -l"stdc++" -l"stdc++.6" -l"stdc++.6.0.9" -l"xml2" -l"xml2.2" -l"z" -framework "AVFoundation" -framework "AdSupport" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreFoundation" -framework "CoreGraphics" -framework "CoreMedia" -framework "Foundation" -framework "GoogleInteractiveMediaAds" -framework "MediaAccessibility" -framework "MediaPlayer" -framework "MessageUI" -framework "QuartzCore" -framework "Social" -framework "SystemConfiguration" -framework "UIKit" -framework "WebKit" -weak_framework "WebKit"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods

@@ -1,0 +1,19 @@
+PODS:
+  - GoogleAds-IMA-iOS-SDK (3.2.1)
+  - KalturaPlayerSDK (2.4.7):
+    - KalturaPlayerSDK/Core (= 2.4.7)
+    - KalturaPlayerSDK/Widevine (= 2.4.7)
+  - KalturaPlayerSDK/Core (2.4.7)
+  - KalturaPlayerSDK/Widevine (2.4.7)
+
+DEPENDENCIES:
+  - GoogleAds-IMA-iOS-SDK (~> 3.2.1)
+  - KalturaPlayerSDK
+
+SPEC CHECKSUMS:
+  GoogleAds-IMA-iOS-SDK: 33d54c3c2e56ab6f03255709ec4336174b420860
+  KalturaPlayerSDK: 318d71596773ad9dd2d6cc818bae3bb32e1d451a
+
+PODFILE CHECKSUM: 0566f56c77b9e7999e8262d97547cd63d84e31b0
+
+COCOAPODS: 1.1.0.beta.2

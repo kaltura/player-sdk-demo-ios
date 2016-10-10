@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3071C06E29DFB51E542883703A772AEB8E221B09",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3071C06E29DFB51E542883703A772AEB8E221B09" : 9223372036854775807,
+    "C8599C6442C2751A61AE351C616FCB28200CC541" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6C4469F4-5DBE-4187-9AFB-AFB428D01213",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3071C06E29DFB51E542883703A772AEB8E221B09" : "player-sdk-demo-ios\/",
+    "C8599C6442C2751A61AE351C616FCB28200CC541" : "player-sdk-native-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CCDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ovp\/CCDemo\/CCDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/player-sdk-demo-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3071C06E29DFB51E542883703A772AEB8E221B09"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/player-sdk-native-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C8599C6442C2751A61AE351C616FCB28200CC541"
+    }
+  ]
+}

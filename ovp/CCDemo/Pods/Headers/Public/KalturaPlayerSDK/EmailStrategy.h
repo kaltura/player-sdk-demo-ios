@@ -1,0 +1,1 @@
+../../../../../../../player-sdk-native-ios/KALTURAPlayerSDK/EmailStrategy.h

@@ -12,9 +12,7 @@
 		5F387FFB1D002B19001F1928 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387FFA1D002B19001F1928 /* ViewController.m */; };
 		5F3880001D002B19001F1928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F387FFF1D002B19001F1928 /* Assets.xcassets */; };
 		5F3880031D002B19001F1928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F3880011D002B19001F1928 /* LaunchScreen.storyboard */; };
-		5F3880101D002B56001F1928 /* CastDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F38800F1D002B56001F1928 /* CastDeviceTableViewCell.m */; };
 		5F3880251D002BA8001F1928 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3880241D002BA8001F1928 /* AVFoundation.framework */; };
-		5F38802A1D002BF1001F1928 /* DevicesInRangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3880291D002BF1001F1928 /* DevicesInRangeViewController.m */; };
 		5F38802C1D002C0D001F1928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F38802B1D002C0D001F1928 /* Main.storyboard */; };
 		5F38802E1D002C84001F1928 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38802D1D002C84001F1928 /* libxml2.2.tbd */; };
 		5F3880301D002C97001F1928 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F38802F1D002C97001F1928 /* libz.tbd */; };
@@ -43,11 +41,7 @@
 		5F387FFF1D002B19001F1928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F3880021D002B19001F1928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F3880041D002B19001F1928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F38800E1D002B56001F1928 /* CastDeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastDeviceTableViewCell.h; sourceTree = "<group>"; };
-		5F38800F1D002B56001F1928 /* CastDeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastDeviceTableViewCell.m; sourceTree = "<group>"; };
 		5F3880241D002BA8001F1928 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		5F3880281D002BF1001F1928 /* DevicesInRangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesInRangeViewController.h; sourceTree = "<group>"; };
-		5F3880291D002BF1001F1928 /* DevicesInRangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesInRangeViewController.m; sourceTree = "<group>"; };
 		5F38802B1D002C0D001F1928 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5F38802D1D002C84001F1928 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		5F38802F1D002C97001F1928 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -61,7 +55,6 @@
 		5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		5F3880411D002DEB001F1928 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5F3880431D002DFA001F1928 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		5FD85F6C1D01B4F700CA75D2 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleCast.framework; sourceTree = "<group>"; };
 		F94A1947C38A47FF2A9F7661 /* Pods-CCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCDemo/Pods-CCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +93,6 @@
 		5F387FE71D002B19001F1928 = {
 			isa = PBXGroup;
 			children = (
-				5FD85F6C1D01B4F700CA75D2 /* GoogleCast.framework */,
 				5F3880431D002DFA001F1928 /* MediaPlayer.framework */,
 				5F3880411D002DEB001F1928 /* libc++.tbd */,
 				5F38803F1D002DD8001F1928 /* MediaAccessibility.framework */,
@@ -131,10 +123,6 @@
 		5F387FF21D002B19001F1928 /* CCDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5F3880281D002BF1001F1928 /* DevicesInRangeViewController.h */,
-				5F3880291D002BF1001F1928 /* DevicesInRangeViewController.m */,
-				5F38800E1D002B56001F1928 /* CastDeviceTableViewCell.h */,
-				5F38800F1D002B56001F1928 /* CastDeviceTableViewCell.m */,
 				5F387FF61D002B19001F1928 /* AppDelegate.h */,
 				5F387FF71D002B19001F1928 /* AppDelegate.m */,
 				5F387FF91D002B19001F1928 /* ViewController.h */,
@@ -264,7 +252,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B24B7D511646237B77C7C571 /* [CP] Copy Pods Resources */ = {
@@ -291,8 +279,6 @@
 			files = (
 				5F387FFB1D002B19001F1928 /* ViewController.m in Sources */,
 				5F387FF81D002B19001F1928 /* AppDelegate.m in Sources */,
-				5F38802A1D002BF1001F1928 /* DevicesInRangeViewController.m in Sources */,
-				5F3880101D002B56001F1928 /* CastDeviceTableViewCell.m in Sources */,
 				5F387FF51D002B19001F1928 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

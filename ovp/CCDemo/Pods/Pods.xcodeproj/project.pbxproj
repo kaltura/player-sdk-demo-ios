@@ -1,0 +1,1217 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00142624EB9707002FBB383237014D6B /* KPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84E0F9FAA3835EAD290F78B1610D6B3 /* KPViewController.m */; };
+		01B99376E356E2BC5C4DAC6CD1450139 /* TwitterStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D09B862A0521C239B19A986D946E1B9 /* TwitterStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		064E7D703049EA4F6CF42C1E347C7D96 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24C653A132248AC2725A176A14BFCBC /* AdSupport.framework */; };
+		06EF552A2E5E46578B315728C35B2E5A /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B07FF424CA1762955F699F47FE3CA1 /* NSDictionary+Utilities.m */; };
+		0984FD284299E2D312938A80C75D275C /* NSDictionary+Cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FB5AE375B6C02438CA12FB258C6C2E5 /* NSDictionary+Cache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A17AFBDDA5FB476D60A92044297B54C /* KPPlayerConfig_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D199B3A70595C9CF03DC53D5D40017 /* KPPlayerConfig_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B35A9868B28135CA7D54C84E35D6BD3 /* KPPlayerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EF9AA2BA21B0B189E102D89F58CC6A /* KPPlayerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C00ADE376E84C5500718F59407E6C76 /* KPFairPlayHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CA569B9FC92B84D1DB99BE4AAC3AAFBD /* KPFairPlayHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		101F3318E835E0A25F0C8218C1CAE3DC /* EmailStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 276D159EE517CA6BFF527BA9257B43A0 /* EmailStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11718A75932FAD72167A0A4197AD1E3F /* IMAHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DE6547C22483986A823BCBD3A8A305C /* IMAHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11D9A11060DEA86F3F54D30FD1B359AB /* NSMutableDictionary+AdSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC5315E566A06D08B2537CC3633015 /* NSMutableDictionary+AdSupport.m */; };
+		14C20CDDF9AC0159F04AFDC203738416 /* KCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 407B595123C9F6C8E8CE5D85BA415FF5 /* KCacheManager.m */; };
+		154DD6D6B20E4C2196A9DC51E836F230 /* KPControlsUIWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B6A65264794AFCB4280F8B2A631E7F /* KPControlsUIWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		161A3F6000671282229FB581F2614EBD /* GoogleplusStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD67E41054BBEE67A62EEDB277FD8EC /* GoogleplusStrategy.m */; };
+		18788BB05D0A43B212537D3C959ACEDE /* FacebookStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = A64F2A83A9BC58D8539B44BD19A8F6A5 /* FacebookStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C0BFFF4DCD06438AA7B54DE774625C8 /* CachedStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7E092A2D3755C591FF7DEFFE95DAB5B /* CachedStrings.plist */; };
+		1E2590490FA92DFA84C02607D825377B /* Pods-CCDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0338DC0143742971D4741E5C3AD08412 /* Pods-CCDemo-dummy.m */; };
+		2429B10AC94B72C5C8E1D07DB4F5C335 /* WidevineClassicCDM.m in Sources */ = {isa = PBXBuildFile; fileRef = 440EF951993A59FBF2DD6EBAFFDF9E2B /* WidevineClassicCDM.m */; };
+		277B499591D3567DBF51E84C8F9527CF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E379D2A86187F4829D6657A853280A65 /* CoreFoundation.framework */; };
+		2B7D9BC069E2DF2326DB5BCC5E50D75A /* NSBundle+Kaltura.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1A7B9DB26FF84C7DC316DD1360152B /* NSBundle+Kaltura.m */; };
+		2FB3BB971BC61D32ECF044338AC29C19 /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9FCC45DA5CDB3FCE3C9F39199E33FA /* NSMutableArray+QueueAdditions.m */; };
+		305BAEABF3364546C8F377EBB5DAFA16 /* SmsStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D581C3E75E05330BFD183685146949 /* SmsStrategy.m */; };
+		30D8B7C26FAF061712E5AF24F1C5401C /* KPURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 883C2CF6B88D6246EA1E1F232D99C32A /* KPURLProtocol.m */; };
+		374069DACEC658FF84B309F3A372F1DA /* KPControlsWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = A373B5FEE988EE4D0313D0BA90663F94 /* KPControlsWKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DEA2109F8DB24CB7804A3243A4FD94A /* KPMediaPlayback.h in Headers */ = {isa = PBXBuildFile; fileRef = B837B39F6BE8ECD691B99CDBA556DC51 /* KPMediaPlayback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		404519EEE27DCF96EA230CE74B99C36C /* KPShareManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F959B4F0CDFE0699B433CD03125466 /* KPShareManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4497B70039293BD2290B35CB69CA7C6A /* KPControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AE5336D59696ED0CB4028A4830854B /* KPControlsView.m */; };
+		457AEC10B3631AE389DDFF1167CCA1D3 /* NSDictionary+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FAFB4BF4EB223BE157A68BEDC71C53FD /* NSDictionary+Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B68E246235DACFBBC8529474B08BDB /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B859C54FB130022DE74CACC344F3087 /* MediaAccessibility.framework */; };
+		46C55754BFF9D33057335AEDA1DE3454 /* KPCastProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AF26AAC2D970B67DF890E836C26CD9E /* KPCastProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47FEB951B5DB55766A776FEED451111F /* KPController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE8EA88EB2327CCBCF74F7FA7ED239 /* KPController.m */; };
+		486A05CA653160A8F0D0B5EB34889B83 /* KPWebKitBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FCC48F56CC03177FF556E67B0B7CDB /* KPWebKitBrowserViewController.xib */; };
+		4D1AF7F37D8DF59AD7C9B91D0C795B6C /* KPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8370E6DB7285AF32DCB48CE4D17B457 /* KPlayer.m */; };
+		4D6589E1D67E470E8B94191A23DC3322 /* NSMutableDictionary+Cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C690CB3DC3DF9B36E79E10E30230BF9 /* NSMutableDictionary+Cache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E18DE27570DED0B312B652CC3046566 /* NSMutableArray+QueueAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 466EF26ED3E2E2F83F0E51ABA2649036 /* NSMutableArray+QueueAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F48164CE309A10EB751F591E4A6C82F /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF6A92EEE73312B455DF15B90601349 /* NSString+Utilities.m */; };
+		50C366ABD63F272010C2F23E271B8783 /* KPIMAPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FB91A4638900226445590DB0EC836E3 /* KPIMAPlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		548FE692A66A6016412016263AFEDF4F /* KPLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 523328C9976E53FF45932841B8BB353A /* KPLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B6928B8094C7AB6A05277A5FDB0372D /* GoogleCastProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 100EA98A110BB1FDEF345395E10EACA2 /* GoogleCastProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BD3551A74E9ABD25F6728A67E025E39 /* NSDictionary+Strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = D34AC3B1B6CB2E32B7379628B33DA460 /* NSDictionary+Strategy.m */; };
+		64796A008CEC884E6EBF2C76A4FBB2CE /* KPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 80E5C38E29D70ECB0D33D6C8433E555D /* KPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CCDC321CF73EA9C3BFB4FD3DAC14F31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34FDE85CCE9564545E6880C208D2074F /* SystemConfiguration.framework */; };
+		73EBC0699D491D3FF6A1F9027D67F130 /* NSDictionary+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC714C541CEBD0E5975A14962C8427 /* NSDictionary+Cache.m */; };
+		75E3226046A66EF24648BE2034DECD0F /* KPAssetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FA4BD97027020B1DADEE786D113C6 /* KPAssetBuilder.m */; };
+		779DFC86337D7EA731DD2FE7B13AF41E /* KPlayerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BE821916903555A4BA9BCA0265D5A /* KPlayerFactory.m */; };
+		7A2CEDB514F920DD6140842E1BA29A53 /* KCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A4A3662BE856D3CFAAC3B57D5B25DBB7 /* KCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AA02B50D95CEE449F642215A4EA709B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E59B38F7D8A7744BC6050094AB813FE /* Social.framework */; };
+		81199149DCFB0EBD20CBD21C15EB041B /* KPURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D226390199AD3090A2A5132455721148 /* KPURLProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		856918340FF35F6F9E1994BD2079B278 /* KPBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963B0F6337F081D0ED9277B281C949CA /* KPBrowserViewController.xib */; };
+		85AA094F99498CB63921EE66434E6CEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A789116B99BFE74ACD9F04B1909134BB /* Foundation.framework */; };
+		8933BDE67857EED1E8E4167FCCDE276D /* KPControlsWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 265BF79E9695A629CF7E729B48A99DBA /* KPControlsWKWebView.m */; };
+		8C6D8530DD8656B23364AB84C1664BCF /* NSString+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 620E20A02982621CC75FF718E5DB2C49 /* NSString+Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D28E4AB4ED9D4F4728FEDA1DF43E5B1 /* NSMutableArray+QueryItems.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EBDD70706AEC2168672305797809563 /* NSMutableArray+QueryItems.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D3A79BF31C2D3D943337AC190F32E43 /* DeviceParamsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A0381886DA4D31616A9E6BA12B0DF3DD /* DeviceParamsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F84F914B48BF20F7E93F0772267B902 /* KPLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 855619EB3C098292F0E7129061292854 /* KPLogManager.m */; };
+		93DF52711D86D2C6E795DD02D461DF78 /* KMediaPlayerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D713E7F9E9B201AEF3EEE14F789B4B /* KMediaPlayerDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94BF287EAF149A1A2EE503D29EDA7A1A /* NSMutableDictionary+AdSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 8703386311C2E5945B40C29E80EA66ED /* NSMutableDictionary+AdSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94CD361743242B834CC2E180F80F4F90 /* KPBrowserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CDF6A660D407E7E4341FC47452AC45C7 /* KPBrowserViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94EB1030C242BA245281EBF7F22E75EC /* KPControlsUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52EC87937469E7C56C684D1F2348DD3 /* KPControlsUIWebView.m */; };
+		95444C5E0875E996986C12C2524A925E /* DeviceParamsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F15D23E5B1608F206E70923582E011 /* DeviceParamsHandler.m */; };
+		978FAC1ED289876A45BA908E9AEF2A0E /* KPShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3022D50F07B1DE6099CB1C98264E410F /* KPShareManager.m */; };
+		97DC27858FF08E061BE4D540FD9CAA52 /* linkedinStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735EA30940DDFD014DC8A1027567350 /* linkedinStrategy.m */; };
+		9B7132A2472F23A3FCEE357B7987C42A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C5114534A9C253E204B62BA605FF6 /* MediaPlayer.framework */; };
+		9BCDC955E420B3DE441BA76FF038BCA3 /* KPCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 443EDA0C2AB0F91EDF9A9A99C2A87442 /* KPCacheConfig.m */; };
+		9D9F028A5ECFA41AD31E25EBD7FB14B8 /* KPViewControllerProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 485664566DE22399191EB3B5B2CF7C9B /* KPViewControllerProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E513A59DD8872949C39D7C411B35052 /* KPWidevineClassicHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7174373F09E35796A1418DBC1D315FC7 /* KPWidevineClassicHandler.m */; };
+		A25A59224F2B3C0BA27B72B339C09673 /* KPWebKitBrowserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EE36E3E79199F62DCF5F50F481FD9F1D /* KPWebKitBrowserViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A28F6CB230584B996B8E155E9D25B89D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393ACAE4CDBAECFF94FBFD7797DB76AE /* AVFoundation.framework */; };
+		A5683E948394B7307B90BEDCE5D69B9E /* GoogleCastProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 906A5ECA3C47C97B284986337D5FDA35 /* GoogleCastProvider.m */; };
+		A605FB7E7D3F41BE4EA42B8986122279 /* KPController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 54CB5B47937C3DD7629E1EE27C7430AC /* KPController_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8B908B7537B04CFE147B941551A873F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530CFCBF23C27F3442D2A727E3622C18 /* MessageUI.framework */; };
+		A8FEBE32402DA9B212C2A2FC7504C57B /* KPPlayerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D606F46CC3986B00DCA322759C26CAF /* KPPlayerConfig.m */; };
+		A97B2AF9D418B6D546F23F889202FF68 /* WViPhoneAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = A32D93BD3266D55B8EE46ADE6D631448 /* WViPhoneAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA91A0D42307A2851BAB39ADC4E666D7 /* KPLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B2C8AB0C2953D18240D53B9306BD5B /* KPLog.m */; };
+		AB2690983AC50EB6E60CABC3A982B5AB /* KPController.h in Headers */ = {isa = PBXBuildFile; fileRef = B0254B118702DEE48451127408FA0AD0 /* KPController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADC01BB646214227B61DBB795D74AE0F /* KPViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F7FB60F751E68DF2E461473CCF977798 /* KPViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1B87F7D47D093A26F3EB49F60B06EC1 /* KPFairPlayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A49DE4AE86AA2B621585C248CB60B5 /* KPFairPlayHandler.m */; };
+		B1FFA105C8CA78CCEAD8CD318E09B72C /* KPLocalAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB10B27DB83CA7BE43F3D26606C05F9 /* KPLocalAssetsManager.m */; };
+		B27181BDA0890E83216777DB4E05250E /* NSBundle+Kaltura.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CEEA7094B88F3EA10BEE5B0FB0081D5 /* NSBundle+Kaltura.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B27CFED316B80943B065F411BA4A517C /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E1E0393D34A168B4788ACBE2755D15F /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4273D2BF3CB20288689BD31B8E3B672 /* EmailStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE7FD3656C90B377132C203860D91F4 /* EmailStrategy.m */; };
+		B90F050C59987AB1BAE4CF6D470BEA36 /* WidevineClassicCDM.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF15858F2F0BC0D6214932E0846E661 /* WidevineClassicCDM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB49D306E1307431975A1E3A487C156D /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C301C8287FD3F6C0BF29AA228C9B80 /* Utilities.m */; };
+		C2F9D7650C743DD697F50F60211203DE /* KPCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F17888C2AFE8ED01E0E177CFF04C509 /* KPCacheConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3F6AB95E27B700E53196030A2FA311F /* linkedinStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = C98832D9C8AC8D00F573BE488F41108E /* linkedinStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAD7DCF97E599AF9F3786C757B22DC39 /* KPAssetBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8289071B348DC38D3ED453B79884B6AF /* KPAssetBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB282C75DBD30485746CF843B46339DF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3513A09152B920A6DD0290807BD37BC7 /* AudioToolbox.framework */; };
+		CB8F526CE1521F8F5E73AD55DAE55B3E /* KPIMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7015EF22ED8055FC612CBDBCF1694F6B /* KPIMAPlayerViewController.m */; };
+		CC7837EB2E32B4F4CF7DD5159307B4C8 /* KPLogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 665F64CAF667AD3970F9A2E01EE464B1 /* KPLogManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF290AFF5C97A8B08E16109C9784D442 /* KPAssetHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC6E65F8ED3AC89D01CFFCC04F2B563 /* KPAssetHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4BC29676EB23DF649B7C7A041F32F60 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18091EA2071D86ECFD3C1B50050018D2 /* QuartzCore.framework */; };
+		D50157046E71716C97147912412AAC80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A789116B99BFE74ACD9F04B1909134BB /* Foundation.framework */; };
+		D731540EEB4DBBFC3001884D92A22897 /* KPlayerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C5A7B364CFAF73075256FAA00E1BCE /* KPlayerFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBBF7528861887CACC644382990B77A5 /* FacebookStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 889BF67C529936C35E50B71040EBDA89 /* FacebookStrategy.m */; };
+		DCD6F24D0ACE4B3FACF6DEEBD0C17B65 /* KPWidevineClassicHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 795DF0DCCA035D32CAD40EAD511AC6D4 /* KPWidevineClassicHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD97B965C6EA1CDC0547EF5358AAB219 /* NSMutableArray+QueryItems.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6E0109FF4CB08153C184D8AA14B4E /* NSMutableArray+QueryItems.m */; };
+		DDB02595255A63910EB39A2198ACEE7F /* SmsStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 25B900114C3487305A310EC1DDBE49E1 /* SmsStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E16157C27583D31D3AC54544B12412E9 /* KalturaPlayerSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C4B6884A3837C4C578F29B01B2653F /* KalturaPlayerSDK-dummy.m */; };
+		E84617CE44570015B14A45C9BEA346B6 /* GoogleplusStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 33B6272679868334FF096191D864309A /* GoogleplusStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9C377053699FD6098009FBE9A736111 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE02D548E3BA843778EA0966F8D41CDA /* WebKit.framework */; };
+		E9F9F423E6E46A9433DE86A11EDE1999 /* KPBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600FC23813B09FE84D2BBD408164E09D /* KPBrowserViewController.m */; };
+		EB9EBAB6CA13CFAE4CA5EA0B75006B10 /* NSMutableDictionary+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD33A1166DDA2970CEDFAF9D31406C8 /* NSMutableDictionary+Cache.m */; };
+		EBBC7D7451C4FE79E261161801A47870 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2EABB679022B30CA2683D2093BBC48 /* CoreGraphics.framework */; };
+		ECFDF7F5900D5103E9108C13140C973D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFC2A6CE6A6082877EC40FC688F0E14 /* UIKit.framework */; };
+		EF06F49ED170F4E9D63FA34352615F5F /* KPControlsView.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AB68070CCF580712476A12DB9A1BE5 /* KPControlsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F03390801CEA47E3CE6A19180F896F58 /* TwitterStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE99281E9DDD7ED0D6499F6C6974FE7 /* TwitterStrategy.m */; };
+		F1E01F809D042DD96FF9B5E21782AA96 /* KPWebKitBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3849CAFF0591C6C673CF31A6D2B252 /* KPWebKitBrowserViewController.m */; };
+		F5DD91A0275AB53C2CCCA3BF8AC8F9D3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DAD25D4B4EDD7761B0CACA85ACCA8E /* CFNetwork.framework */; };
+		FB0775F2E575CF92CD207B106C71F065 /* KPLocalAssetsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8200F61CF2A41FA9715630B8BF06E908 /* KPLocalAssetsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBD0327C7E7F3432EEE6F2EB1DDEE8BF /* NSDictionary+Strategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA8FA104B1F04148ACE23E89A7FBCCE /* NSDictionary+Strategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1497A046836FCC9D6177B277E91766F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3917795FB23CE56C049A8339B6F38C5;
+			remoteInfo = "KalturaPlayerSDK-KALTURAPlayerSDKResources";
+		};
+		B58C8B6BC87BE62BAF79031DD310B66D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8BC17F6A0EFB03FF4D7E19D3810F73B;
+			remoteInfo = KalturaPlayerSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0338DC0143742971D4741E5C3AD08412 /* Pods-CCDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CCDemo-dummy.m"; sourceTree = "<group>"; };
+		03EF9AA2BA21B0B189E102D89F58CC6A /* KPPlayerConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPPlayerConfig.h; sourceTree = "<group>"; };
+		048D220FAE6008F4C7DFFA13A9E33B9F /* Pods-CCDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CCDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		090479192871ABB04AC128FE24682A53 /* GCKDeviceScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceScanner.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKDeviceScanner.h"; sourceTree = "<group>"; };
+		0C690CB3DC3DF9B36E79E10E30230BF9 /* NSMutableDictionary+Cache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Cache.h"; sourceTree = "<group>"; };
+		0CEEA7094B88F3EA10BEE5B0FB0081D5 /* NSBundle+Kaltura.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Kaltura.h"; sourceTree = "<group>"; };
+		0DE7FD3656C90B377132C203860D91F4 /* EmailStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = EmailStrategy.m; sourceTree = "<group>"; };
+		0F17888C2AFE8ED01E0E177CFF04C509 /* KPCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPCacheConfig.h; sourceTree = "<group>"; };
+		0F18430D2D5B930913A1211171563515 /* GCKUIButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIButton.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIButton.h"; sourceTree = "<group>"; };
+		0F5C371BDF072FEE8935F8F3D5504966 /* libKalturaPlayerSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKalturaPlayerSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		100EA98A110BB1FDEF345395E10EACA2 /* GoogleCastProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GoogleCastProvider.h; sourceTree = "<group>"; };
+		119334DCBFF1BB51F8AF1975985A17BF /* GCKLobbyState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLobbyState.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKLobbyState.h"; sourceTree = "<group>"; };
+		133498DCCBC03EFD23FE489644C46BB2 /* GCKUIImageHints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIImageHints.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIImageHints.h"; sourceTree = "<group>"; };
+		16565B5BDB146974FB122FB826D643E1 /* GCKGenericChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKGenericChannel.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKGenericChannel.h"; sourceTree = "<group>"; };
+		179DEED0D1F11F1131A4557B1F28FB46 /* GCKFilterCriteria.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKFilterCriteria.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKFilterCriteria.h"; sourceTree = "<group>"; };
+		18091EA2071D86ECFD3C1B50050018D2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		1ECEE5EC9D92E3F4F13A04B40044CAE7 /* GCKPlayerInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKPlayerInfo.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKPlayerInfo.h"; sourceTree = "<group>"; };
+		223FA4BD97027020B1DADEE786D113C6 /* KPAssetBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPAssetBuilder.m; sourceTree = "<group>"; };
+		224DCC58D0AF4163A2A38F89EF1E00B4 /* GCKGameplayState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKGameplayState.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKGameplayState.h"; sourceTree = "<group>"; };
+		24B2C8AB0C2953D18240D53B9306BD5B /* KPLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPLog.m; sourceTree = "<group>"; };
+		25B900114C3487305A310EC1DDBE49E1 /* SmsStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SmsStrategy.h; sourceTree = "<group>"; };
+		265BF79E9695A629CF7E729B48A99DBA /* KPControlsWKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPControlsWKWebView.m; sourceTree = "<group>"; };
+		26A7EFC5ABFD66811CE2973E46A4F276 /* GCKRemoteMediaClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKRemoteMediaClient.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKRemoteMediaClient.h"; sourceTree = "<group>"; };
+		270272D221B0F2AF88C68D3F984A54AE /* NSDictionary+GCKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+GCKAdditions.h"; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/NSDictionary+GCKAdditions.h"; sourceTree = "<group>"; };
+		276D159EE517CA6BFF527BA9257B43A0 /* EmailStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = EmailStrategy.h; sourceTree = "<group>"; };
+		29259182DCA3494744BE9E08E134F824 /* GCKCastChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCastChannel.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKCastChannel.h"; sourceTree = "<group>"; };
+		29D6DBB5F9DF73A0F8F27CC12D3B6063 /* GCKUIMediaController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIMediaController.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIMediaController.h"; sourceTree = "<group>"; };
+		2C8EB8F3191D1E232E3658242A01E1AF /* GCKGameManagerState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKGameManagerState.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKGameManagerState.h"; sourceTree = "<group>"; };
+		2D43DE76B6B2E31B711B9A007F0B4A6C /* GCKLoggerCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLoggerCommon.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKLoggerCommon.h"; sourceTree = "<group>"; };
+		2DCC5A00EEA87D7731DFCC63CF31E077 /* GCKSession+Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GCKSession+Protected.h"; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKSession+Protected.h"; sourceTree = "<group>"; };
+		2DD33A1166DDA2970CEDFAF9D31406C8 /* NSMutableDictionary+Cache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Cache.m"; sourceTree = "<group>"; };
+		3022D50F07B1DE6099CB1C98264E410F /* KPShareManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPShareManager.m; sourceTree = "<group>"; };
+		30DB177555F4D46F410F5AE3444BC7BA /* GCKMediaCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaCommon.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMediaCommon.h"; sourceTree = "<group>"; };
+		3121974C09AB6748B0C0A51157215739 /* GCKRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKRequest.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKRequest.h"; sourceTree = "<group>"; };
+		33B6272679868334FF096191D864309A /* GoogleplusStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GoogleplusStrategy.h; sourceTree = "<group>"; };
+		34A49DE4AE86AA2B621585C248CB60B5 /* KPFairPlayHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPFairPlayHandler.m; sourceTree = "<group>"; };
+		34FDE85CCE9564545E6880C208D2074F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		3513A09152B920A6DD0290807BD37BC7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		393ACAE4CDBAECFF94FBFD7797DB76AE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		3AD67E41054BBEE67A62EEDB277FD8EC /* GoogleplusStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GoogleplusStrategy.m; sourceTree = "<group>"; };
+		3B48E623F01F98315353EA37E827DA62 /* GCKMediaMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaMetadata.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMediaMetadata.h"; sourceTree = "<group>"; };
+		3C6A72FB51B319E1AD133A37090E99D3 /* GCKUIDeviceVolumeController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIDeviceVolumeController.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIDeviceVolumeController.h"; sourceTree = "<group>"; };
+		3CA8FA104B1F04148ACE23E89A7FBCCE /* NSDictionary+Strategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Strategy.h"; sourceTree = "<group>"; };
+		3DF15858F2F0BC0D6214932E0846E661 /* WidevineClassicCDM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WidevineClassicCDM.h; sourceTree = "<group>"; };
+		3ED9ED801D4EFE11564101A97AE74203 /* Pods-CCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		407B595123C9F6C8E8CE5D85BA415FF5 /* KCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KCacheManager.m; sourceTree = "<group>"; };
+		41A086425146F2AA07CFFE2FADA08FA4 /* GCKDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDevice.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKDevice.h"; sourceTree = "<group>"; };
+		440EF951993A59FBF2DD6EBAFFDF9E2B /* WidevineClassicCDM.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WidevineClassicCDM.m; sourceTree = "<group>"; };
+		443EDA0C2AB0F91EDF9A9A99C2A87442 /* KPCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPCacheConfig.m; sourceTree = "<group>"; };
+		466EF26ED3E2E2F83F0E51ABA2649036 /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
+		485664566DE22399191EB3B5B2CF7C9B /* KPViewControllerProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPViewControllerProtocols.h; sourceTree = "<group>"; };
+		4AB10B27DB83CA7BE43F3D26606C05F9 /* KPLocalAssetsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPLocalAssetsManager.m; sourceTree = "<group>"; };
+		4DD5F4D9AE4A8717FC6E2E79A70BA47D /* GCKUICastButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUICastButton.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUICastButton.h"; sourceTree = "<group>"; };
+		4E809912FDC852EA6DBCC6229764495E /* Pods-CCDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CCDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4EFC714C541CEBD0E5975A14962C8427 /* NSDictionary+Cache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Cache.m"; sourceTree = "<group>"; };
+		4F575341C261E93527B8E8926F52C1D6 /* GCKMediaStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaStatus.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMediaStatus.h"; sourceTree = "<group>"; };
+		4F94BAF71EEF8F55EC8BEE55C0C7A81C /* GCKSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKSessionManager.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKSessionManager.h"; sourceTree = "<group>"; };
+		4FB91A4638900226445590DB0EC836E3 /* KPIMAPlayerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPIMAPlayerViewController.h; sourceTree = "<group>"; };
+		50AE5336D59696ED0CB4028A4830854B /* KPControlsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPControlsView.m; sourceTree = "<group>"; };
+		523328C9976E53FF45932841B8BB353A /* KPLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPLog.h; sourceTree = "<group>"; };
+		5245C17F0ACEC0F6F5B86C412D5875B8 /* GCKLaunchOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLaunchOptions.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKLaunchOptions.h"; sourceTree = "<group>"; };
+		530CFCBF23C27F3442D2A727E3622C18 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		53B22990FC5EAA76828E809D2B7C3D18 /* GCKDeviceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceManager.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKDeviceManager.h"; sourceTree = "<group>"; };
+		54CB5B47937C3DD7629E1EE27C7430AC /* KPController_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPController_Private.h; sourceTree = "<group>"; };
+		57F959B4F0CDFE0699B433CD03125466 /* KPShareManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPShareManager.h; sourceTree = "<group>"; };
+		5BE99281E9DDD7ED0D6499F6C6974FE7 /* TwitterStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TwitterStrategy.m; sourceTree = "<group>"; };
+		5D606F46CC3986B00DCA322759C26CAF /* KPPlayerConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPPlayerConfig.m; sourceTree = "<group>"; };
+		5E1E0393D34A168B4788ACBE2755D15F /* Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		5FB4DA1AFA55CF350A8DC71EE52EF38A /* GCKLoggerFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLoggerFilter.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKLoggerFilter.h"; sourceTree = "<group>"; };
+		600FC23813B09FE84D2BBD408164E09D /* KPBrowserViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPBrowserViewController.m; sourceTree = "<group>"; };
+		620E20A02982621CC75FF718E5DB2C49 /* NSString+Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Utilities.h"; sourceTree = "<group>"; };
+		6370805B5A00AAA7B67F71912D3D73EB /* GCKCastOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCastOptions.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKCastOptions.h"; sourceTree = "<group>"; };
+		64B51A20F28D90CC4D02DFF43E8E55F8 /* GCKAdBreakInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKAdBreakInfo.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKAdBreakInfo.h"; sourceTree = "<group>"; };
+		665F64CAF667AD3970F9A2E01EE464B1 /* KPLogManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPLogManager.h; sourceTree = "<group>"; };
+		66DABB16F0168BDA73CCA1780A047DE7 /* libWViPhoneAPI.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libWViPhoneAPI.a; sourceTree = "<group>"; };
+		6735EA30940DDFD014DC8A1027567350 /* linkedinStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = linkedinStrategy.m; sourceTree = "<group>"; };
+		6B54558CBAB145E30E14CA2499618249 /* GCKPlayerState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKPlayerState.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKPlayerState.h"; sourceTree = "<group>"; };
+		6CF84CE368924113576D0DE29E2DB495 /* GCKFrameworkResources.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKFrameworkResources.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKFrameworkResources.h"; sourceTree = "<group>"; };
+		6DEE0B68A34E12ADEEDCBDE6D2AD91F1 /* GCKMultizoneDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMultizoneDevice.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMultizoneDevice.h"; sourceTree = "<group>"; };
+		6F6BE821916903555A4BA9BCA0265D5A /* KPlayerFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPlayerFactory.m; sourceTree = "<group>"; };
+		7015EF22ED8055FC612CBDBCF1694F6B /* KPIMAPlayerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPIMAPlayerViewController.m; sourceTree = "<group>"; };
+		7174373F09E35796A1418DBC1D315FC7 /* KPWidevineClassicHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPWidevineClassicHandler.m; sourceTree = "<group>"; };
+		72143272F1ACFFB405856E840AEEC5AD /* Pods-CCDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CCDemo-frameworks.sh"; sourceTree = "<group>"; };
+		721CB61D69D57460EC26160610062051 /* GCKMediaInformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaInformation.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMediaInformation.h"; sourceTree = "<group>"; };
+		75D581C3E75E05330BFD183685146949 /* SmsStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SmsStrategy.m; sourceTree = "<group>"; };
+		77B07FF424CA1762955F699F47FE3CA1 /* NSDictionary+Utilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utilities.m"; sourceTree = "<group>"; };
+		78C4B6884A3837C4C578F29B01B2653F /* KalturaPlayerSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KalturaPlayerSDK-dummy.m"; sourceTree = "<group>"; };
+		795DF0DCCA035D32CAD40EAD511AC6D4 /* KPWidevineClassicHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPWidevineClassicHandler.h; sourceTree = "<group>"; };
+		7AFC2A6CE6A6082877EC40FC688F0E14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7FF7E0E0852B1588D2D0E108993B47AA /* ResourceBundle-KALTURAPlayerSDKResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-KALTURAPlayerSDKResources-Info.plist"; sourceTree = "<group>"; };
+		80E5C38E29D70ECB0D33D6C8433E555D /* KPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPlayer.h; sourceTree = "<group>"; };
+		8200F61CF2A41FA9715630B8BF06E908 /* KPLocalAssetsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPLocalAssetsManager.h; sourceTree = "<group>"; };
+		8289071B348DC38D3ED453B79884B6AF /* KPAssetBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPAssetBuilder.h; sourceTree = "<group>"; };
+		82C5A7B364CFAF73075256FAA00E1BCE /* KPlayerFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPlayerFactory.h; sourceTree = "<group>"; };
+		855619EB3C098292F0E7129061292854 /* KPLogManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPLogManager.m; sourceTree = "<group>"; };
+		85D199B3A70595C9CF03DC53D5D40017 /* KPPlayerConfig_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPPlayerConfig_Private.h; sourceTree = "<group>"; };
+		8703386311C2E5945B40C29E80EA66ED /* NSMutableDictionary+AdSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+AdSupport.h"; sourceTree = "<group>"; };
+		883C2CF6B88D6246EA1E1F232D99C32A /* KPURLProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPURLProtocol.m; sourceTree = "<group>"; };
+		889BF67C529936C35E50B71040EBDA89 /* FacebookStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FacebookStrategy.m; sourceTree = "<group>"; };
+		88B25B73C9784A0A0261309EF22F95A1 /* GCKDeviceProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceProvider.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKDeviceProvider.h"; sourceTree = "<group>"; };
+		88B6A65264794AFCB4280F8B2A631E7F /* KPControlsUIWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPControlsUIWebView.h; sourceTree = "<group>"; };
+		8CF6A92EEE73312B455DF15B90601349 /* NSString+Utilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utilities.m"; sourceTree = "<group>"; };
+		8D09B862A0521C239B19A986D946E1B9 /* TwitterStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TwitterStrategy.h; sourceTree = "<group>"; };
+		8DE6547C22483986A823BCBD3A8A305C /* IMAHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IMAHandler.h; sourceTree = "<group>"; };
+		8ECEBFB0F0020867466CB4A998283CE9 /* GCKSessionTraits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKSessionTraits.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKSessionTraits.h"; sourceTree = "<group>"; };
+		8F2EABB679022B30CA2683D2093BBC48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		906A5ECA3C47C97B284986337D5FDA35 /* GoogleCastProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GoogleCastProvider.m; sourceTree = "<group>"; };
+		91A2BA5D479D5F75CEBB2DF6776FC895 /* GCKDiscoveryManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDiscoveryManager.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKDiscoveryManager.h"; sourceTree = "<group>"; };
+		91C301C8287FD3F6C0BF29AA228C9B80 /* Utilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		938B15D780B2F2045AFFEB7C8AB2B5B9 /* GCKDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDefines.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKDefines.h"; sourceTree = "<group>"; };
+		93A0E4793CF5BA960AB733D9A226379A /* GCKMediaTextTrackStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaTextTrackStyle.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMediaTextTrackStyle.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		941DCB3A5FB637BA777039A59C06051B /* GCKJSONUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKJSONUtils.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKJSONUtils.h"; sourceTree = "<group>"; };
+		95AD4CC8BE986B7069BB233D2704C4E4 /* GCKApplicationMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKApplicationMetadata.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKApplicationMetadata.h"; sourceTree = "<group>"; };
+		963B0F6337F081D0ED9277B281C949CA /* KPBrowserViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = KPBrowserViewController.xib; sourceTree = "<group>"; };
+		99660946F3DB034D35E7D5E27E3E5245 /* GCKUIMediaTrackSelectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIMediaTrackSelectionViewController.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIMediaTrackSelectionViewController.h"; sourceTree = "<group>"; };
+		9AC6E65F8ED3AC89D01CFFCC04F2B563 /* KPAssetHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPAssetHandler.h; sourceTree = "<group>"; };
+		9AF26AAC2D970B67DF890E836C26CD9E /* KPCastProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPCastProvider.h; sourceTree = "<group>"; };
+		9B859C54FB130022DE74CACC344F3087 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MediaAccessibility.framework; sourceTree = DEVELOPER_DIR; };
+		9E59B38F7D8A7744BC6050094AB813FE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
+		9EBDD70706AEC2168672305797809563 /* NSMutableArray+QueryItems.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueryItems.h"; sourceTree = "<group>"; };
+		9FB5AE375B6C02438CA12FB258C6C2E5 /* NSDictionary+Cache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Cache.h"; sourceTree = "<group>"; };
+		9FD9C0B9C9618C5189A1A05A64B1AA73 /* GCKLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLogger.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKLogger.h"; sourceTree = "<group>"; };
+		9FDFDD1FF0A00F2D1E1C583B5502BCAA /* GCKUICastContainerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUICastContainerViewController.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUICastContainerViewController.h"; sourceTree = "<group>"; };
+		A0381886DA4D31616A9E6BA12B0DF3DD /* DeviceParamsHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DeviceParamsHandler.h; sourceTree = "<group>"; };
+		A1D6E0109FF4CB08153C184D8AA14B4E /* NSMutableArray+QueryItems.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueryItems.m"; sourceTree = "<group>"; };
+		A32D93BD3266D55B8EE46ADE6D631448 /* WViPhoneAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WViPhoneAPI.h; sourceTree = "<group>"; };
+		A373B5FEE988EE4D0313D0BA90663F94 /* KPControlsWKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPControlsWKWebView.h; sourceTree = "<group>"; };
+		A3FD31B6D1C63D03C864767B076B5CC5 /* GCKUIImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIImageCache.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIImageCache.h"; sourceTree = "<group>"; };
+		A4A3662BE856D3CFAAC3B57D5B25DBB7 /* KCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KCacheManager.h; sourceTree = "<group>"; };
+		A4EE8EA88EB2327CCBCF74F7FA7ED239 /* KPController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPController.m; sourceTree = "<group>"; };
+		A571C746FEDC8DAF8A1D994CAE3A0D5D /* GCKGameManagerResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKGameManagerResult.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKGameManagerResult.h"; sourceTree = "<group>"; };
+		A64F2A83A9BC58D8539B44BD19A8F6A5 /* FacebookStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FacebookStrategy.h; sourceTree = "<group>"; };
+		A789116B99BFE74ACD9F04B1909134BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A9AF8CA0270B1CC72E38ECE548BC1D46 /* GCKCastContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCastContext.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKCastContext.h"; sourceTree = "<group>"; };
+		ABD3A2636FF70B9C291504F518AC214C /* GCKColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKColor.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKColor.h"; sourceTree = "<group>"; };
+		AC14AF5BB1B1D37A888D5C5395583CDB /* GCKSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKSession.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKSession.h"; sourceTree = "<group>"; };
+		AC3849CAFF0591C6C673CF31A6D2B252 /* KPWebKitBrowserViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPWebKitBrowserViewController.m; sourceTree = "<group>"; };
+		ADF1DAF0464979AFB7C540FFF5E4D24A /* GCKMediaQueueItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaQueueItem.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMediaQueueItem.h"; sourceTree = "<group>"; };
+		AE02D548E3BA843778EA0966F8D41CDA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		AF1A7B9DB26FF84C7DC316DD1360152B /* NSBundle+Kaltura.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Kaltura.m"; sourceTree = "<group>"; };
+		B0254B118702DEE48451127408FA0AD0 /* KPController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPController.h; sourceTree = "<group>"; };
+		B24C653A132248AC2725A176A14BFCBC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		B3D713E7F9E9B201AEF3EEE14F789B4B /* KMediaPlayerDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KMediaPlayerDefines.h; sourceTree = "<group>"; };
+		B837B39F6BE8ECD691B99CDBA556DC51 /* KPMediaPlayback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPMediaPlayback.h; sourceTree = "<group>"; };
+		B93A9B68393F7510C27E44B78133457A /* GCKCastSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCastSession.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKCastSession.h"; sourceTree = "<group>"; };
+		B9F7A28BFECF4427CC053AC000EE102B /* GCKCastContext+UI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GCKCastContext+UI.h"; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKCastContext+UI.h"; sourceTree = "<group>"; };
+		BBF0A0949212D4AEE401DAD91ED55854 /* GCKDynamicFrameworkSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDynamicFrameworkSupport.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKDynamicFrameworkSupport.h"; sourceTree = "<group>"; };
+		BE4C5114534A9C253E204B62BA605FF6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		BF0409514A7300AB96E00DD81101AF1C /* GCKCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCommon.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKCommon.h"; sourceTree = "<group>"; };
+		BF9FCC45DA5CDB3FCE3C9F39199E33FA /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
+		C0503A7CA03162F8234ABD31CEF9E579 /* GCKMultizoneStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMultizoneStatus.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMultizoneStatus.h"; sourceTree = "<group>"; };
+		C52EC87937469E7C56C684D1F2348DD3 /* KPControlsUIWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPControlsUIWebView.m; sourceTree = "<group>"; };
+		C935F31A2164C684313D6D296BF06A2E /* GCKMediaControlChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaControlChannel.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMediaControlChannel.h"; sourceTree = "<group>"; };
+		C98832D9C8AC8D00F573BE488F41108E /* linkedinStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = linkedinStrategy.h; sourceTree = "<group>"; };
+		CA569B9FC92B84D1DB99BE4AAC3AAFBD /* KPFairPlayHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPFairPlayHandler.h; sourceTree = "<group>"; };
+		CB44B70066067908FC04FACF7EF7BB70 /* GCKGlobalFlags.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKGlobalFlags.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKGlobalFlags.h"; sourceTree = "<group>"; };
+		CDF163984044BF64856E77AA9ADB9B47 /* GCKUIMediaButtonBarProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIMediaButtonBarProtocol.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIMediaButtonBarProtocol.h"; sourceTree = "<group>"; };
+		CDF6A660D407E7E4341FC47452AC45C7 /* KPBrowserViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPBrowserViewController.h; sourceTree = "<group>"; };
+		CE4504FF414684D9FAF33BCB1669C042 /* GoogleCast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GoogleCast.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GoogleCast.h"; sourceTree = "<group>"; };
+		D13A2F832D6C654F0D8238D0A8286007 /* GCKGameManagerChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKGameManagerChannel.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKGameManagerChannel.h"; sourceTree = "<group>"; };
+		D226390199AD3090A2A5132455721148 /* KPURLProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPURLProtocol.h; sourceTree = "<group>"; };
+		D34AC3B1B6CB2E32B7379628B33DA460 /* NSDictionary+Strategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Strategy.m"; sourceTree = "<group>"; };
+		D4DAD25D4B4EDD7761B0CACA85ACCA8E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		D5B19396EF4FE91C38C8B5CDEBC150A1 /* Pods-CCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CCDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D628007B2C326DDE3A0065933D4C66CA /* GCKSenderApplicationInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKSenderApplicationInfo.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKSenderApplicationInfo.h"; sourceTree = "<group>"; };
+		D84E0F9FAA3835EAD290F78B1610D6B3 /* KPViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPViewController.m; sourceTree = "<group>"; };
+		D92F4B057D871BBE4576F8BBBCF1CFE5 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework"; sourceTree = "<group>"; };
+		D9FF0B784750B1D05B5DE34C5FED9D4A /* KalturaPlayerSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KalturaPlayerSDK.xcconfig; sourceTree = "<group>"; };
+		DCA4F6E1D9C779450D709D2CDD8E1B84 /* GCKMediaTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaTrack.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKMediaTrack.h"; sourceTree = "<group>"; };
+		DCEAF146048ED293DEEF87A24E902B96 /* GCKUIMiniMediaControlsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIMiniMediaControlsViewController.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIMiniMediaControlsViewController.h"; sourceTree = "<group>"; };
+		E035461DE10ADD6AF2EB7715D5F8DB72 /* GCKNSDictionary+TypedValueLookup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GCKNSDictionary+TypedValueLookup.h"; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKNSDictionary+TypedValueLookup.h"; sourceTree = "<group>"; };
+		E379D2A86187F4829D6657A853280A65 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		E587426811CEA5C8DD2462C9D117A2CB /* GCKImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKImage.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKImage.h"; sourceTree = "<group>"; };
+		E5FCC48F56CC03177FF556E67B0B7CDB /* KPWebKitBrowserViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = KPWebKitBrowserViewController.xib; sourceTree = "<group>"; };
+		E9F95BD169ECF5A9DD298DBF44121A9E /* GCKUIImagePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIImagePicker.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIImagePicker.h"; sourceTree = "<group>"; };
+		EB5517FCE721C4841966FB1CDFE28AB9 /* libPods-CCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA68900B9C83CB69B0B96E2B6027611 /* GCKDeviceProvider+Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GCKDeviceProvider+Protected.h"; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKDeviceProvider+Protected.h"; sourceTree = "<group>"; };
+		EBF29343C5A23FD49CA1073D9C644C60 /* Pods-CCDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CCDemo-resources.sh"; sourceTree = "<group>"; };
+		EE36E3E79199F62DCF5F50F481FD9F1D /* KPWebKitBrowserViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPWebKitBrowserViewController.h; sourceTree = "<group>"; };
+		EFBA440097E12BE335B7FEFD4BAAB09E /* GCKError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKError.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKError.h"; sourceTree = "<group>"; };
+		F4AB68070CCF580712476A12DB9A1BE5 /* KPControlsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPControlsView.h; sourceTree = "<group>"; };
+		F545815354221301818A83189D4F13A3 /* KALTURAPlayerSDKResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KALTURAPlayerSDKResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54759C2E6CD9059C771A1F71286B594 /* GCKUIExpandedMediaControlsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIExpandedMediaControlsViewController.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIExpandedMediaControlsViewController.h"; sourceTree = "<group>"; };
+		F5CC5315E566A06D08B2537CC3633015 /* NSMutableDictionary+AdSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+AdSupport.m"; sourceTree = "<group>"; };
+		F7E092A2D3755C591FF7DEFFE95DAB5B /* CachedStrings.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = CachedStrings.plist; sourceTree = "<group>"; };
+		F7FB60F751E68DF2E461473CCF977798 /* KPViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KPViewController.h; sourceTree = "<group>"; };
+		F8370E6DB7285AF32DCB48CE4D17B457 /* KPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KPlayer.m; sourceTree = "<group>"; };
+		F8B942199249B8A3835C9DAAFB487A9D /* NSTimer+GCKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+GCKAdditions.h"; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/NSTimer+GCKAdditions.h"; sourceTree = "<group>"; };
+		F8F15D23E5B1608F206E70923582E011 /* DeviceParamsHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DeviceParamsHandler.m; sourceTree = "<group>"; };
+		FAFB4BF4EB223BE157A68BEDC71C53FD /* NSDictionary+Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utilities.h"; sourceTree = "<group>"; };
+		FD4CA545930CDE1819922BAA3DD04F0B /* KalturaPlayerSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KalturaPlayerSDK-prefix.pch"; sourceTree = "<group>"; };
+		FE00AD4336FD536D299F441CFCEDA19C /* GCKUIUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKUIUtils.h; path = "GoogleCastSDK-Public-3.2.0-Release/GoogleCast.framework/Headers/GCKUIUtils.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E42788F824BB628ED942D746A9ABFFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064E7D703049EA4F6CF42C1E347C7D96 /* AdSupport.framework in Frameworks */,
+				CB282C75DBD30485746CF843B46339DF /* AudioToolbox.framework in Frameworks */,
+				A28F6CB230584B996B8E155E9D25B89D /* AVFoundation.framework in Frameworks */,
+				F5DD91A0275AB53C2CCCA3BF8AC8F9D3 /* CFNetwork.framework in Frameworks */,
+				277B499591D3567DBF51E84C8F9527CF /* CoreFoundation.framework in Frameworks */,
+				EBBC7D7451C4FE79E261161801A47870 /* CoreGraphics.framework in Frameworks */,
+				85AA094F99498CB63921EE66434E6CEE /* Foundation.framework in Frameworks */,
+				45B68E246235DACFBBC8529474B08BDB /* MediaAccessibility.framework in Frameworks */,
+				9B7132A2472F23A3FCEE357B7987C42A /* MediaPlayer.framework in Frameworks */,
+				A8B908B7537B04CFE147B941551A873F /* MessageUI.framework in Frameworks */,
+				D4BC29676EB23DF649B7C7A041F32F60 /* QuartzCore.framework in Frameworks */,
+				7AA02B50D95CEE449F642215A4EA709B /* Social.framework in Frameworks */,
+				6CCDC321CF73EA9C3BFB4FD3DAC14F31 /* SystemConfiguration.framework in Frameworks */,
+				ECFDF7F5900D5103E9108C13140C973D /* UIKit.framework in Frameworks */,
+				E9C377053699FD6098009FBE9A736111 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF400D65BB08725299D2AD2C85BF99ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC34F568E5A2E6A1A0D9071E3AD4624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D50157046E71716C97147912412AAC80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0118A28A212F40CCDF9D70F0445D1812 /* Pods-CCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4E809912FDC852EA6DBCC6229764495E /* Pods-CCDemo-acknowledgements.markdown */,
+				048D220FAE6008F4C7DFFA13A9E33B9F /* Pods-CCDemo-acknowledgements.plist */,
+				0338DC0143742971D4741E5C3AD08412 /* Pods-CCDemo-dummy.m */,
+				72143272F1ACFFB405856E840AEEC5AD /* Pods-CCDemo-frameworks.sh */,
+				EBF29343C5A23FD49CA1073D9C644C60 /* Pods-CCDemo-resources.sh */,
+				D5B19396EF4FE91C38C8B5CDEBC150A1 /* Pods-CCDemo.debug.xcconfig */,
+				3ED9ED801D4EFE11564101A97AE74203 /* Pods-CCDemo.release.xcconfig */,
+			);
+			name = "Pods-CCDemo";
+			path = "Target Support Files/Pods-CCDemo";
+			sourceTree = "<group>";
+		};
+		0153389E688C6A9CB0959E261CDF3313 /* Widevine */ = {
+			isa = PBXGroup;
+			children = (
+				BF857A0A6B6B6197EDD5194701A85022 /* Frameworks */,
+			);
+			name = Widevine;
+			sourceTree = "<group>";
+		};
+		199B36BA3C77ACBD65C56C2680BEC074 /* KALTURAPlayerSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A0381886DA4D31616A9E6BA12B0DF3DD /* DeviceParamsHandler.h */,
+				F8F15D23E5B1608F206E70923582E011 /* DeviceParamsHandler.m */,
+				276D159EE517CA6BFF527BA9257B43A0 /* EmailStrategy.h */,
+				0DE7FD3656C90B377132C203860D91F4 /* EmailStrategy.m */,
+				A64F2A83A9BC58D8539B44BD19A8F6A5 /* FacebookStrategy.h */,
+				889BF67C529936C35E50B71040EBDA89 /* FacebookStrategy.m */,
+				100EA98A110BB1FDEF345395E10EACA2 /* GoogleCastProvider.h */,
+				906A5ECA3C47C97B284986337D5FDA35 /* GoogleCastProvider.m */,
+				33B6272679868334FF096191D864309A /* GoogleplusStrategy.h */,
+				3AD67E41054BBEE67A62EEDB277FD8EC /* GoogleplusStrategy.m */,
+				8DE6547C22483986A823BCBD3A8A305C /* IMAHandler.h */,
+				A4A3662BE856D3CFAAC3B57D5B25DBB7 /* KCacheManager.h */,
+				407B595123C9F6C8E8CE5D85BA415FF5 /* KCacheManager.m */,
+				B3D713E7F9E9B201AEF3EEE14F789B4B /* KMediaPlayerDefines.h */,
+				8289071B348DC38D3ED453B79884B6AF /* KPAssetBuilder.h */,
+				223FA4BD97027020B1DADEE786D113C6 /* KPAssetBuilder.m */,
+				9AC6E65F8ED3AC89D01CFFCC04F2B563 /* KPAssetHandler.h */,
+				CDF6A660D407E7E4341FC47452AC45C7 /* KPBrowserViewController.h */,
+				600FC23813B09FE84D2BBD408164E09D /* KPBrowserViewController.m */,
+				0F17888C2AFE8ED01E0E177CFF04C509 /* KPCacheConfig.h */,
+				443EDA0C2AB0F91EDF9A9A99C2A87442 /* KPCacheConfig.m */,
+				9AF26AAC2D970B67DF890E836C26CD9E /* KPCastProvider.h */,
+				B0254B118702DEE48451127408FA0AD0 /* KPController.h */,
+				A4EE8EA88EB2327CCBCF74F7FA7ED239 /* KPController.m */,
+				54CB5B47937C3DD7629E1EE27C7430AC /* KPController_Private.h */,
+				88B6A65264794AFCB4280F8B2A631E7F /* KPControlsUIWebView.h */,
+				C52EC87937469E7C56C684D1F2348DD3 /* KPControlsUIWebView.m */,
+				F4AB68070CCF580712476A12DB9A1BE5 /* KPControlsView.h */,
+				50AE5336D59696ED0CB4028A4830854B /* KPControlsView.m */,
+				A373B5FEE988EE4D0313D0BA90663F94 /* KPControlsWKWebView.h */,
+				265BF79E9695A629CF7E729B48A99DBA /* KPControlsWKWebView.m */,
+				CA569B9FC92B84D1DB99BE4AAC3AAFBD /* KPFairPlayHandler.h */,
+				34A49DE4AE86AA2B621585C248CB60B5 /* KPFairPlayHandler.m */,
+				4FB91A4638900226445590DB0EC836E3 /* KPIMAPlayerViewController.h */,
+				7015EF22ED8055FC612CBDBCF1694F6B /* KPIMAPlayerViewController.m */,
+				80E5C38E29D70ECB0D33D6C8433E555D /* KPlayer.h */,
+				F8370E6DB7285AF32DCB48CE4D17B457 /* KPlayer.m */,
+				82C5A7B364CFAF73075256FAA00E1BCE /* KPlayerFactory.h */,
+				6F6BE821916903555A4BA9BCA0265D5A /* KPlayerFactory.m */,
+				8200F61CF2A41FA9715630B8BF06E908 /* KPLocalAssetsManager.h */,
+				4AB10B27DB83CA7BE43F3D26606C05F9 /* KPLocalAssetsManager.m */,
+				523328C9976E53FF45932841B8BB353A /* KPLog.h */,
+				24B2C8AB0C2953D18240D53B9306BD5B /* KPLog.m */,
+				665F64CAF667AD3970F9A2E01EE464B1 /* KPLogManager.h */,
+				855619EB3C098292F0E7129061292854 /* KPLogManager.m */,
+				B837B39F6BE8ECD691B99CDBA556DC51 /* KPMediaPlayback.h */,
+				03EF9AA2BA21B0B189E102D89F58CC6A /* KPPlayerConfig.h */,
+				5D606F46CC3986B00DCA322759C26CAF /* KPPlayerConfig.m */,
+				85D199B3A70595C9CF03DC53D5D40017 /* KPPlayerConfig_Private.h */,
+				57F959B4F0CDFE0699B433CD03125466 /* KPShareManager.h */,
+				3022D50F07B1DE6099CB1C98264E410F /* KPShareManager.m */,
+				D226390199AD3090A2A5132455721148 /* KPURLProtocol.h */,
+				883C2CF6B88D6246EA1E1F232D99C32A /* KPURLProtocol.m */,
+				F7FB60F751E68DF2E461473CCF977798 /* KPViewController.h */,
+				D84E0F9FAA3835EAD290F78B1610D6B3 /* KPViewController.m */,
+				485664566DE22399191EB3B5B2CF7C9B /* KPViewControllerProtocols.h */,
+				EE36E3E79199F62DCF5F50F481FD9F1D /* KPWebKitBrowserViewController.h */,
+				AC3849CAFF0591C6C673CF31A6D2B252 /* KPWebKitBrowserViewController.m */,
+				795DF0DCCA035D32CAD40EAD511AC6D4 /* KPWidevineClassicHandler.h */,
+				7174373F09E35796A1418DBC1D315FC7 /* KPWidevineClassicHandler.m */,
+				C98832D9C8AC8D00F573BE488F41108E /* linkedinStrategy.h */,
+				6735EA30940DDFD014DC8A1027567350 /* linkedinStrategy.m */,
+				0CEEA7094B88F3EA10BEE5B0FB0081D5 /* NSBundle+Kaltura.h */,
+				AF1A7B9DB26FF84C7DC316DD1360152B /* NSBundle+Kaltura.m */,
+				9FB5AE375B6C02438CA12FB258C6C2E5 /* NSDictionary+Cache.h */,
+				4EFC714C541CEBD0E5975A14962C8427 /* NSDictionary+Cache.m */,
+				3CA8FA104B1F04148ACE23E89A7FBCCE /* NSDictionary+Strategy.h */,
+				D34AC3B1B6CB2E32B7379628B33DA460 /* NSDictionary+Strategy.m */,
+				FAFB4BF4EB223BE157A68BEDC71C53FD /* NSDictionary+Utilities.h */,
+				77B07FF424CA1762955F699F47FE3CA1 /* NSDictionary+Utilities.m */,
+				9EBDD70706AEC2168672305797809563 /* NSMutableArray+QueryItems.h */,
+				A1D6E0109FF4CB08153C184D8AA14B4E /* NSMutableArray+QueryItems.m */,
+				466EF26ED3E2E2F83F0E51ABA2649036 /* NSMutableArray+QueueAdditions.h */,
+				BF9FCC45DA5CDB3FCE3C9F39199E33FA /* NSMutableArray+QueueAdditions.m */,
+				8703386311C2E5945B40C29E80EA66ED /* NSMutableDictionary+AdSupport.h */,
+				F5CC5315E566A06D08B2537CC3633015 /* NSMutableDictionary+AdSupport.m */,
+				0C690CB3DC3DF9B36E79E10E30230BF9 /* NSMutableDictionary+Cache.h */,
+				2DD33A1166DDA2970CEDFAF9D31406C8 /* NSMutableDictionary+Cache.m */,
+				620E20A02982621CC75FF718E5DB2C49 /* NSString+Utilities.h */,
+				8CF6A92EEE73312B455DF15B90601349 /* NSString+Utilities.m */,
+				25B900114C3487305A310EC1DDBE49E1 /* SmsStrategy.h */,
+				75D581C3E75E05330BFD183685146949 /* SmsStrategy.m */,
+				8D09B862A0521C239B19A986D946E1B9 /* TwitterStrategy.h */,
+				5BE99281E9DDD7ED0D6499F6C6974FE7 /* TwitterStrategy.m */,
+				5E1E0393D34A168B4788ACBE2755D15F /* Utilities.h */,
+				91C301C8287FD3F6C0BF29AA228C9B80 /* Utilities.m */,
+				3DF15858F2F0BC0D6214932E0846E661 /* WidevineClassicCDM.h */,
+				440EF951993A59FBF2DD6EBAFFDF9E2B /* WidevineClassicCDM.m */,
+				A32D93BD3266D55B8EE46ADE6D631448 /* WViPhoneAPI.h */,
+			);
+			path = KALTURAPlayerSDK;
+			sourceTree = "<group>";
+		};
+		1E746B86621F6289F454FA536C509434 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				199B36BA3C77ACBD65C56C2680BEC074 /* KALTURAPlayerSDK */,
+				885274F27C1FF1C5C6AE92CDF81B3785 /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		36797012C3BA7FBEC7045B9699209A9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D48323ECCE24BD7F560607BDAF7CA9F /* google-cast-sdk */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B90751586063BDAF8D551A9983A0D3A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B24C653A132248AC2725A176A14BFCBC /* AdSupport.framework */,
+				3513A09152B920A6DD0290807BD37BC7 /* AudioToolbox.framework */,
+				393ACAE4CDBAECFF94FBFD7797DB76AE /* AVFoundation.framework */,
+				D4DAD25D4B4EDD7761B0CACA85ACCA8E /* CFNetwork.framework */,
+				E379D2A86187F4829D6657A853280A65 /* CoreFoundation.framework */,
+				8F2EABB679022B30CA2683D2093BBC48 /* CoreGraphics.framework */,
+				A789116B99BFE74ACD9F04B1909134BB /* Foundation.framework */,
+				9B859C54FB130022DE74CACC344F3087 /* MediaAccessibility.framework */,
+				BE4C5114534A9C253E204B62BA605FF6 /* MediaPlayer.framework */,
+				530CFCBF23C27F3442D2A727E3622C18 /* MessageUI.framework */,
+				18091EA2071D86ECFD3C1B50050018D2 /* QuartzCore.framework */,
+				9E59B38F7D8A7744BC6050094AB813FE /* Social.framework */,
+				34FDE85CCE9564545E6880C208D2074F /* SystemConfiguration.framework */,
+				7AFC2A6CE6A6082877EC40FC688F0E14 /* UIKit.framework */,
+				AE02D548E3BA843778EA0966F8D41CDA /* WebKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		43677FA1CE9CEEF506D41F306B4A37AF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0118A28A212F40CCDF9D70F0445D1812 /* Pods-CCDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4D48323ECCE24BD7F560607BDAF7CA9F /* google-cast-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				AF8EDE8F6F866FE363F207FB91D4193C /* Core */,
+			);
+			path = "google-cast-sdk";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				E490508AF1153287F6C4D732E13A9B26 /* Development Pods */,
+				B1EE1360CA12B677A6839856075E4934 /* Frameworks */,
+				36797012C3BA7FBEC7045B9699209A9C /* Pods */,
+				C216E921E5E01C4DBF350D1A42FF35D6 /* Products */,
+				43677FA1CE9CEEF506D41F306B4A37AF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		885274F27C1FF1C5C6AE92CDF81B3785 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE3B81534DAE9297F5B830900F3FAF77 /* KALTURAPlayerSDK */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8C47B171D81001668F96BDA7160A06D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D92F4B057D871BBE4576F8BBBCF1CFE5 /* GoogleCast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF8EDE8F6F866FE363F207FB91D4193C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				64B51A20F28D90CC4D02DFF43E8E55F8 /* GCKAdBreakInfo.h */,
+				95AD4CC8BE986B7069BB233D2704C4E4 /* GCKApplicationMetadata.h */,
+				29259182DCA3494744BE9E08E134F824 /* GCKCastChannel.h */,
+				A9AF8CA0270B1CC72E38ECE548BC1D46 /* GCKCastContext.h */,
+				B9F7A28BFECF4427CC053AC000EE102B /* GCKCastContext+UI.h */,
+				6370805B5A00AAA7B67F71912D3D73EB /* GCKCastOptions.h */,
+				B93A9B68393F7510C27E44B78133457A /* GCKCastSession.h */,
+				ABD3A2636FF70B9C291504F518AC214C /* GCKColor.h */,
+				BF0409514A7300AB96E00DD81101AF1C /* GCKCommon.h */,
+				938B15D780B2F2045AFFEB7C8AB2B5B9 /* GCKDefines.h */,
+				41A086425146F2AA07CFFE2FADA08FA4 /* GCKDevice.h */,
+				53B22990FC5EAA76828E809D2B7C3D18 /* GCKDeviceManager.h */,
+				88B25B73C9784A0A0261309EF22F95A1 /* GCKDeviceProvider.h */,
+				EBA68900B9C83CB69B0B96E2B6027611 /* GCKDeviceProvider+Protected.h */,
+				090479192871ABB04AC128FE24682A53 /* GCKDeviceScanner.h */,
+				91A2BA5D479D5F75CEBB2DF6776FC895 /* GCKDiscoveryManager.h */,
+				BBF0A0949212D4AEE401DAD91ED55854 /* GCKDynamicFrameworkSupport.h */,
+				EFBA440097E12BE335B7FEFD4BAAB09E /* GCKError.h */,
+				179DEED0D1F11F1131A4557B1F28FB46 /* GCKFilterCriteria.h */,
+				6CF84CE368924113576D0DE29E2DB495 /* GCKFrameworkResources.h */,
+				D13A2F832D6C654F0D8238D0A8286007 /* GCKGameManagerChannel.h */,
+				A571C746FEDC8DAF8A1D994CAE3A0D5D /* GCKGameManagerResult.h */,
+				2C8EB8F3191D1E232E3658242A01E1AF /* GCKGameManagerState.h */,
+				224DCC58D0AF4163A2A38F89EF1E00B4 /* GCKGameplayState.h */,
+				16565B5BDB146974FB122FB826D643E1 /* GCKGenericChannel.h */,
+				CB44B70066067908FC04FACF7EF7BB70 /* GCKGlobalFlags.h */,
+				E587426811CEA5C8DD2462C9D117A2CB /* GCKImage.h */,
+				941DCB3A5FB637BA777039A59C06051B /* GCKJSONUtils.h */,
+				5245C17F0ACEC0F6F5B86C412D5875B8 /* GCKLaunchOptions.h */,
+				119334DCBFF1BB51F8AF1975985A17BF /* GCKLobbyState.h */,
+				9FD9C0B9C9618C5189A1A05A64B1AA73 /* GCKLogger.h */,
+				2D43DE76B6B2E31B711B9A007F0B4A6C /* GCKLoggerCommon.h */,
+				5FB4DA1AFA55CF350A8DC71EE52EF38A /* GCKLoggerFilter.h */,
+				30DB177555F4D46F410F5AE3444BC7BA /* GCKMediaCommon.h */,
+				C935F31A2164C684313D6D296BF06A2E /* GCKMediaControlChannel.h */,
+				721CB61D69D57460EC26160610062051 /* GCKMediaInformation.h */,
+				3B48E623F01F98315353EA37E827DA62 /* GCKMediaMetadata.h */,
+				ADF1DAF0464979AFB7C540FFF5E4D24A /* GCKMediaQueueItem.h */,
+				4F575341C261E93527B8E8926F52C1D6 /* GCKMediaStatus.h */,
+				93A0E4793CF5BA960AB733D9A226379A /* GCKMediaTextTrackStyle.h */,
+				DCA4F6E1D9C779450D709D2CDD8E1B84 /* GCKMediaTrack.h */,
+				6DEE0B68A34E12ADEEDCBDE6D2AD91F1 /* GCKMultizoneDevice.h */,
+				C0503A7CA03162F8234ABD31CEF9E579 /* GCKMultizoneStatus.h */,
+				E035461DE10ADD6AF2EB7715D5F8DB72 /* GCKNSDictionary+TypedValueLookup.h */,
+				1ECEE5EC9D92E3F4F13A04B40044CAE7 /* GCKPlayerInfo.h */,
+				6B54558CBAB145E30E14CA2499618249 /* GCKPlayerState.h */,
+				26A7EFC5ABFD66811CE2973E46A4F276 /* GCKRemoteMediaClient.h */,
+				3121974C09AB6748B0C0A51157215739 /* GCKRequest.h */,
+				D628007B2C326DDE3A0065933D4C66CA /* GCKSenderApplicationInfo.h */,
+				AC14AF5BB1B1D37A888D5C5395583CDB /* GCKSession.h */,
+				2DCC5A00EEA87D7731DFCC63CF31E077 /* GCKSession+Protected.h */,
+				4F94BAF71EEF8F55EC8BEE55C0C7A81C /* GCKSessionManager.h */,
+				8ECEBFB0F0020867466CB4A998283CE9 /* GCKSessionTraits.h */,
+				0F18430D2D5B930913A1211171563515 /* GCKUIButton.h */,
+				4DD5F4D9AE4A8717FC6E2E79A70BA47D /* GCKUICastButton.h */,
+				9FDFDD1FF0A00F2D1E1C583B5502BCAA /* GCKUICastContainerViewController.h */,
+				3C6A72FB51B319E1AD133A37090E99D3 /* GCKUIDeviceVolumeController.h */,
+				F54759C2E6CD9059C771A1F71286B594 /* GCKUIExpandedMediaControlsViewController.h */,
+				A3FD31B6D1C63D03C864767B076B5CC5 /* GCKUIImageCache.h */,
+				133498DCCBC03EFD23FE489644C46BB2 /* GCKUIImageHints.h */,
+				E9F95BD169ECF5A9DD298DBF44121A9E /* GCKUIImagePicker.h */,
+				CDF163984044BF64856E77AA9ADB9B47 /* GCKUIMediaButtonBarProtocol.h */,
+				29D6DBB5F9DF73A0F8F27CC12D3B6063 /* GCKUIMediaController.h */,
+				99660946F3DB034D35E7D5E27E3E5245 /* GCKUIMediaTrackSelectionViewController.h */,
+				DCEAF146048ED293DEEF87A24E902B96 /* GCKUIMiniMediaControlsViewController.h */,
+				FE00AD4336FD536D299F441CFCEDA19C /* GCKUIUtils.h */,
+				CE4504FF414684D9FAF33BCB1669C042 /* GoogleCast.h */,
+				270272D221B0F2AF88C68D3F984A54AE /* NSDictionary+GCKAdditions.h */,
+				F8B942199249B8A3835C9DAAFB487A9D /* NSTimer+GCKAdditions.h */,
+				8C47B171D81001668F96BDA7160A06D3 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		B1EE1360CA12B677A6839856075E4934 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B90751586063BDAF8D551A9983A0D3A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B60F85148F96E9D6B7560B61499C474C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9FF0B784750B1D05B5DE34C5FED9D4A /* KalturaPlayerSDK.xcconfig */,
+				78C4B6884A3837C4C578F29B01B2653F /* KalturaPlayerSDK-dummy.m */,
+				FD4CA545930CDE1819922BAA3DD04F0B /* KalturaPlayerSDK-prefix.pch */,
+				7FF7E0E0852B1588D2D0E108993B47AA /* ResourceBundle-KALTURAPlayerSDKResources-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../player-sdk-demo-ios/ovp/CCDemo/Pods/Target Support Files/KalturaPlayerSDK";
+			sourceTree = "<group>";
+		};
+		BF857A0A6B6B6197EDD5194701A85022 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66DABB16F0168BDA73CCA1780A047DE7 /* libWViPhoneAPI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C216E921E5E01C4DBF350D1A42FF35D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F545815354221301818A83189D4F13A3 /* KALTURAPlayerSDKResources.bundle */,
+				0F5C371BDF072FEE8935F8F3D5504966 /* libKalturaPlayerSDK.a */,
+				EB5517FCE721C4841966FB1CDFE28AB9 /* libPods-CCDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC282E0B09DB30C09E00F5686BEFC515 /* KalturaPlayerSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1E746B86621F6289F454FA536C509434 /* Core */,
+				B60F85148F96E9D6B7560B61499C474C /* Support Files */,
+				0153389E688C6A9CB0959E261CDF3313 /* Widevine */,
+			);
+			name = KalturaPlayerSDK;
+			path = "../../../../player-sdk-native-ios";
+			sourceTree = "<group>";
+		};
+		E490508AF1153287F6C4D732E13A9B26 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC282E0B09DB30C09E00F5686BEFC515 /* KalturaPlayerSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FE3B81534DAE9297F5B830900F3FAF77 /* KALTURAPlayerSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F7E092A2D3755C591FF7DEFFE95DAB5B /* CachedStrings.plist */,
+				963B0F6337F081D0ED9277B281C949CA /* KPBrowserViewController.xib */,
+				E5FCC48F56CC03177FF556E67B0B7CDB /* KPWebKitBrowserViewController.xib */,
+			);
+			path = KALTURAPlayerSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		864B3DD328F1FF3DD82C11C004981DDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3A79BF31C2D3D943337AC190F32E43 /* DeviceParamsHandler.h in Headers */,
+				101F3318E835E0A25F0C8218C1CAE3DC /* EmailStrategy.h in Headers */,
+				18788BB05D0A43B212537D3C959ACEDE /* FacebookStrategy.h in Headers */,
+				5B6928B8094C7AB6A05277A5FDB0372D /* GoogleCastProvider.h in Headers */,
+				E84617CE44570015B14A45C9BEA346B6 /* GoogleplusStrategy.h in Headers */,
+				11718A75932FAD72167A0A4197AD1E3F /* IMAHandler.h in Headers */,
+				7A2CEDB514F920DD6140842E1BA29A53 /* KCacheManager.h in Headers */,
+				93DF52711D86D2C6E795DD02D461DF78 /* KMediaPlayerDefines.h in Headers */,
+				CAD7DCF97E599AF9F3786C757B22DC39 /* KPAssetBuilder.h in Headers */,
+				CF290AFF5C97A8B08E16109C9784D442 /* KPAssetHandler.h in Headers */,
+				94CD361743242B834CC2E180F80F4F90 /* KPBrowserViewController.h in Headers */,
+				C2F9D7650C743DD697F50F60211203DE /* KPCacheConfig.h in Headers */,
+				46C55754BFF9D33057335AEDA1DE3454 /* KPCastProvider.h in Headers */,
+				AB2690983AC50EB6E60CABC3A982B5AB /* KPController.h in Headers */,
+				A605FB7E7D3F41BE4EA42B8986122279 /* KPController_Private.h in Headers */,
+				154DD6D6B20E4C2196A9DC51E836F230 /* KPControlsUIWebView.h in Headers */,
+				EF06F49ED170F4E9D63FA34352615F5F /* KPControlsView.h in Headers */,
+				374069DACEC658FF84B309F3A372F1DA /* KPControlsWKWebView.h in Headers */,
+				0C00ADE376E84C5500718F59407E6C76 /* KPFairPlayHandler.h in Headers */,
+				50C366ABD63F272010C2F23E271B8783 /* KPIMAPlayerViewController.h in Headers */,
+				64796A008CEC884E6EBF2C76A4FBB2CE /* KPlayer.h in Headers */,
+				D731540EEB4DBBFC3001884D92A22897 /* KPlayerFactory.h in Headers */,
+				FB0775F2E575CF92CD207B106C71F065 /* KPLocalAssetsManager.h in Headers */,
+				548FE692A66A6016412016263AFEDF4F /* KPLog.h in Headers */,
+				CC7837EB2E32B4F4CF7DD5159307B4C8 /* KPLogManager.h in Headers */,
+				3DEA2109F8DB24CB7804A3243A4FD94A /* KPMediaPlayback.h in Headers */,
+				0B35A9868B28135CA7D54C84E35D6BD3 /* KPPlayerConfig.h in Headers */,
+				0A17AFBDDA5FB476D60A92044297B54C /* KPPlayerConfig_Private.h in Headers */,
+				404519EEE27DCF96EA230CE74B99C36C /* KPShareManager.h in Headers */,
+				81199149DCFB0EBD20CBD21C15EB041B /* KPURLProtocol.h in Headers */,
+				ADC01BB646214227B61DBB795D74AE0F /* KPViewController.h in Headers */,
+				9D9F028A5ECFA41AD31E25EBD7FB14B8 /* KPViewControllerProtocols.h in Headers */,
+				A25A59224F2B3C0BA27B72B339C09673 /* KPWebKitBrowserViewController.h in Headers */,
+				DCD6F24D0ACE4B3FACF6DEEBD0C17B65 /* KPWidevineClassicHandler.h in Headers */,
+				C3F6AB95E27B700E53196030A2FA311F /* linkedinStrategy.h in Headers */,
+				B27181BDA0890E83216777DB4E05250E /* NSBundle+Kaltura.h in Headers */,
+				0984FD284299E2D312938A80C75D275C /* NSDictionary+Cache.h in Headers */,
+				FBD0327C7E7F3432EEE6F2EB1DDEE8BF /* NSDictionary+Strategy.h in Headers */,
+				457AEC10B3631AE389DDFF1167CCA1D3 /* NSDictionary+Utilities.h in Headers */,
+				8D28E4AB4ED9D4F4728FEDA1DF43E5B1 /* NSMutableArray+QueryItems.h in Headers */,
+				4E18DE27570DED0B312B652CC3046566 /* NSMutableArray+QueueAdditions.h in Headers */,
+				94BF287EAF149A1A2EE503D29EDA7A1A /* NSMutableDictionary+AdSupport.h in Headers */,
+				4D6589E1D67E470E8B94191A23DC3322 /* NSMutableDictionary+Cache.h in Headers */,
+				8C6D8530DD8656B23364AB84C1664BCF /* NSString+Utilities.h in Headers */,
+				DDB02595255A63910EB39A2198ACEE7F /* SmsStrategy.h in Headers */,
+				01B99376E356E2BC5C4DAC6CD1450139 /* TwitterStrategy.h in Headers */,
+				B27CFED316B80943B065F411BA4A517C /* Utilities.h in Headers */,
+				B90F050C59987AB1BAE4CF6D470BEA36 /* WidevineClassicCDM.h in Headers */,
+				A97B2AF9D418B6D546F23F889202FF68 /* WViPhoneAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8BD1CF30A7C6C0E1E8E9B8A2D358141B /* Pods-CCDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65DD6B2E3DE4729E2BF759B63D265EBA /* Build configuration list for PBXNativeTarget "Pods-CCDemo" */;
+			buildPhases = (
+				3C4F94E26759D8E4F4B4B6837E3676AC /* Sources */,
+				EEC34F568E5A2E6A1A0D9071E3AD4624 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				610BA266098159F3931C2FF005556B45 /* PBXTargetDependency */,
+			);
+			name = "Pods-CCDemo";
+			productName = "Pods-CCDemo";
+			productReference = EB5517FCE721C4841966FB1CDFE28AB9 /* libPods-CCDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A3917795FB23CE56C049A8339B6F38C5 /* KalturaPlayerSDK-KALTURAPlayerSDKResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F853FFAC7DC85B90E024FFA2651A001 /* Build configuration list for PBXNativeTarget "KalturaPlayerSDK-KALTURAPlayerSDKResources" */;
+			buildPhases = (
+				52B801B84C297B11477553E071819AB7 /* Sources */,
+				BF400D65BB08725299D2AD2C85BF99ED /* Frameworks */,
+				64C12DE5B12FC7599AA99646092ABA1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KalturaPlayerSDK-KALTURAPlayerSDKResources";
+			productName = "KalturaPlayerSDK-KALTURAPlayerSDKResources";
+			productReference = F545815354221301818A83189D4F13A3 /* KALTURAPlayerSDKResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D8BC17F6A0EFB03FF4D7E19D3810F73B /* KalturaPlayerSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C479326881B39E9C81116F097F0999 /* Build configuration list for PBXNativeTarget "KalturaPlayerSDK" */;
+			buildPhases = (
+				8654FFBA2DD857A923442E1FD5DFAEB0 /* Sources */,
+				9E42788F824BB628ED942D746A9ABFFD /* Frameworks */,
+				864B3DD328F1FF3DD82C11C004981DDE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD1883E8FE0A0CDF5F12F9C682132582 /* PBXTargetDependency */,
+			);
+			name = KalturaPlayerSDK;
+			productName = KalturaPlayerSDK;
+			productReference = 0F5C371BDF072FEE8935F8F3D5504966 /* libKalturaPlayerSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C216E921E5E01C4DBF350D1A42FF35D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8BC17F6A0EFB03FF4D7E19D3810F73B /* KalturaPlayerSDK */,
+				A3917795FB23CE56C049A8339B6F38C5 /* KalturaPlayerSDK-KALTURAPlayerSDKResources */,
+				8BD1CF30A7C6C0E1E8E9B8A2D358141B /* Pods-CCDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64C12DE5B12FC7599AA99646092ABA1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C0BFFF4DCD06438AA7B54DE774625C8 /* CachedStrings.plist in Resources */,
+				856918340FF35F6F9E1994BD2079B278 /* KPBrowserViewController.xib in Resources */,
+				486A05CA653160A8F0D0B5EB34889B83 /* KPWebKitBrowserViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C4F94E26759D8E4F4B4B6837E3676AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2590490FA92DFA84C02607D825377B /* Pods-CCDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B801B84C297B11477553E071819AB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8654FFBA2DD857A923442E1FD5DFAEB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95444C5E0875E996986C12C2524A925E /* DeviceParamsHandler.m in Sources */,
+				B4273D2BF3CB20288689BD31B8E3B672 /* EmailStrategy.m in Sources */,
+				DBBF7528861887CACC644382990B77A5 /* FacebookStrategy.m in Sources */,
+				A5683E948394B7307B90BEDCE5D69B9E /* GoogleCastProvider.m in Sources */,
+				161A3F6000671282229FB581F2614EBD /* GoogleplusStrategy.m in Sources */,
+				E16157C27583D31D3AC54544B12412E9 /* KalturaPlayerSDK-dummy.m in Sources */,
+				14C20CDDF9AC0159F04AFDC203738416 /* KCacheManager.m in Sources */,
+				75E3226046A66EF24648BE2034DECD0F /* KPAssetBuilder.m in Sources */,
+				E9F9F423E6E46A9433DE86A11EDE1999 /* KPBrowserViewController.m in Sources */,
+				9BCDC955E420B3DE441BA76FF038BCA3 /* KPCacheConfig.m in Sources */,
+				47FEB951B5DB55766A776FEED451111F /* KPController.m in Sources */,
+				94EB1030C242BA245281EBF7F22E75EC /* KPControlsUIWebView.m in Sources */,
+				4497B70039293BD2290B35CB69CA7C6A /* KPControlsView.m in Sources */,
+				8933BDE67857EED1E8E4167FCCDE276D /* KPControlsWKWebView.m in Sources */,
+				B1B87F7D47D093A26F3EB49F60B06EC1 /* KPFairPlayHandler.m in Sources */,
+				CB8F526CE1521F8F5E73AD55DAE55B3E /* KPIMAPlayerViewController.m in Sources */,
+				4D1AF7F37D8DF59AD7C9B91D0C795B6C /* KPlayer.m in Sources */,
+				779DFC86337D7EA731DD2FE7B13AF41E /* KPlayerFactory.m in Sources */,
+				B1FFA105C8CA78CCEAD8CD318E09B72C /* KPLocalAssetsManager.m in Sources */,
+				AA91A0D42307A2851BAB39ADC4E666D7 /* KPLog.m in Sources */,
+				8F84F914B48BF20F7E93F0772267B902 /* KPLogManager.m in Sources */,
+				A8FEBE32402DA9B212C2A2FC7504C57B /* KPPlayerConfig.m in Sources */,
+				978FAC1ED289876A45BA908E9AEF2A0E /* KPShareManager.m in Sources */,
+				30D8B7C26FAF061712E5AF24F1C5401C /* KPURLProtocol.m in Sources */,
+				00142624EB9707002FBB383237014D6B /* KPViewController.m in Sources */,
+				F1E01F809D042DD96FF9B5E21782AA96 /* KPWebKitBrowserViewController.m in Sources */,
+				9E513A59DD8872949C39D7C411B35052 /* KPWidevineClassicHandler.m in Sources */,
+				97DC27858FF08E061BE4D540FD9CAA52 /* linkedinStrategy.m in Sources */,
+				2B7D9BC069E2DF2326DB5BCC5E50D75A /* NSBundle+Kaltura.m in Sources */,
+				73EBC0699D491D3FF6A1F9027D67F130 /* NSDictionary+Cache.m in Sources */,
+				5BD3551A74E9ABD25F6728A67E025E39 /* NSDictionary+Strategy.m in Sources */,
+				06EF552A2E5E46578B315728C35B2E5A /* NSDictionary+Utilities.m in Sources */,
+				DD97B965C6EA1CDC0547EF5358AAB219 /* NSMutableArray+QueryItems.m in Sources */,
+				2FB3BB971BC61D32ECF044338AC29C19 /* NSMutableArray+QueueAdditions.m in Sources */,
+				11D9A11060DEA86F3F54D30FD1B359AB /* NSMutableDictionary+AdSupport.m in Sources */,
+				EB9EBAB6CA13CFAE4CA5EA0B75006B10 /* NSMutableDictionary+Cache.m in Sources */,
+				4F48164CE309A10EB751F591E4A6C82F /* NSString+Utilities.m in Sources */,
+				305BAEABF3364546C8F377EBB5DAFA16 /* SmsStrategy.m in Sources */,
+				F03390801CEA47E3CE6A19180F896F58 /* TwitterStrategy.m in Sources */,
+				BB49D306E1307431975A1E3A487C156D /* Utilities.m in Sources */,
+				2429B10AC94B72C5C8E1D07DB4F5C335 /* WidevineClassicCDM.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		610BA266098159F3931C2FF005556B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KalturaPlayerSDK;
+			target = D8BC17F6A0EFB03FF4D7E19D3810F73B /* KalturaPlayerSDK */;
+			targetProxy = B58C8B6BC87BE62BAF79031DD310B66D /* PBXContainerItemProxy */;
+		};
+		AD1883E8FE0A0CDF5F12F9C682132582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KalturaPlayerSDK-KALTURAPlayerSDKResources";
+			target = A3917795FB23CE56C049A8339B6F38C5 /* KalturaPlayerSDK-KALTURAPlayerSDKResources */;
+			targetProxy = B1497A046836FCC9D6177B277E91766F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7561EA1E3A2489DB738E014B3425C1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B19396EF4FE91C38C8B5CDEBC150A1 /* Pods-CCDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		912E8F9673DD36F44772CA96CFDCD3BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ED9ED801D4EFE11564101A97AE74203 /* Pods-CCDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B9D8E640BA3C0507F57A93B05CC1B3BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9FF0B784750B1D05B5DE34C5FED9D4A /* KalturaPlayerSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KalturaPlayerSDK/KalturaPlayerSDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D37499CB158C60E07A6F80910E0069C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9FF0B784750B1D05B5DE34C5FED9D4A /* KalturaPlayerSDK.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KalturaPlayerSDK";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/KalturaPlayerSDK/ResourceBundle-KALTURAPlayerSDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = KALTURAPlayerSDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		E7A0D5C3766657C4E14BAB95CDDEB122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9FF0B784750B1D05B5DE34C5FED9D4A /* KalturaPlayerSDK.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KalturaPlayerSDK";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/KalturaPlayerSDK/ResourceBundle-KALTURAPlayerSDKResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = KALTURAPlayerSDKResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EAB125651B5995DD4440B15C281E4120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9FF0B784750B1D05B5DE34C5FED9D4A /* KalturaPlayerSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KalturaPlayerSDK/KalturaPlayerSDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F853FFAC7DC85B90E024FFA2651A001 /* Build configuration list for PBXNativeTarget "KalturaPlayerSDK-KALTURAPlayerSDKResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A0D5C3766657C4E14BAB95CDDEB122 /* Debug */,
+				D37499CB158C60E07A6F80910E0069C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
+				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65C479326881B39E9C81116F097F0999 /* Build configuration list for PBXNativeTarget "KalturaPlayerSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9D8E640BA3C0507F57A93B05CC1B3BD /* Debug */,
+				EAB125651B5995DD4440B15C281E4120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65DD6B2E3DE4729E2BF759B63D265EBA /* Build configuration list for PBXNativeTarget "Pods-CCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7561EA1E3A2489DB738E014B3425C1C2 /* Debug */,
+				912E8F9673DD36F44772CA96CFDCD3BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

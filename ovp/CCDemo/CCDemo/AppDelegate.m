@@ -7,16 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import <GoogleCast/GoogleCast.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <GCKLoggerDelegate>
 
 @end
 
 @implementation AppDelegate
 
+//F16506C7 2.48.4
+// 276999A7 2.48.3
+static NSString *const kReceiverAppID = @"276999A7";
+static const BOOL kDebugLoggingEnabled = YES;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    GCKCastOptions *options =
+    [[GCKCastOptions alloc] initWithReceiverApplicationID:kReceiverAppID];
+    [GCKCastContext setSharedInstanceWithOptions:options];
+    
+    [GCKLogger sharedInstance].delegate = self;
+    
     return YES;
 }
 
@@ -40,6 +52,14 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - GCKLoggerDelegate
+
+- (void)logMessage:(NSString *)message fromFunction:(NSString *)function {
+    if (kDebugLoggingEnabled) {
+        NSLog(@"%@  %@", function, message);
+    }
 }
 
 @end
