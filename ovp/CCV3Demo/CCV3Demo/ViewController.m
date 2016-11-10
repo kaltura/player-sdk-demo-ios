@@ -13,7 +13,7 @@
 #import <GoogleCast/GoogleCast.h>
 #import <KalturaPlayerSDK/GoogleCastProvider.h>
 
-static NSString * const kViewControllerServer = @"http://kgit.html5video.org/tags/v2.49/mwEmbedFrame.php";
+static NSString * const kViewControllerServer = @"http://cdnapi.kaltura.com";
 static NSString * const kViewControllerUIConfId = @"37150601";
 static NSString * const kViewControllerPartnerId = @"2212491";
 
