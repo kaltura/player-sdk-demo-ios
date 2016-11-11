@@ -12,7 +12,7 @@
 #import "AppDelegate.h"
 
 static CGFloat const kMediaListViewControllerAnimationDuration = 1.0;
-static NSString * const kMediaListViewControllerKeyEntryId = @"KEY_ENTRY_ID";
+static NSString * const kMediaListViewControllerKeyEntryId = @"entryid";
 
 @interface MediaListViewController () <GCKUIMiniMediaControlsViewControllerDelegate>
 
