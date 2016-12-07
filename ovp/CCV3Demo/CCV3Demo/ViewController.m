@@ -42,16 +42,19 @@ static NSString * const kViewControllerPartnerId = @"2212491";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
-    
-    [self.navigationController.navigationBar setHidden: YES];
-}
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear: animated];
+    [self.navigationController.navigationBar setHidden: YES];
+    
+    _castButton.hidden = YES;
+    _changeMediaButton.hidden = YES;
     
     if ([_playerViewController.view superview]) {
         [_playerViewController removePlayer];
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear: animated];
 
     [self p_configWithEntryId: _currentEntryId];
     self.castProvider = [GoogleCastProvider sharedInstance];
@@ -70,6 +73,14 @@ static NSString * const kViewControllerPartnerId = @"2212491";
     [self.view bringSubviewToFront: _backButton];
     
     [[GCKCastContext sharedInstance].sessionManager addListener: self];
+    
+    typeof(self) __weak weakSelf = self;
+    [_playerViewController registerReadyEvent:^{
+        typeof(self) __strong strongSelf = weakSelf;
+        
+        strongSelf.castButton.hidden = NO;
+        strongSelf.changeMediaButton.hidden = NO;
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
