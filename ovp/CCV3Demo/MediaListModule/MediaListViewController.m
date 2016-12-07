@@ -7,9 +7,11 @@
 //
 
 #import "MediaListViewController.h"
-#import "ViewInput.h"
-#import <GoogleCast/GoogleCast.h>
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "ViewInput.h"
+
+#import <GoogleCast/GoogleCast.h>
 
 static CGFloat const kMediaListViewControllerAnimationDuration = 1.0;
 static NSString * const kMediaListViewControllerKeyEntryId = @"entryid";
@@ -21,9 +23,17 @@ static NSString * const kMediaListViewControllerKeyEntryId = @"entryid";
 @property (weak, nonatomic) IBOutlet UIView *miniMediaControlsContainerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *miniMediaControlsHeightConstraint;
 
+@property (strong, nonatomic) ViewController *playerViewController;
+
 @end
 
 @implementation MediaListViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    
+    [self.navigationController.navigationBar setHidden: NO];
+}
 
 - (void) viewDidLoad {
     [super viewDidLoad];
@@ -45,6 +55,10 @@ static NSString * const kMediaListViewControllerKeyEntryId = @"entryid";
     [_miniMediaControlsViewController didMoveToParentViewController:self];
     
     [self updateControlBarsVisibility];
+    
+    GCKUICastButton *castButton = [[GCKUICastButton alloc] initWithFrame:CGRectMake(0, 0, 24, 24)];
+    castButton.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:castButton];
 }
 
 - (void)updateControlBarsVisibility {
@@ -94,20 +108,18 @@ static NSString * const kMediaListViewControllerKeyEntryId = @"entryid";
         [self playSelectedItemRemotely];
     } else {
         
-        [self performSegueWithIdentifier: kShowViewController sender: nil];
-    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if ([segue.identifier isEqualToString: kShowViewController]) {
-        
-        UIViewController *destination = segue.destinationViewController;
-        if ([destination conformsToProtocol:@protocol(ViewInput)]) {
+        if (!_playerViewController) {
             
-            id<ViewInput> viewInput = (id<ViewInput>)destination;
+            self.playerViewController = [[UIStoryboard storyboardWithName:@"Main" bundle: nil] instantiateViewControllerWithIdentifier: @"PlayerViewController"];
+        }
+
+        if ([_playerViewController conformsToProtocol:@protocol(ViewInput)]) {
+            
+            id<ViewInput> viewInput = (id<ViewInput>)_playerViewController;
             [viewInput shouldUpdateWithEntryId: _currentEntryId];
         }
+        
+        [self.navigationController pushViewController: _playerViewController animated: YES];
     }
 }
 

@@ -140,12 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFE0B9DF1DD48A44000EB3F8 /* Build configuration list for PBXNativeTarget "CCV3Demo" */;
 			buildPhases = (
-				F9EFE8212F12033602438504 /* Check Pods Manifest.lock */,
+				F9EFE8212F12033602438504 /* [CP] Check Pods Manifest.lock */,
 				DFE0B9C41DD48A43000EB3F8 /* Sources */,
 				DFE0B9C51DD48A43000EB3F8 /* Frameworks */,
 				DFE0B9C61DD48A43000EB3F8 /* Resources */,
-				9777361EA0199D8A89CC1E85 /* Embed Pods Frameworks */,
-				63F415AF2044CD1EAF897CFB /* Copy Pods Resources */,
+				9777361EA0199D8A89CC1E85 /* [CP] Embed Pods Frameworks */,
+				63F415AF2044CD1EAF897CFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +167,7 @@
 				TargetAttributes = {
 					DFE0B9C71DD48A43000EB3F8 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AMGTA68RNT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -203,14 +204,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		63F415AF2044CD1EAF897CFB /* Copy Pods Resources */ = {
+		63F415AF2044CD1EAF897CFB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,14 +219,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCV3Demo/Pods-CCV3Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9777361EA0199D8A89CC1E85 /* Embed Pods Frameworks */ = {
+		9777361EA0199D8A89CC1E85 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,19 +234,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCV3Demo/Pods-CCV3Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9EFE8212F12033602438504 /* Check Pods Manifest.lock */ = {
+		F9EFE8212F12033602438504 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -382,9 +383,11 @@
 			baseConfigurationReference = D040CD7AA76A23C9845FB89B /* Pods-CCV3Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = AMGTA68RNT;
 				INFOPLIST_FILE = CCV3Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.CCV3Demo.CCV3Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.CCV3Demo.CCV3Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -394,9 +397,11 @@
 			baseConfigurationReference = C6A62AA8376130ADB9C2D568 /* Pods-CCV3Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = AMGTA68RNT;
 				INFOPLIST_FILE = CCV3Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.CCV3Demo.CCV3Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.CCV3Demo.CCV3Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

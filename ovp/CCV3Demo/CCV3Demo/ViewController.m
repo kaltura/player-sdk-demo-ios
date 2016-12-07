@@ -14,54 +14,68 @@
 #import <KalturaPlayerSDK/GoogleCastProvider.h>
 
 static NSString * const kViewControllerServer = @"http://cdnapi.kaltura.com";
-static NSString * const kViewControllerUIConfId = @"37150601";
+
+static NSString * const kViewControllerUIConfId = @"37484452";
 static NSString * const kViewControllerPartnerId = @"2212491";
 
-@interface ViewController ()
+@interface ViewController () <GCKSessionManagerListener>
+
 @property (weak, nonatomic) IBOutlet UIButton *castButton;
 @property (weak, nonatomic) IBOutlet UIButton *changeMediaButton;
-@property (strong, nonatomic) NSString *currentEntryId;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+
 @property (strong, nonatomic) KPViewController *playerViewController;
+@property (strong, nonatomic) KPPlayerConfig *config;
 @property (strong, nonatomic) GoogleCastProvider *castProvider;
+@property (strong, nonatomic) NSString *currentEntryId;
+
 @end
 
 @implementation ViewController
 
 #pragma mark - Life cycle
 
-- (void)dealloc {
+- (IBAction)backDidClick:(id)sender {
     
-    [_playerViewController removePlayer];
+    [self.navigationController popViewControllerAnimated: YES];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
     
-    KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer: kViewControllerServer
-                                                           uiConfID: kViewControllerUIConfId
-                                                          partnerId: kViewControllerPartnerId];
-    config.entryId = _currentEntryId;
+    [self.navigationController.navigationBar setHidden: YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear: animated];
     
-    [config addConfigKey:@"chromecast.plugin" withValue: @"true"];
-    [config addConfigKey:@"chromecast.useKalturaPlayer" withValue: @"true"];
-    
+    if ([_playerViewController.view superview]) {
+        [_playerViewController removePlayer];
+    }
+
+    [self p_configWithEntryId: _currentEntryId];
     self.castProvider = [GoogleCastProvider sharedInstance];
-    
     [_castProvider setLogo:[NSURL URLWithString: @"https://lh3.googleusercontent.com/hlVw3SIXl6Cv4zEP3Je909jHtiTjmBG-iAzfIMSgClw7cFEK6BT_UjMbzjlnmP-F_o2LtQI"]];
     
-    self.playerViewController = [[KPViewController alloc] initWithConfiguration: config];
-    _playerViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    self.playerViewController = [[KPViewController alloc] initWithConfiguration: _config];
+    
     [_playerViewController loadPlayerIntoViewController: self];
     [self addChildViewController: _playerViewController];
     [self.view addSubview: _playerViewController.view];
     
+    _playerViewController.view.frame = self.view.frame;
+    
     [self.view bringSubviewToFront: _castButton];
     [self.view bringSubviewToFront: _changeMediaButton];
+    [self.view bringSubviewToFront: _backButton];
     
-    GCKUICastButton *castButton = [[GCKUICastButton alloc] initWithFrame:CGRectMake(0, 0, 24, 24)];
-    castButton.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:castButton];
+    [[GCKCastContext sharedInstance].sessionManager addListener: self];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear: animated];
+    
+    [_playerViewController resetPlayer];
 }
 
 #pragma mark - Actions
@@ -80,7 +94,7 @@ static NSString * const kViewControllerPartnerId = @"2212491";
 
 - (IBAction)changeMeida:(id)sender {
     
-    [_playerViewController changeMedia: _currentEntryId];
+    [_playerViewController changeMedia: @"0_63rji9fo"];
 }
 
 #pragma mark - ViewControllerInput
@@ -88,6 +102,24 @@ static NSString * const kViewControllerPartnerId = @"2212491";
 - (void)shouldUpdateWithEntryId:(NSString *)entryId {
     
     self.currentEntryId = entryId;
+}
+
+#pragma mark - Player
+
+- (void)p_configWithEntryId:(NSString *)entryId {
+    
+    self.config = [[KPPlayerConfig alloc] initWithServer: kViewControllerServer
+                                                uiConfID: kViewControllerUIConfId
+                                               partnerId: kViewControllerPartnerId];
+    _config.entryId = entryId;
+    
+    [_config addConfigKey:@"chromecast.plugin" withValue: @"true"];
+    [_config addConfigKey:@"chromecast.useKalturaPlayer" withValue: @"true"];
+    [_config addConfigKey:@"autoPlay" withValue:@"true"];
+    
+//    NSString *adTag = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
+//    [_config addConfigKey:@"doubleClick.plugin" withValue: @"true"];
+//    [_config addConfigKey:@"doubleClick.adTagUrl" withValue: adTag];
 }
 
 @end
