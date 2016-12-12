@@ -24,6 +24,11 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
 
 #pragma mark - Actions
 
+- (IBAction)didClickBack:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated: YES];
+}
+
 - (IBAction)didClickDownload:(id)sender {
     
     _downloadButton.enabled = NO;
@@ -98,6 +103,8 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
     conf.entryId = entryId;
     conf.localContentId = localeName;
     
+    
+    
     return conf;
 }
 
@@ -130,7 +137,13 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
 
 - (NSString *) p_downloadUrlWithMediaPlainObject: (MediaPlainObject *)plain {
     
-    return [NSString stringWithFormat:@"http://cfvod.kaltura.com/pd/p/%@/sp/%@00/serveFlavor/entryId/%@/v/11/flavorId/%@/name/a.mp4", plain.partnerId, plain.partnerId, plain.entryId, plain.flavorId];
+    //https
+    NSString *downloadLink = [NSString stringWithFormat:@"https://cdnapisec.kaltura.com/p/%@/sp/%@00/playManifest/entryId/%@/flavorId/%@/format/url/protocol/https/a.mp4", plain.partnerId, plain.partnerId, plain.entryId, plain.flavorId];
+    
+    //http
+    downloadLink = [NSString stringWithFormat:@"http://cdnapi.kaltura.com/p/%@/sp/%@00/playManifest/entryId/%@/flavorId/%@/format/url/protocol/https/a.mp4", plain.partnerId, plain.partnerId, plain.entryId, plain.flavorId];
+    
+    return downloadLink;
 }
 
 - (NSString *) p_targetFileWithMediaPlainObject: (MediaPlainObject *)plain {
@@ -149,6 +162,7 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
     
     NSURLSession *session = [self p_configureSession];
     NSString *downloadUrl = [self p_downloadUrlWithMediaPlainObject: _plain];
+    NSLog(@"Download url: %@", downloadUrl);
     if (downloadUrl.length > 0) {
         
         NSURLSessionDownloadTask *task = [session downloadTaskWithURL: [NSURL URLWithString: downloadUrl]];

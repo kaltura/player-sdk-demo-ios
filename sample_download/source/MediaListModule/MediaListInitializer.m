@@ -34,8 +34,9 @@
     self.mediaListView.tableView.dataSource = self.mediaListView.dataDisplayManager;
     
     self.mediaListView.mediaList = [self p_generatePlainMediaObjsWithArray: @[
-      @{@"entry_id": @"1_jqt5xrs1", @"flavor_id": @"1_t44vxdmb", @"partner_id": @"2164401", @"uiconf_id": @"35748841", @"localName": @"kaltura_test_video_1.mp4"},
-      @{@"entry_id": @"1_jp0fiw3x", @"flavor_id": @"1_kq2p4qhp", @"partner_id": @"2164401", @"uiconf_id": @"35748841", @"localName": @"kaltura_test_video_2.mp4"}]];//@"1_jp0fiw3x"
+      @{@"entry_id": @"1_elmoexon", @"flavor_id": @"1_ldpqil0q", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_1.mp4"},
+      @{@"entry_id": @"1_dozywu20", @"flavor_id": @"1_6fxsja3g", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_2.mp4"},
+      @{@"entry_id": @"1_773arzin", @"flavor_id": @"1_o2ho5y41", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_3.mp4"}]];
 }
 
 - (NSArray *) p_generatePlainMediaObjsWithArray: (NSArray *)array {
