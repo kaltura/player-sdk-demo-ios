@@ -34,9 +34,10 @@
     self.mediaListView.tableView.dataSource = self.mediaListView.dataDisplayManager;
     
     self.mediaListView.mediaList = [self p_generatePlainMediaObjsWithArray: @[
-      @{@"entry_id": @"1_elmoexon", @"flavor_id": @"1_ldpqil0q", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_1.mp4"},
-      @{@"entry_id": @"1_dozywu20", @"flavor_id": @"1_6fxsja3g", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_2.mp4"},
-      @{@"entry_id": @"1_773arzin", @"flavor_id": @"1_o2ho5y41", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_3.mp4"}]];
+      @{@"entry_id": @"1_elmoexon", @"flavor_id": @"1_ldpqil0q", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_1.mp4", @"format": @"mp4"},
+      @{@"entry_id": @"1_dozywu20", @"flavor_id": @"1_6fxsja3g", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_2.mp4", @"format": @"mp4"},
+      @{@"entry_id": @"1_773arzin", @"flavor_id": @"1_o2ho5y41", @"partner_id": @"2212491", @"uiconf_id": @"37599311", @"localName": @"kaltura_test_video_3.mp4", @"format": @"mp4"}
+      ]];
 }
 
 - (NSArray *) p_generatePlainMediaObjsWithArray: (NSArray *)array {
@@ -84,6 +85,12 @@
     if ([localNameObject isKindOfClass: [NSString class]]) {
         
         plain.name = (NSString *)localNameObject;
+    }
+    
+    id format = [dictionary objectForKey: @"format"];
+    if ([format isKindOfClass: [NSString class]]) {
+        
+        plain.format = (NSString *)format;
     }
     
     return plain;
