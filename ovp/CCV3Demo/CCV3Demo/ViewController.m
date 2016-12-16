@@ -15,10 +15,10 @@
 
 static NSString * const kViewControllerServer = @"http://cdnapi.kaltura.com";
 
-static NSString * const kViewControllerUIConfId = @"37484452";
+static NSString * const kViewControllerUIConfId = @"37599311";
 static NSString * const kViewControllerPartnerId = @"2212491";
 
-@interface ViewController () <GCKSessionManagerListener>
+@interface ViewController () <GCKSessionManagerListener, GCKUIMiniMediaControlsViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *castButton;
 @property (weak, nonatomic) IBOutlet UIButton *changeMediaButton;
@@ -26,7 +26,6 @@ static NSString * const kViewControllerPartnerId = @"2212491";
 
 @property (strong, nonatomic) KPViewController *playerViewController;
 @property (strong, nonatomic) KPPlayerConfig *config;
-@property (strong, nonatomic) GoogleCastProvider *castProvider;
 @property (strong, nonatomic) NSString *currentEntryId;
 
 @end
@@ -34,11 +33,6 @@ static NSString * const kViewControllerPartnerId = @"2212491";
 @implementation ViewController
 
 #pragma mark - Life cycle
-
-- (IBAction)backDidClick:(id)sender {
-    
-    [self.navigationController popViewControllerAnimated: YES];
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
@@ -51,28 +45,60 @@ static NSString * const kViewControllerPartnerId = @"2212491";
     if ([_playerViewController.view superview]) {
         [_playerViewController removePlayer];
     }
+    
+    appDelegate.castControlBarsEnabled = NO;
+    appDelegate.miniMediaControlsViewController.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear: animated];
+    
+    [[GoogleCastProvider sharedInstance] setLogo:[NSURL URLWithString: @"https://lh3.googleusercontent.com/hlVw3SIXl6Cv4zEP3Je909jHtiTjmBG-iAzfIMSgClw7cFEK6BT_UjMbzjlnmP-F_o2LtQI"]];
+    [[GCKCastContext sharedInstance].sessionManager addListener: self];
+        
+    [self p_playerInitializer];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear: animated];
+    
+    [_playerViewController resetPlayer];
+    
+    appDelegate.castControlBarsEnabled = YES;
+    appDelegate.miniMediaControlsViewController.delegate = nil;
+}
+
+#pragma mark - Actions
+
+- (IBAction)backDidClick:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated: YES];
+}
+
+- (IBAction)didClickCastButton:(id)sender {
+    
+    _playerViewController.castProvider = [GoogleCastProvider sharedInstance];
+    [_playerViewController changeMedia: _currentEntryId];
+}
+
+- (IBAction)changeMeida:(id)sender {
+    
+    [_playerViewController changeMedia: @"0_63rji9fo"];
+}
+
+#pragma mark - Player
+
+- (void)p_playerInitializer {
+    
     [self p_configWithEntryId: _currentEntryId];
-    self.castProvider = [GoogleCastProvider sharedInstance];
-    [_castProvider setLogo:[NSURL URLWithString: @"https://lh3.googleusercontent.com/hlVw3SIXl6Cv4zEP3Je909jHtiTjmBG-iAzfIMSgClw7cFEK6BT_UjMbzjlnmP-F_o2LtQI"]];
-    
     self.playerViewController = [[KPViewController alloc] initWithConfiguration: _config];
-    
     [_playerViewController loadPlayerIntoViewController: self];
     [self addChildViewController: _playerViewController];
     [self.view addSubview: _playerViewController.view];
-    
-    _playerViewController.view.frame = self.view.frame;
-    
     [self.view bringSubviewToFront: _castButton];
     [self.view bringSubviewToFront: _changeMediaButton];
     [self.view bringSubviewToFront: _backButton];
-    
-    [[GCKCastContext sharedInstance].sessionManager addListener: self];
+    _playerViewController.view.frame = self.view.frame;
     
     typeof(self) __weak weakSelf = self;
     [_playerViewController registerReadyEvent:^{
@@ -82,40 +108,6 @@ static NSString * const kViewControllerPartnerId = @"2212491";
         strongSelf.changeMediaButton.hidden = NO;
     }];
 }
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear: animated];
-    
-    [_playerViewController resetPlayer];
-}
-
-#pragma mark - Actions
-
-- (IBAction)didClickCastButton:(id)sender {
-    
-    self.castProvider = [GoogleCastProvider sharedInstance];
-    _playerViewController.castProvider = _castProvider;
-    
-    GCKRemoteMediaClient *remoteMediaClient = [GCKCastContext sharedInstance].sessionManager.currentSession.remoteMediaClient;
-    if (remoteMediaClient.mediaStatus) {
-    
-        [_playerViewController changeMedia: _currentEntryId];
-    }
-}
-
-- (IBAction)changeMeida:(id)sender {
-    
-    [_playerViewController changeMedia: @"0_63rji9fo"];
-}
-
-#pragma mark - ViewControllerInput
-
-- (void)shouldUpdateWithEntryId:(NSString *)entryId {
-    
-    self.currentEntryId = entryId;
-}
-
-#pragma mark - Player
 
 - (void)p_configWithEntryId:(NSString *)entryId {
     
@@ -131,6 +123,34 @@ static NSString * const kViewControllerPartnerId = @"2212491";
 //    NSString *adTag = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
 //    [_config addConfigKey:@"doubleClick.plugin" withValue: @"true"];
 //    [_config addConfigKey:@"doubleClick.adTagUrl" withValue: adTag];
+}
+
+#pragma mark - GCKUIMiniMediaControlsViewControllerDelegate
+
+/**
+ * Notifies about a change in the active state of the control bar.
+ *
+ * @param miniMediaControlsViewController The now playing view controller instance.
+ * @param shouldAppear If <code>YES</code>, the control bar can be displayed. If <code>NO</code>,
+ *     the control bar should be hidden.
+ */
+
+- (void)miniMediaControlsViewController:
+(GCKUIMiniMediaControlsViewController *)miniMediaControlsViewController
+                           shouldAppear:(BOOL)shouldAppear {
+    
+    if (shouldAppear) {
+        
+        [self.navigationController popViewControllerAnimated: YES];
+        [appDelegate appearExpandedControlWithNavigationitem: self.navigationItem];
+    }
+}
+
+#pragma mark - ViewControllerInput
+
+- (void)shouldUpdateWithEntryId:(NSString *)entryId {
+    
+    self.currentEntryId = entryId;
 }
 
 @end

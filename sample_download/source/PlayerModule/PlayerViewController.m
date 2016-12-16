@@ -113,6 +113,10 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
                                                 uiConfID: uiconfId 
                                                partnerId: partnerId];
     
+//    conf.cacheSize = downloadEnable ? 100 : 0.0;
+//    conf.entryId = entryId;
+//    conf.localContentId = localeName;
+    
     conf.cacheSize = 100;
     
     if (entryId.length > 0) {

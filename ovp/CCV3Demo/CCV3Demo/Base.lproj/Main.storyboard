@@ -129,29 +129,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0k2-cu-2JO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="SbK-qU-GAH"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="kPG-lQ-iPm" secondAttribute="trailing" constant="-20" id="Gtr-mM-lkD"/>
                             <constraint firstItem="kPG-lQ-iPm" firstAttribute="top" secondItem="BU8-sp-SSp" secondAttribute="topMargin" id="V6w-Uy-DMC"/>
-                            <constraint firstItem="0k2-cu-2JO" firstAttribute="leading" secondItem="BU8-sp-SSp" secondAttribute="leading" id="a17-Uz-nTM"/>
                             <constraint firstItem="kPG-lQ-iPm" firstAttribute="leading" secondItem="BU8-sp-SSp" secondAttribute="leadingMargin" constant="-20" id="b3c-4M-R2A"/>
-                            <constraint firstAttribute="trailing" secondItem="0k2-cu-2JO" secondAttribute="trailing" id="ett-QW-Zv6"/>
                             <constraint firstItem="96j-2i-Mb9" firstAttribute="top" secondItem="kPG-lQ-iPm" secondAttribute="bottom" id="noD-um-ImF"/>
-                            <constraint firstItem="96j-2i-Mb9" firstAttribute="top" secondItem="0k2-cu-2JO" secondAttribute="bottom" id="r0H-cz-NtE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NSR-fs-yh9"/>
                     <connections>
-                        <outlet property="miniMediaControlsContainerView" destination="0k2-cu-2JO" id="yu3-7Z-rKZ"/>
-                        <outlet property="miniMediaControlsHeightConstraint" destination="SbK-qU-GAH" id="Mpb-aj-E55"/>
                         <outlet property="tableView" destination="kPG-lQ-iPm" id="Nlf-3O-HSq"/>
                     </connections>
                 </viewController>
