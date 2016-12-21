@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6D292C8F515705C40B5E325A /* libPods-LocalAssetsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A3428F7E03955CEC0FAC17 /* libPods-LocalAssetsDemo.a */; };
+		FB0F3DBE1E07C99B001DE2DC /* AVAssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */; };
 		FB19E9791D926CC000AC717F /* AssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9781D926CC000AC717F /* AssetDownloader.m */; };
 		FB19E97C1D927F6E00AC717F /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E97B1D927F6E00AC717F /* Asset.m */; };
-		FB19E97E1D928F1500AC717F /* AVAssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */; };
 		FB1DDC661CECBA5400DDA2BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC651CECBA5400DDA2BD /* main.m */; };
 		FB1DDC691CECBA5400DDA2BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC681CECBA5400DDA2BD /* AppDelegate.m */; };
 		FB1DDC6C1CECBA5400DDA2BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC6B1CECBA5400DDA2BD /* ViewController.m */; };
@@ -234,7 +234,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -248,7 +248,7 @@
 				FB1DDC6C1CECBA5400DDA2BD /* ViewController.m in Sources */,
 				FB1DDC691CECBA5400DDA2BD /* AppDelegate.m in Sources */,
 				FB1DDC661CECBA5400DDA2BD /* main.m in Sources */,
-				FB19E97E1D928F1500AC717F /* AVAssetDownloader.m in Sources */,
+				FB0F3DBE1E07C99B001DE2DC /* AVAssetDownloader.m in Sources */,
 				FB19E9791D926CC000AC717F /* AssetDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
