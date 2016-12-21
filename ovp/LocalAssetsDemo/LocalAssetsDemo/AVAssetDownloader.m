@@ -68,7 +68,14 @@
     if (!assetCache) {
         return nil;
     }
-    for (NSString* characteristic in @[AVMediaCharacteristicAudible, AVMediaCharacteristicLegible]) {
+    // Audio and subtitles
+//    NSArray* characteristics = @[AVMediaCharacteristicAudible, AVMediaCharacteristicLegible];
+    // Audio
+//    NSArray* characteristics = @[AVMediaCharacteristicAudible];
+    // Subtitles
+    NSArray* characteristics = @[AVMediaCharacteristicLegible];
+    
+    for (NSString* characteristic in characteristics) {
         AVMediaSelectionGroup* mediaSelectionGroup = [asset mediaSelectionGroupForMediaCharacteristic:characteristic];
         
         // Determine which offline media selection options exist for this asset
