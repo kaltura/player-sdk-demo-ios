@@ -157,7 +157,7 @@
             
             
     // Create a mutable copy and select the media selection option in the media selection group
-    AVMutableMediaSelection* mediaSelection = [self.mediaSelection mutableCopy];
+    AVMutableMediaSelection* mediaSelection = [self.mediaSelection[assetDownloadTask] mutableCopy];
     [mediaSelection selectMediaOption:option inMediaSelectionGroup:group];
     
     // Create a new download task with this media selection in its options
