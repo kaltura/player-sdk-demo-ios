@@ -13,6 +13,7 @@
 
 @interface AVAssetDownloader ()
 @property (nonatomic) NSMutableDictionary<AVAssetDownloadTask*, AVMediaSelection*>* mediaSelection;
+@property (strong, nonatomic) AVAssetDownloadURLSession *assetDownloadURLSession;
 @end
 
 @interface MediaSelectionTuple : NSObject
@@ -37,7 +38,7 @@
 
 - (void)startDownload {
     
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"LocalAssetsDemo"];
+    NSURLSessionConfiguration *backgroundConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"AAPL-Identifier"];
     
     NSURL* downloadUrl = [NSURL URLWithString:self.asset.downloadUrl];
 
@@ -50,8 +51,8 @@
 //    NSDictionary* options = @{AVAssetDownloadTaskMediaSelectionKey: mediaSelection};
     
     
-    AVAssetDownloadURLSession *session = [AVAssetDownloadURLSession sessionWithConfiguration:config assetDownloadDelegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    AVAssetDownloadTask* task = [session assetDownloadTaskWithURLAsset:urlAsset assetTitle:self.asset.localName assetArtworkData:nil options:nil];
+    self.assetDownloadURLSession = [AVAssetDownloadURLSession sessionWithConfiguration: backgroundConfiguration assetDownloadDelegate: self delegateQueue: [NSOperationQueue mainQueue]];
+    AVAssetDownloadTask* task = [_assetDownloadURLSession assetDownloadTaskWithURLAsset:urlAsset assetTitle:self.asset.localName assetArtworkData:nil options:nil];
     task.taskDescription = self.asset.localName;
     
     self.mediaSelection = [[NSMutableDictionary alloc] init];
@@ -62,6 +63,16 @@
 -(void)progressReport:(float)fraction {
     
 }
+
+
+// MARK: Convenience
+
+/**
+ This function demonstrates returns the next `AVMediaSelectionGroup` and
+ `AVMediaSelectionOption` that should be downloaded if needed. This is done
+ by querying an `AVURLAsset`'s `AVAssetCache` for its available `AVMediaSelection`
+ and comparing it to the remote versions.
+ */
 
 -(MediaSelectionTuple*)nextMediaSelection:(AVURLAsset*)asset {
     AVAssetCache* assetCache = asset.assetCache;
@@ -76,23 +87,27 @@
     NSArray* characteristics = @[AVMediaCharacteristicLegible];
     
     for (NSString* characteristic in characteristics) {
-        AVMediaSelectionGroup* mediaSelectionGroup = [asset mediaSelectionGroupForMediaCharacteristic:characteristic];
-        
+
         // Determine which offline media selection options exist for this asset
-        NSArray<AVMediaSelectionOption*>* savedOptions = [assetCache mediaSelectionOptionsInMediaSelectionGroup:mediaSelectionGroup];
-        
-        // If there are still media options to download...
-        if (savedOptions.count < mediaSelectionGroup.options.count) {
+        AVMediaSelectionGroup *mediaSelectionGroup = [asset mediaSelectionGroupForMediaCharacteristic: characteristic];
+        if (mediaSelectionGroup) {
             
-            for (AVMediaSelectionOption* option in mediaSelectionGroup.options) {
-                if (![savedOptions containsObject:option]) {
-                    
-                    // This option hasn't been downloaded. Return it so it can be.
-                    return [[MediaSelectionTuple alloc] initWithGroup:mediaSelectionGroup option:option];
+            NSArray<AVMediaSelectionOption*>* savedOptions = [assetCache mediaSelectionOptionsInMediaSelectionGroup:mediaSelectionGroup];
+            
+            if (savedOptions.count < mediaSelectionGroup.options.count) {
+                // There are still media options left to download.
+                for (AVMediaSelectionOption* option in mediaSelectionGroup.options) {
+                    if (![savedOptions containsObject:option]) {
+                        
+                        // This option hasn't been downloaded. Return it so it can be.
+                        return [[MediaSelectionTuple alloc] initWithGroup:mediaSelectionGroup option:option];
+                    }
                 }
             }
-        }    
+        }
     }
+    
+    // At this point all media options have been downloaded.
     return nil;
 }
 
@@ -134,7 +149,7 @@
 }
 
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    AVAssetDownloadTask* assetDownloadTask = (AVAssetDownloadTask *)task;
+    AVAssetDownloadTask *assetDownloadTask = (AVAssetDownloadTask *)task;
     NSLog(@"asset %@ completed; error? %@", assetDownloadTask.URLAsset.URL, error);
     if (error) {
         self.progressReport(-1);
@@ -142,39 +157,62 @@
     }
     
     // Download extra media selections
-
+    
     // Determine the next available AVMediaSelectionOption to download
-    MediaSelectionTuple* nextSelection = [self nextMediaSelection:assetDownloadTask.URLAsset];
+    MediaSelectionTuple *mediaSelectionPair = [self nextMediaSelection:assetDownloadTask.URLAsset];
     
-    
-    AVMediaSelectionGroup* group = nextSelection.group;
-    
-    // If an undownloaded media selection option exists in the group...
-    if (group == nil) {
-        // done
-        return;
-    }
-    
-    AVMediaSelectionOption* option = nextSelection.option;
-    // Exit early if no corresponding AVMediaSelection exists for the current task
-    if (self.mediaSelection[assetDownloadTask] == nil) {
-        // done
-        return;
-    }
+    if (mediaSelectionPair.group != nil) {
+        
+        /*
+         This task did complete sucessfully. At this point the application
+         can download additional media selections if needed.
+         
+         To download additional `AVMediaSelection`s, you should use the
+         `AVMediaSelection` reference saved in `AVAssetDownloadDelegate.urlSession(_:assetDownloadTask:didResolve:)`.
+         */
+        AVMutableMediaSelection *originalMediaSelection = (AVMutableMediaSelection *)_mediaSelection[assetDownloadTask];
+        if (originalMediaSelection == nil) {
+            
+            return;
+        } else {
+            
+            /*
+             There are still media selections to download.
+             
+             Create a mutable copy of the AVMediaSelection reference saved in
+             `AVAssetDownloadDelegate.urlSession(_:assetDownloadTask:didResolve:)`.
+             */
+            AVMutableMediaSelection *mediaSelection = (AVMutableMediaSelection *)[originalMediaSelection mutableCopy];
+            AVMediaSelectionOption *option = mediaSelectionPair.option;
+            AVMediaSelectionGroup *group = mediaSelectionPair.group;
+            if (option && group) {
+                 // Select the AVMediaSelectionOption in the AVMediaSelectionGroup we found earlier.
+                [mediaSelection selectMediaOption: option inMediaSelectionGroup: group];
+            }
             
             
-    // Create a mutable copy and select the media selection option in the media selection group
-    AVMutableMediaSelection* mediaSelection = [self.mediaSelection[assetDownloadTask] mutableCopy];
-    [mediaSelection selectMediaOption:option inMediaSelectionGroup:group];
-    
-    // Create a new download task with this media selection in its options
-    NSDictionary* downloadOptions = @{AVAssetDownloadTaskMediaSelectionKey: mediaSelection};
-    
-    // Start media selection download
-    AVAssetDownloadTask* nextTask = [((AVAssetDownloadURLSession*)session) assetDownloadTaskWithURLAsset:assetDownloadTask.URLAsset assetTitle:assetDownloadTask.taskDescription assetArtworkData:nil options:downloadOptions];
-    [nextTask resume];
-    
+            // Create a new download task with this media selection in its options
+            NSDictionary* downloadOptions = @{AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: @2000000, AVAssetDownloadTaskMediaSelectionKey: mediaSelection};
+            NSString *someAssetName = self.asset.localName;
+            
+            /*
+             Ask the `URLSession` to vend a new `AVAssetDownloadTask` using
+             the same `AVURLAsset` and assetTitle as before.
+             
+             This time, the application includes the specific `AVMediaSelection`
+             to download as well as a higher bitrate.
+             */
+            AVAssetDownloadTask *nextTask = [_assetDownloadURLSession assetDownloadTaskWithURLAsset: assetDownloadTask.URLAsset assetTitle:someAssetName assetArtworkData: nil options: downloadOptions];
+            if (nextTask == nil) {
+                
+                return;
+            } else {
+                
+                nextTask.taskDescription = someAssetName;
+                [nextTask resume];
+            }
+        }
+    }
 }
-
 
 @end
