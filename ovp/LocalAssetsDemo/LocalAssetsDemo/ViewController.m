@@ -30,7 +30,7 @@ static KPPlayerConfig* configForDemoAsset(Asset* asset, BOOL forRegister) {
     // TODO: set server, uiconfid, partnerId
     KPPlayerConfig* config;
     config = [KPPlayerConfig configWithServer:@"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php" uiConfID:@"37747041" partnerId:@"2215841"];
-    
+    [config addConfigKey:@"closedCaptions.showEmbeddedCaptions" withValue:@"true"];
     // TODO (optional): set cachesize in MB
     config.cacheSize = 100; 
     
