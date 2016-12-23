@@ -13,6 +13,9 @@
 
 @interface AVAssetDownloader ()
 @property (nonatomic) NSMutableDictionary<AVAssetDownloadTask*, AVMediaSelection*>* mediaSelection;
+/// Internal map of AVAssetDownloadTask to its corresponding Asset.
+@property (nonatomic) NSMutableDictionary<AVAssetDownloadTask*, Asset*>* activeDownloadsMap;
+
 @property (strong, nonatomic) AVAssetDownloadURLSession *assetDownloadURLSession;
 @end
 
@@ -36,6 +39,29 @@
 
 @implementation AVAssetDownloader
 
+///// Triggers the initial AVAssetDownloadTask for a given Asset.
+//func downloadStream(for asset: Asset) {
+//    /*
+//     For the initial download, we ask the URLSession for an AVAssetDownloadTask
+//     with a minimum bitrate corresponding with one of the lower bitrate variants
+//     in the asset.
+//     */
+//    guard let task = assetDownloadURLSession.makeAssetDownloadTask(asset: asset.urlAsset, assetTitle: asset.name, assetArtworkData: nil, options: [AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: 265000]) else { return }
+//    
+//    // To better track the AVAssetDownloadTask we set the taskDescription to something unique for our sample.
+//    task.taskDescription = asset.name
+//    
+//    activeDownloadsMap[task] = asset
+//    
+//    task.resume()
+//    
+//    var userInfo = [String: Any]()
+//    userInfo[Asset.Keys.name] = asset.name
+//    userInfo[Asset.Keys.downloadState] = Asset.DownloadState.downloading.rawValue
+//    
+//    NotificationCenter.default.post(name: AssetDownloadStateChangedNotification, object: nil, userInfo:  userInfo)
+//}
+
 - (void)startDownload {
     
     NSURLSessionConfiguration *backgroundConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"AAPL-Identifier"];
@@ -50,14 +76,26 @@
 //    AVMutableMediaSelection* mediaSelection = [[AVMutableMediaSelection alloc] init];
 //    NSDictionary* options = @{AVAssetDownloadTaskMediaSelectionKey: mediaSelection};
     
+    // Create a new download task with this media selection in its options
+    NSDictionary* downloadOptions = @{AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: @265000};
     
     self.assetDownloadURLSession = [AVAssetDownloadURLSession sessionWithConfiguration: backgroundConfiguration assetDownloadDelegate: self delegateQueue: [NSOperationQueue mainQueue]];
-    AVAssetDownloadTask* task = [_assetDownloadURLSession assetDownloadTaskWithURLAsset:urlAsset assetTitle:self.asset.localName assetArtworkData:nil options:nil];
-    task.taskDescription = self.asset.localName;
+    AVAssetDownloadTask* task = [_assetDownloadURLSession assetDownloadTaskWithURLAsset:urlAsset assetTitle:self.asset.localName assetArtworkData:nil options: downloadOptions];
     
-    self.mediaSelection = [[NSMutableDictionary alloc] init];
-    
-    [task resume];
+    if (task == nil) {
+        
+        return;
+    } else {
+        
+        task.taskDescription = self.asset.localName;
+        
+        self.mediaSelection = [[NSMutableDictionary alloc] init];
+        self.activeDownloadsMap = [[NSMutableDictionary alloc] init];
+        
+        self.activeDownloadsMap[task] = self.asset;
+        
+        [task resume];
+    }
 }
 
 -(void)progressReport:(float)fraction {
@@ -80,11 +118,11 @@
         return nil;
     }
     // Audio and subtitles
-//    NSArray* characteristics = @[AVMediaCharacteristicAudible, AVMediaCharacteristicLegible];
+    NSArray* characteristics = @[AVMediaCharacteristicAudible, AVMediaCharacteristicLegible];
     // Audio
 //    NSArray* characteristics = @[AVMediaCharacteristicAudible];
     // Subtitles
-    NSArray* characteristics = @[AVMediaCharacteristicLegible];
+//    NSArray* characteristics = @[AVMediaCharacteristicLegible];
     
     for (NSString* characteristic in characteristics) {
 
@@ -149,7 +187,19 @@
 }
 
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    
+    /*
+     This is the ideal place to begin downloading additional media selections
+     once the asset itself has finished downloading.
+     */
     AVAssetDownloadTask *assetDownloadTask = (AVAssetDownloadTask *)task;
+    Asset *downloadAsset = [_activeDownloadsMap objectForKey: assetDownloadTask];
+    if (downloadAsset == nil || assetDownloadTask == nil) {
+        
+        return;
+    }
+    [_activeDownloadsMap removeObjectForKey: assetDownloadTask];
+    
     NSLog(@"asset %@ completed; error? %@", assetDownloadTask.URLAsset.URL, error);
     if (error) {
         self.progressReport(-1);
@@ -193,7 +243,6 @@
             
             // Create a new download task with this media selection in its options
             NSDictionary* downloadOptions = @{AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: @2000000, AVAssetDownloadTaskMediaSelectionKey: mediaSelection};
-            NSString *someAssetName = self.asset.localName;
             
             /*
              Ask the `URLSession` to vend a new `AVAssetDownloadTask` using
@@ -202,13 +251,16 @@
              This time, the application includes the specific `AVMediaSelection`
              to download as well as a higher bitrate.
              */
-            AVAssetDownloadTask *nextTask = [_assetDownloadURLSession assetDownloadTaskWithURLAsset: assetDownloadTask.URLAsset assetTitle:someAssetName assetArtworkData: nil options: downloadOptions];
+            AVAssetDownloadTask *nextTask = [_assetDownloadURLSession assetDownloadTaskWithURLAsset: assetDownloadTask.URLAsset assetTitle: downloadAsset.localName
+                                                                                   assetArtworkData: nil options: downloadOptions];
             if (nextTask == nil) {
                 
                 return;
             } else {
                 
-                nextTask.taskDescription = someAssetName;
+                nextTask.taskDescription = downloadAsset.localName;
+                self.activeDownloadsMap[nextTask] = downloadAsset;
+                
                 [nextTask resume];
             }
         }

@@ -155,7 +155,7 @@
 				TargetAttributes = {
 					FB1DDC601CECBA5400DDA2BD = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = X8RDCFJK95;
+						DevelopmentTeam = AMGTA68RNT;
 						DevelopmentTeamName = "Kaltura, Inc.";
 					};
 				};
@@ -368,10 +368,12 @@
 			baseConfigurationReference = B0006F657BF3246CC15B4475 /* Pods-LocalAssetsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = AMGTA68RNT;
 				INFOPLIST_FILE = LocalAssetsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.LocalAssetsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.KalturaDownloadSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -381,10 +383,12 @@
 			baseConfigurationReference = DF0BF47E2269108B65C8E005 /* Pods-LocalAssetsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = AMGTA68RNT;
 				INFOPLIST_FILE = LocalAssetsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.LocalAssetsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.KalturaDownloadSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -22,15 +22,21 @@ static NSArray<Asset*>* demoAssets() {
     // TODO: modify the array of assets. 
     // Assets that are not meant to be downloaded can have nil as the flavor and url.
     return @[
-             [Asset assetWithName:@"kalturaVideoSolutions" entry:@"1_nzffqkbk" flavor:@"1_tebzcakx" url:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_nzffqkbk/flavorIds/1_fwqw0ess,1_yq43k0hz,1_7pjl2kat,1_tebzcakx/format/applehttp/protocol/https/a.m3u8"]
-             ];
+//               [Asset assetWithName:@"kalturaVideoSolutions" entry:@"0_00qaakql" flavor:@"0_gempayqv" url:@"https://cdnapisec.kaltura.com/p/2066791/sp/206679100/playManifest/entryId/0_00qaakql/flavorIds/0_gempayqv,0_1w1ijvw6/format/applehttp/protocol/https/a.m3u8"]
+//             [Asset assetWithName:@"kalturaVideoSolutions" entry:@"1_nzffqkbk" flavor:@"1_tebzcakx" url:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_nzffqkbk/flavorIds/1_fwqw0ess,1_yq43k0hz,1_7pjl2kat,1_tebzcakx/format/applehttp/protocol/https/a.m3u8"],
+//             [Asset assetWithName:@"kalturaVideoSolutions" entry:@"0_00qaakql" flavor:@"0_gempayqv" url:@"https://cdnapisec.kaltura.com/p/2066791/sp/206679100/playManifest/entryId/0_00qaakql/flavorIds/0_gempayqv,0_1w1ijvw6/format/applehttp/protocol/https/a.m3u8"]
+             [Asset assetWithName:@"kalturaVideoSolutions" entry:@"1_asj9g38z" flavor:@"1_qorlzr41" url:@"https://cdnapisec.kaltura.com/p/2066791/sp/206679100/playManifest/entryId/1_asj9g38z/flavorIds/1_qorlzr41,1_63qjt3w3/format/applehttp/protocol/https/a.m3u8"]
+            ];
 }
 
 static KPPlayerConfig* configForDemoAsset(Asset* asset, BOOL forRegister) {
     // TODO: set server, uiconfid, partnerId
     KPPlayerConfig* config;
     config = [KPPlayerConfig configWithServer:@"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php" uiConfID:@"37747041" partnerId:@"2215841"];
+//    config = [KPPlayerConfig configWithServer:@"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php" uiConfID:@"37289212" partnerId:@"2066791"];
     [config addConfigKey:@"closedCaptions.showEmbeddedCaptions" withValue:@"true"];
+    [config addConfigKey:@"audioSelector.plugin" withValue:@"true"];
+    
     // TODO (optional): set cachesize in MB
     config.cacheSize = 100; 
     
