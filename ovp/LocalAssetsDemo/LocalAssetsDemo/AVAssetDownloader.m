@@ -46,6 +46,8 @@
 
 -(void)URLSession:(NSURLSession *)session assetDownloadTask:(AVAssetDownloadTask *)assetDownloadTask didFinishDownloadingToURL:(NSURL *)location {
     [[NSUserDefaults standardUserDefaults] setObject:location.relativePath forKey:assetDownloadTask.taskDescription];
+    [self.assetRegistrationHelper saveAssetAtPath:location];
+    
     self.progressReport(2);
 }
 

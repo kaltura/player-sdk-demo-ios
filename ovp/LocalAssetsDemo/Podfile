@@ -4,8 +4,9 @@
 # use_frameworks!
 
 target 'LocalAssetsDemo' do
-pod 'KalturaPlayerSDK'      #, :path => '../../../player-sdk-native-ios'
-pod "DownPicker"
+    pod 'KalturaPlayerSDK/Core',      :git => 'https://github.com/kaltura/player-sdk-native-ios', tag: 'v2.6.8'
+    pod 'KalturaPlayerSDK/Widevine',  :git => 'https://github.com/kaltura/player-sdk-native-ios', tag: 'v2.6.8'
+    pod 'DownPicker'
 end
 
 post_install do |installer|

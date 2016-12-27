@@ -1,19 +1,27 @@
 PODS:
   - DownPicker (0.1.34)
-  - KalturaPlayerSDK (2.4.7):
-    - KalturaPlayerSDK/Core (= 2.4.7)
-    - KalturaPlayerSDK/Widevine (= 2.4.7)
-  - KalturaPlayerSDK/Core (2.4.7)
-  - KalturaPlayerSDK/Widevine (2.4.7)
+  - KalturaPlayerSDK/Core (2.6.8)
+  - KalturaPlayerSDK/Widevine (2.6.8)
 
 DEPENDENCIES:
   - DownPicker
-  - KalturaPlayerSDK
+  - KalturaPlayerSDK/Core (from `https://github.com/kaltura/player-sdk-native-ios`, tag `v2.6.8`)
+  - KalturaPlayerSDK/Widevine (from `https://github.com/kaltura/player-sdk-native-ios`, tag `v2.6.8`)
+
+EXTERNAL SOURCES:
+  KalturaPlayerSDK:
+    :git: https://github.com/kaltura/player-sdk-native-ios
+    :tag: v2.6.8
+
+CHECKOUT OPTIONS:
+  KalturaPlayerSDK:
+    :git: https://github.com/kaltura/player-sdk-native-ios
+    :tag: v2.6.8
 
 SPEC CHECKSUMS:
   DownPicker: c00ea63f08ae82116cc93d0eba74e86bf3d4c68e
-  KalturaPlayerSDK: 318d71596773ad9dd2d6cc818bae3bb32e1d451a
+  KalturaPlayerSDK: 097f3d62de2928cdeee9f6a7f3595d606303f477
 
-PODFILE CHECKSUM: 5d83e3fe0fee99884d43148ac66bf9ecb8d0c8fb
+PODFILE CHECKSUM: cb0f936a689d6cebefb3e371d0f173cb8b5cd424
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

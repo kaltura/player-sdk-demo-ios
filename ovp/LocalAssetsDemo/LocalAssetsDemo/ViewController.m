@@ -23,7 +23,6 @@ static NSArray<Asset*>* demoAssets() {
     // Assets that are not meant to be downloaded can have nil as the flavor and url.
     return @[
              [Asset assetWithName:@"sintel.fps" entry:@"0_pl5lbfo0" flavor:@"0_zwq3l44r"   url:@"https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/flavorIds/0_zwq3l44r/format/applehttp/protocol/https/a.m3u8"],
-             [Asset assetWithName:@"count.wvm" entry:@"0_uafvpmv8" flavor:@"0_2rl0w6f1" url:@"http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_uafvpmv8/flavorId/0_2rl0w6f1/format/url/protocol/http/a.wvm"],
              ];
 }
 
