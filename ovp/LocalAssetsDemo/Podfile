@@ -4,7 +4,8 @@
 # use_frameworks!
 
 target 'LocalAssetsDemo' do
-pod 'KalturaPlayerSDK'      #, :path => '../../../player-sdk-native-ios'
+#pod 'KalturaPlayerSDK'      #, :path => '../../../player-sdk-native-ios'
+pod 'KalturaPlayerSDK', :git => 'https://github.com/kaltura/player-sdk-native-ios.git', :branch => ‘develop’
 pod "DownPicker"
 end
 

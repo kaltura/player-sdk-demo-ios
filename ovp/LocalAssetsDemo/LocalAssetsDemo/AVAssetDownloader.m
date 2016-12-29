@@ -39,29 +39,6 @@
 
 @implementation AVAssetDownloader
 
-///// Triggers the initial AVAssetDownloadTask for a given Asset.
-//func downloadStream(for asset: Asset) {
-//    /*
-//     For the initial download, we ask the URLSession for an AVAssetDownloadTask
-//     with a minimum bitrate corresponding with one of the lower bitrate variants
-//     in the asset.
-//     */
-//    guard let task = assetDownloadURLSession.makeAssetDownloadTask(asset: asset.urlAsset, assetTitle: asset.name, assetArtworkData: nil, options: [AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: 265000]) else { return }
-//    
-//    // To better track the AVAssetDownloadTask we set the taskDescription to something unique for our sample.
-//    task.taskDescription = asset.name
-//    
-//    activeDownloadsMap[task] = asset
-//    
-//    task.resume()
-//    
-//    var userInfo = [String: Any]()
-//    userInfo[Asset.Keys.name] = asset.name
-//    userInfo[Asset.Keys.downloadState] = Asset.DownloadState.downloading.rawValue
-//    
-//    NotificationCenter.default.post(name: AssetDownloadStateChangedNotification, object: nil, userInfo:  userInfo)
-//}
-
 - (void)startDownload {
     
     NSURLSessionConfiguration *backgroundConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"AAPL-Identifier"];
@@ -137,8 +114,14 @@
                 for (AVMediaSelectionOption* option in mediaSelectionGroup.options) {
                     if (![savedOptions containsObject:option]) {
                         
-                        // This option hasn't been downloaded. Return it so it can be.
-                        return [[MediaSelectionTuple alloc] initWithGroup:mediaSelectionGroup option:option];
+                        // Skip if it doesn't have a tag
+                        if ([characteristic isEqualToString: AVMediaCharacteristicLegible] && option.extendedLanguageTag == nil) {
+                            
+                            NSLog(@"Skipping download of option with no language tag");
+                        } else {
+                             // This option hasn't been downloaded. Return it so it can be.
+                            return [[MediaSelectionTuple alloc] initWithGroup:mediaSelectionGroup option:option];
+                        }
                     }
                 }
             }
