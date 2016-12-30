@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import <KalturaPlayerSDK/KPLogManager.h>
+#import <DownloadToGo/DownloadToGo.h>
 
 @interface AppDelegate ()
 
@@ -21,6 +22,10 @@
     // Override point for customization after application launch.
     
     [KPLogManager setKPLogLevel:KPLogLevelDebug];
+    
+    //Please stard Mongo
+    [MongooseWrapper start];
+    
     return YES;
 }
 

@@ -14,36 +14,32 @@
 #import <KalturaPlayerSDK/KPLocalAssetsManager.h>
 #import <KalturaPlayerSDK/KPViewController.h>
 #import <DownPicker/DownPicker.h>
+#import "Asset.h"
 
-#import "AVAssetDownloader.h"
+#import <DownloadToGo/DownloadToGo.h>
+@import DownloadToGo;
+
+typedef void (^callBackForPrepareToDownload)(KADownloadItem *);
 
 static NSArray<Asset*>* demoAssets() {
     
     // TODO: modify the array of assets. 
     // Assets that are not meant to be downloaded can have nil as the flavor and url.
     return @[
-             [Asset assetWithName:@"sintel.fps" entry:@"0_pl5lbfo0" flavor:@"0_zwq3l44r"   url:@"https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/flavorIds/0_zwq3l44r/format/applehttp/protocol/https/a.m3u8"],
-             ];
+        [Asset assetWithName:@"kalturaVideoSolutions" entry:@"0_00qaakql" flavor:@"0_gempayqv" url:@"https://cdnapisec.kaltura.com/p/2066791/sp/206679100/playManifest/entryId/0_00qaakql/flavorIds/0_gempayqv,0_1w1ijvw6/format/applehttp/protocol/https/a.m3u8"]
+    ];
 }
 
 static KPPlayerConfig* configForDemoAsset(Asset* asset, BOOL forRegister) {
     // TODO: set server, uiconfid, partnerId
     KPPlayerConfig* config;
-    config = [KPPlayerConfig configWithServer:@"https://cdnapisec.kaltura.com" uiConfID:@"31956421" partnerId:@"1851571"];
+    config = [KPPlayerConfig configWithServer:@"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php" uiConfID:@"37289212" partnerId:@"2066791"];
+    
+    [config addConfigKey:@"closedCaptions.showEmbeddedCaptions" withValue:@"true"];
+    [config addConfigKey:@"audioSelector.plugin" withValue:@"true"];
     
     // TODO (optional): set cachesize in MB
     config.cacheSize = 100; 
-    
-    // TODO (optional): set KS, if required by server config
-    //config.ks = @KS;
-    
-    // TODO (optional): customize the player some more. 
-    // [config addConfigKey:(NSString *) withValue:(NSString *)];
-    // [config addConfigKey:(NSString *) withDictionary:(NSDictionary *)];
-    // [config addConfigKey:@"autoPlay" withValue:@"true"];
-
-    // TODO (optional): add extra cache inclusion patterns (regexps)
-    // config.cacheConfig.includePatterns = @[];
     
     // Common
     config.entryId = asset.entryId;
@@ -53,29 +49,50 @@ static KPPlayerConfig* configForDemoAsset(Asset* asset, BOOL forRegister) {
 
 }
 
-
-
-
-
-@interface ViewController ()
+@interface ViewController () <KADownloadItemDelegate, KPViewControllerDelegate, KPSourceURLProvider>
 @property (nonatomic) KPViewController* kpv;
 @property (strong, nonatomic) DownPicker* picker;
 @property (nonatomic, readonly) Asset* selectedAsset;
 @property (nonatomic) NSArray<Asset*>* assets;
-
 @property (nonatomic) KPAssetRegistrationHelper* assetRegistrationHelper;
+@property (strong, nonatomic) KADownloadItem *downloadItem;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 @end
-
-@interface ViewController (KalturaPlayer) <KPViewControllerDelegate, KPSourceURLProvider>
-@end
-
-
-
-
 
 @implementation ViewController
 
--(void)setDownPicker {
+#pragma mark - Life Cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _assets = demoAssets();
+    
+    [self prepareForDownloadWithMediaEntry:self.selectedAsset completion:^(KADownloadItem * downloadItem) {
+        self.downloadItem = downloadItem;
+        switch (downloadItem.downloadState) {
+            case KADownloadItemDownloadStateInitial:
+            case KADownloadItemDownloadStateInProgress:
+            case KADownloadItemDownloadStatePaused:
+            break;
+            
+            case KADownloadItemDownloadStateDownloaded:
+            
+            
+            [self.playButton setBackgroundColor: [UIColor redColor]];
+            break;
+            
+            default:
+            break;
+        }
+    }];
+    
+    [self setDownPicker];
+}
+    
+#pragma mark - Picker
+    
+- (void)setDownPicker {
     NSInteger selectedIndex = _picker ? _picker.selectedIndex : 0;
     
     _picker = [[DownPicker alloc] initWithTextField:_assetPicker withData:[_assets valueForKey:@"description"]];
@@ -83,34 +100,108 @@ static KPPlayerConfig* configForDemoAsset(Asset* asset, BOOL forRegister) {
     _picker.selectedIndex = selectedIndex;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    _assets = demoAssets();
-    
-    [self setDownPicker];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(Asset *)selectedAsset {
+- (Asset *)selectedAsset {
     return _assets[_picker.selectedIndex];
 }
-
--(IBAction)assetSelected:(id)sender {
-}
-
--(IBAction)statusTapped:(UIButton*)button {
+   
+#pragma mark - Offline mode
     
-    [KPLocalAssetsManager checkStatusForAsset:configForDemoAsset(self.selectedAsset, YES) path:self.selectedAsset.targetFile callback:^(NSError *error, NSTimeInterval expiryTime, NSTimeInterval availableTime) {
-        NSLog(@"status: %d -- %d -- error: %@", (int)expiryTime, (int)availableTime, error);
+- (void)startDownload {
+    
+    [_downloadItem addDelegate: self];
+    
+    [_downloadItem loadInfo:^(KADownloadItem * _Nonnull item, BOOL success) {
+        
+        if (success) {
+            
+            [item selectVideoStreams:@[@0] completion:^(BOOL success) {
+               
+                if (success) {
+                    
+                    [item selectAudioStreams:@[@0,@1] completion:^(BOOL success) {
+                        
+                        if (success) {
+                            
+                            [item startDownload];
+                        }
+                    }];
+                }
+            }];
+        }
     }];
 }
+    
+- (void)prepareForDownloadWithMediaEntry:(Asset *)mediaEntry completion: (callBackForPrepareToDownload)callBack {
+    
+    NSString *sourceUrl = mediaEntry.downloadUrl;
+    NSString *sourceFormat = @"m3u8";
+    
+    [[KADownloadManager sharedInstance] getItem: mediaEntry.entryId itemUrl: sourceUrl itemFormat: sourceFormat completion:^(KADownloadItem * _Nonnull item) {
+        
+        if (callBack) {
+        
+            callBack(item);
+        }
+    }];
+}
+    
+#pragma mark - KADownloadItemDelegate
+    
+- (void)downloadWillStart:(KADownloadItem * _Nonnull)item {
+    
+}
+    
+- (void)downloadStarted:(KADownloadItem * _Nonnull)item {
+    
+}
+    
+- (void)downloadPaused:(KADownloadItem * _Nonnull)item {
+    
+}
+    
+- (void)downloadInterrupted:(KADownloadItem * _Nonnull)item {
+    
+}
+    
+- (void)downloadFailed:(KADownloadItem * _Nonnull)item error:(NSError * _Nullable)error {
+    
+}
+    
+- (void)downloadResumed:(KADownloadItem * _Nonnull)item {
+    
+}
+    
+- (void)downloadFinished:(KADownloadItem * _Nonnull)item {
+    
+    NSLog(@"downloadFinished: %@", item.playUrl);
+    
+    _downloadButton.backgroundColor = [UIColor yellowColor];
+}
+    
+- (void)downloadInProgress:(KADownloadItem * _Nonnull)item {
+    
+    NSLog(@"downloadInProgress: %f", item.currentProgress);
+}
+    
+#pragma mark - KPViewControllerDelegate, KPSourceURLProvider
+    
+-(NSString*)urlForEntryId:(NSString *)entryId currentURL:(NSString *)current {
+    
+    NSString *playUrl = nil;
+    if (_downloadItem.downloadState == KADownloadItemDownloadStateDownloaded) {
+        
+        playUrl = _downloadItem.playUrl.absoluteString;
+    }
+    return playUrl;
+}
+    
+#pragma mark - Actions
+    
+- (IBAction)assetSelected:(id)sender {
 
--(IBAction)playTapped:(UIButton*)button {
+}
+    
+- (IBAction)playTapped:(UIButton*)button {
     
     KPPlayerConfig* config = configForDemoAsset(self.selectedAsset, NO);
     if (!_kpv) {
@@ -128,63 +219,17 @@ static KPPlayerConfig* configForDemoAsset(Asset* asset, BOOL forRegister) {
         [_kpv changeConfiguration:config];
     }
 }
-
--(IBAction)loadTapped:(UIButton*)button {
-    NSLog(@"loadTapped:%@", button);
+    
+- (IBAction)loadTapped:(UIButton*)button {
     
     [self startDownload];
-    
-}
-
--(IBAction)registerTapped:(UIButton*)button {
-    NSLog(@"registerTapped:%@", button);
-    
-    button.backgroundColor = [UIColor yellowColor];
-    
-    NSLog(@"file info: %@", [[NSFileManager defaultManager] attributesOfItemAtPath:self.selectedAsset.targetFile error:nil]);
-    
-    NSString* path = self.selectedAsset.targetFile;
-
-    [KPLocalAssetsManager registerAsset:configForDemoAsset(self.selectedAsset, YES) flavor:self.selectedAsset.flavorId path:path callback:^(NSError *error) {
-        NSLog(@"Done:%@", error);
-        UIColor* color = error ? [UIColor redColor] : [UIColor whiteColor];
-        [button performSelectorOnMainThread:@selector(setBackgroundColor:) withObject:color waitUntilDone:NO];
-    }];
-}
-
-- (void)startDownload {
-    
-    kDownloadProgressReport progressReport = ^(float progress) {
-        NSLog(@"progress: %f", progress);
-        
-        if (progress == 2) {
-            _downloadButton.backgroundColor = [UIColor whiteColor];
-            _downloadButton.titleLabel.text = @"Download";
-            [self setDownPicker];
-        } else if (progress == -1) {
-            _downloadButton.backgroundColor = [UIColor redColor];
-        }
-    };
-    
-    KPPlayerConfig* playerConfig = configForDemoAsset(self.selectedAsset, YES);
-    AssetDownloader* downloader = [AssetDownloader downloaderForAsset:self.selectedAsset config:playerConfig];
-    
-    downloader.progressReport = progressReport;
-    [downloader startDownload];
-    
-    _downloadButton.backgroundColor = [UIColor yellowColor];
 }
 
 @end
 
 @implementation ViewController (KalturaPlayer)
 
--(NSString*)urlForEntryId:(NSString *)entryId currentURL:(NSString *)current {
-    
-    NSAssert([entryId isEqualToString:self.selectedAsset.entryId], @"Demo: assuming we're playing the selected asset");
-    
-    return self.selectedAsset.playbackUrl;
-}
+
 
 
 @end
