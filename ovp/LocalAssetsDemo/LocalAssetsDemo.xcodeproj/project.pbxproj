@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D292C8F515705C40B5E325A /* libPods-LocalAssetsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A3428F7E03955CEC0FAC17 /* libPods-LocalAssetsDemo.a */; };
-		FB19E9791D926CC000AC717F /* AssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9781D926CC000AC717F /* AssetDownloader.m */; };
+		DEF9BF24E5029909296AFE7C /* Pods_LocalAssetsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A516505A2C924284A9339F0A /* Pods_LocalAssetsDemo.framework */; };
 		FB19E97C1D927F6E00AC717F /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E97B1D927F6E00AC717F /* Asset.m */; };
-		FB19E97E1D928F1500AC717F /* AVAssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */; };
 		FB1DDC661CECBA5400DDA2BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC651CECBA5400DDA2BD /* main.m */; };
 		FB1DDC691CECBA5400DDA2BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC681CECBA5400DDA2BD /* AppDelegate.m */; };
 		FB1DDC6C1CECBA5400DDA2BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC6B1CECBA5400DDA2BD /* ViewController.m */; };
@@ -20,13 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		68A3428F7E03955CEC0FAC17 /* libPods-LocalAssetsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalAssetsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A516505A2C924284A9339F0A /* Pods_LocalAssetsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalAssetsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0006F657BF3246CC15B4475 /* Pods-LocalAssetsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalAssetsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalAssetsDemo/Pods-LocalAssetsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0BF47E2269108B65C8E005 /* Pods-LocalAssetsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalAssetsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalAssetsDemo/Pods-LocalAssetsDemo.release.xcconfig"; sourceTree = "<group>"; };
-		FB19E9501D91BA2F00AC717F /* AVAssetDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAssetDownloader.h; sourceTree = "<group>"; };
-		FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAssetDownloader.m; sourceTree = "<group>"; };
-		FB19E9771D926CC000AC717F /* AssetDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetDownloader.h; sourceTree = "<group>"; };
-		FB19E9781D926CC000AC717F /* AssetDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetDownloader.m; sourceTree = "<group>"; };
 		FB19E97A1D927F6E00AC717F /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asset.h; sourceTree = "<group>"; };
 		FB19E97B1D927F6E00AC717F /* Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Asset.m; sourceTree = "<group>"; };
 		FB1DDC611CECBA5400DDA2BD /* LocalAssetsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalAssetsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D292C8F515705C40B5E325A /* libPods-LocalAssetsDemo.a in Frameworks */,
+				DEF9BF24E5029909296AFE7C /* Pods_LocalAssetsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +59,7 @@
 		D4612A6E2DBB9BE507D92BCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				68A3428F7E03955CEC0FAC17 /* libPods-LocalAssetsDemo.a */,
+				A516505A2C924284A9339F0A /* Pods_LocalAssetsDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -95,10 +89,6 @@
 				FB1DDC681CECBA5400DDA2BD /* AppDelegate.m */,
 				FB1DDC6A1CECBA5400DDA2BD /* ViewController.h */,
 				FB1DDC6B1CECBA5400DDA2BD /* ViewController.m */,
-				FB19E9501D91BA2F00AC717F /* AVAssetDownloader.h */,
-				FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */,
-				FB19E9771D926CC000AC717F /* AssetDownloader.h */,
-				FB19E9781D926CC000AC717F /* AssetDownloader.m */,
 				FB19E97A1D927F6E00AC717F /* Asset.h */,
 				FB19E97B1D927F6E00AC717F /* Asset.m */,
 				FB1DDC6D1CECBA5400DDA2BD /* Main.storyboard */,
@@ -155,7 +145,7 @@
 				TargetAttributes = {
 					FB1DDC601CECBA5400DDA2BD = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = X8RDCFJK95;
+						DevelopmentTeam = AMGTA68RNT;
 						DevelopmentTeamName = "Kaltura, Inc.";
 					};
 				};
@@ -248,8 +238,6 @@
 				FB1DDC6C1CECBA5400DDA2BD /* ViewController.m in Sources */,
 				FB1DDC691CECBA5400DDA2BD /* AppDelegate.m in Sources */,
 				FB1DDC661CECBA5400DDA2BD /* main.m in Sources */,
-				FB19E97E1D928F1500AC717F /* AVAssetDownloader.m in Sources */,
-				FB19E9791D926CC000AC717F /* AssetDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,10 +356,12 @@
 			baseConfigurationReference = B0006F657BF3246CC15B4475 /* Pods-LocalAssetsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = AMGTA68RNT;
 				INFOPLIST_FILE = LocalAssetsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.LocalAssetsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.KalturaDownloadSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -381,10 +371,12 @@
 			baseConfigurationReference = DF0BF47E2269108B65C8E005 /* Pods-LocalAssetsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = AMGTA68RNT;
 				INFOPLIST_FILE = LocalAssetsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.LocalAssetsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.KalturaDownloadSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

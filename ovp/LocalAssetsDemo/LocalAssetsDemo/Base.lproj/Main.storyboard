@@ -23,6 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-rb-myV">
                                 <rect key="frame" x="97" y="58" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,6 +40,8 @@
                                     <action selector="statusTapped:" destination="dkx-z0-nzr" eventType="touchUpInside" id="Tmh-iq-n59"/>
                                 </connections>
                             </button>
+=======
+>>>>>>> master
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iq4-DF-j9y">
                                 <rect key="frame" x="20" y="58" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,6 +82,7 @@
                     <connections>
                         <outlet property="assetPicker" destination="Egc-Sm-MPj" id="sYT-pb-xdu"/>
                         <outlet property="downloadButton" destination="Iq4-DF-j9y" id="5lR-uC-g6z"/>
+                        <outlet property="playButton" destination="KRB-pt-DJj" id="sgQ-hA-lej"/>
                         <outlet property="playerContainer" destination="taG-Yz-aCt" id="Dfh-Vz-vAf"/>
                     </connections>
                 </viewController>
