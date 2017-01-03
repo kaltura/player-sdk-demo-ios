@@ -137,6 +137,7 @@ static NSString * const kViewControllerPartnerId = @"2066791";
 
 - (void)switchToRemotePlayback {
     
+    _changeMediaButton.hidden = YES;
     _playerViewController.castProvider = [GoogleCastProvider sharedInstance];
     [_playerViewController changeMedia: _currentEntryId];
 }
