@@ -22,12 +22,6 @@
 
 @implementation MediaListViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear: animated];
-    
-    [self.navigationController.navigationBar setHidden: NO];
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear: animated];
     
@@ -57,6 +51,8 @@
 }
 
 - (void)dataDisplayManager: (MediaListDataDisplayManager *)ddManager didSelectPlainObj:(MediaPlainObject *)plain {
+    
+    [_tableView deselectRowAtIndexPath: [_tableView indexPathForSelectedRow] animated: YES];
     
     if ([appDelegate shouldAppearExpandedControlWithCurrentEntryId: plain.name]) {
         

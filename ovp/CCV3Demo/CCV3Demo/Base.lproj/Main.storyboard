@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,19 +23,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umc-il-EHB">
-                                <rect key="frame" x="314" y="28" width="45" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deviсe is connecting to Receiver, please wait... " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2f-J7-JGo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="281.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="NFH-kr-ZQv"/>
-                                    <constraint firstAttribute="width" constant="45" id="qrx-U8-qdR"/>
+                                    <constraint firstAttribute="width" secondItem="L2f-J7-JGo" secondAttribute="height" multiplier="4:3" id="FnJ-97-Oyb"/>
                                 </constraints>
-                                <state key="normal" image="cast_icon"/>
-                                <connections>
-                                    <action selector="didClickCastButton:" destination="Znc-Oa-9Mz" eventType="touchUpInside" id="5IU-CV-2YH"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-DW-V2X">
+                                <rect key="frame" x="0.0" y="20" width="375" height="281.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hZW-DW-V2X" secondAttribute="height" multiplier="4:3" id="bZ2-KN-RzU"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ3-cl-kVg">
-                                <rect key="frame" x="204" y="81" width="155" height="45"/>
+                                <rect key="frame" x="110" y="322.5" width="155" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.03079350443" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Aah-Zu-wMB"/>
@@ -48,36 +54,24 @@
                                     <action selector="changeMeida:" destination="Znc-Oa-9Mz" eventType="touchUpInside" id="kTG-GI-TF9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="752-R1-CLm">
-                                <rect key="frame" x="16" y="28" width="70" height="38"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="BM4-Tj-RGl"/>
-                                    <constraint firstAttribute="height" constant="38" id="bns-Lh-hKp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="BACK">
-                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="backDidClick:" destination="Znc-Oa-9Mz" eventType="touchUpInside" id="sbn-2l-Tl1"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="umc-il-EHB" firstAttribute="trailing" secondItem="vOk-P4-Cdb" secondAttribute="trailingMargin" id="LY9-FI-YrD"/>
-                            <constraint firstItem="752-R1-CLm" firstAttribute="leading" secondItem="vOk-P4-Cdb" secondAttribute="leadingMargin" id="RT7-CI-yXj"/>
-                            <constraint firstItem="eQ3-cl-kVg" firstAttribute="top" secondItem="umc-il-EHB" secondAttribute="bottom" constant="8" id="WyG-in-6qI"/>
-                            <constraint firstItem="eQ3-cl-kVg" firstAttribute="trailing" secondItem="vOk-P4-Cdb" secondAttribute="trailingMargin" id="aG0-1Q-QQo"/>
-                            <constraint firstItem="752-R1-CLm" firstAttribute="top" secondItem="Oa8-8S-NIK" secondAttribute="bottom" constant="8" id="gOt-cE-Lhe"/>
-                            <constraint firstItem="umc-il-EHB" firstAttribute="top" secondItem="Oa8-8S-NIK" secondAttribute="bottom" constant="8" id="y64-HO-LIp"/>
+                            <constraint firstAttribute="trailing" secondItem="L2f-J7-JGo" secondAttribute="trailing" id="1Qq-zU-tdw"/>
+                            <constraint firstAttribute="trailing" secondItem="hZW-DW-V2X" secondAttribute="trailing" id="7gh-wX-WRL"/>
+                            <constraint firstItem="eQ3-cl-kVg" firstAttribute="top" secondItem="L2f-J7-JGo" secondAttribute="bottom" constant="21" id="7vx-v9-1Ml"/>
+                            <constraint firstItem="eQ3-cl-kVg" firstAttribute="centerX" secondItem="vOk-P4-Cdb" secondAttribute="centerX" id="J5L-JV-Fi2"/>
+                            <constraint firstItem="eQ3-cl-kVg" firstAttribute="top" secondItem="hZW-DW-V2X" secondAttribute="bottom" constant="21" id="Ma0-Hv-37G"/>
+                            <constraint firstItem="L2f-J7-JGo" firstAttribute="leading" secondItem="vOk-P4-Cdb" secondAttribute="leading" id="RX3-W3-Gid"/>
+                            <constraint firstItem="hZW-DW-V2X" firstAttribute="top" secondItem="Oa8-8S-NIK" secondAttribute="bottom" id="SKv-i3-Vuq"/>
+                            <constraint firstItem="hZW-DW-V2X" firstAttribute="leading" secondItem="vOk-P4-Cdb" secondAttribute="leading" id="dfq-Fk-emh"/>
+                            <constraint firstItem="L2f-J7-JGo" firstAttribute="top" secondItem="Oa8-8S-NIK" secondAttribute="bottom" id="hPp-qO-NiT"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="752-R1-CLm" id="dNk-by-AW7"/>
-                        <outlet property="castButton" destination="umc-il-EHB" id="J9O-0m-Q20"/>
                         <outlet property="changeMediaButton" destination="eQ3-cl-kVg" id="3fZ-QU-UPT"/>
+                        <outlet property="messageContainer" destination="L2f-J7-JGo" id="uxU-0d-jKT"/>
+                        <outlet property="playerContainer" destination="hZW-DW-V2X" id="Q1i-Wc-ahJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CtX-VQ-5VD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,12 +114,9 @@
                                         <rect key="frame" x="0.0" y="28" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MBK-CY-WpA" id="GY9-l7-JAo">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Znc-Oa-9Mz" kind="showDetail" identifier="ShowViewController" action="showViewController:sender:" id="buz-bA-oHd"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -153,7 +144,4 @@
             <point key="canvasLocation" x="445.60000000000002" y="1140.1799100449775"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="cast_icon" width="100" height="100"/>
-    </resources>
 </document>
