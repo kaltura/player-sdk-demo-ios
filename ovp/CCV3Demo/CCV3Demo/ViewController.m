@@ -46,8 +46,8 @@ static NSString * const kViewControllerPartnerId = @"2066791";
     appDelegate.miniMediaControlsViewController.delegate = self;
     [[GCKCastContext sharedInstance].sessionManager addListener: self];
     
-    _playerContainer.hidden = [GCKCastContext sharedInstance].castState == GCKCastStateConnected;
-    _messageContainer.hidden = [GCKCastContext sharedInstance].castState != GCKCastStateConnected;
+//    _playerContainer.hidden = [GCKCastContext sharedInstance].castState == GCKCastStateConnected;
+//    _messageContainer.hidden = [GCKCastContext sharedInstance].castState != GCKCastStateConnected;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -136,7 +136,7 @@ static NSString * const kViewControllerPartnerId = @"2066791";
 }
 
 - (void)switchToRemotePlayback {
-    
+
     _changeMediaButton.hidden = YES;
     _playerViewController.castProvider = [GoogleCastProvider sharedInstance];
     [_playerViewController changeMedia: _currentEntryId];
@@ -167,9 +167,10 @@ static NSString * const kViewControllerPartnerId = @"2066791";
          didEndSession:(GCKSession *)session
              withError:(NSError *)error {
     NSLog(@"session ended with error: %@", error);
-    [_playerViewController resetPlayer];
-    [self playerInitializer];
-    [self switchToLocalPlayback];
+
+//    [_playerViewController resetPlayer];
+//    [self playerInitializer];
+//    [self switchToLocalPlayback];
 }
 
 #pragma mark - GCKUIMiniMediaControlsViewControllerDelegate
@@ -188,6 +189,8 @@ static NSString * const kViewControllerPartnerId = @"2066791";
     
     if (shouldAppear) {
         
+//        appDelegate.miniMediaControlsViewController.delegate = nil;
+//        [[GCKCastContext sharedInstance].sessionManager removeListener: self];
         [self.navigationController popViewControllerAnimated: YES];
         [appDelegate appearExpandedControlWithNavigationitem: self.navigationItem];
     }
