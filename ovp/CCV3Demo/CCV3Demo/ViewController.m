@@ -12,10 +12,10 @@
 #import <KALTURAPlayerSDK/KPViewController.h>
 #import <KalturaPlayerSDK/GoogleCastProvider.h>
 
-static NSString * const kViewControllerServer = @"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php";
+static NSString * const kViewControllerServer = @"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php";//
 
-static NSString * const kViewControllerUIConfId = @"37289212";
-static NSString * const kViewControllerPartnerId = @"2066791";
+static NSString * const kViewControllerUIConfId = @"35748121";
+static NSString * const kViewControllerPartnerId = @"2164401";
 
 @interface ViewController () < GCKSessionManagerListener, GCKUIMiniMediaControlsViewControllerDelegate >
 
@@ -42,12 +42,9 @@ static NSString * const kViewControllerPartnerId = @"2066791";
         [_playerViewController removePlayer];
     }
     
-    appDelegate.castControlBarsEnabled = NO;
+    appDelegate.castControlBarsEnabled = YES;
     appDelegate.miniMediaControlsViewController.delegate = self;
     [[GCKCastContext sharedInstance].sessionManager addListener: self];
-    
-//    _playerContainer.hidden = [GCKCastContext sharedInstance].castState == GCKCastStateConnected;
-//    _messageContainer.hidden = [GCKCastContext sharedInstance].castState != GCKCastStateConnected;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -74,7 +71,7 @@ static NSString * const kViewControllerPartnerId = @"2066791";
 
 - (IBAction)changeMeida:(id)sender {
     
-    [_playerViewController changeMedia: _currentEntryId];
+    [_playerViewController changeMedia: @"1_jp0fiw3x"];
 }
 
 #pragma mark - Player
@@ -139,7 +136,7 @@ static NSString * const kViewControllerPartnerId = @"2066791";
 
     _changeMediaButton.hidden = YES;
     _playerViewController.castProvider = [GoogleCastProvider sharedInstance];
-    [_playerViewController changeMedia: _currentEntryId];
+//    [_playerViewController changeMedia: _currentEntryId];
 }
 
 #pragma mark - GCKSessionManagerListener
@@ -155,22 +152,6 @@ static NSString * const kViewControllerPartnerId = @"2066791";
        didStartSession:(GCKSession *)session {
     NSLog(@"MediaViewController: sessionManager didStartSession %@", session);
     [self switchToRemotePlayback];
-}
-
-- (void)sessionManager:(GCKSessionManager *)sessionManager
-      didResumeSession:(GCKSession *)session {
-    NSLog(@"MediaViewController: sessionManager didResumeSession %@", session);
-    [self switchToRemotePlayback];
-}
-
-- (void)sessionManager:(GCKSessionManager *)sessionManager
-         didEndSession:(GCKSession *)session
-             withError:(NSError *)error {
-    NSLog(@"session ended with error: %@", error);
-
-//    [_playerViewController resetPlayer];
-//    [self playerInitializer];
-//    [self switchToLocalPlayback];
 }
 
 #pragma mark - GCKUIMiniMediaControlsViewControllerDelegate
@@ -189,10 +170,9 @@ static NSString * const kViewControllerPartnerId = @"2066791";
     
     if (shouldAppear) {
         
-//        appDelegate.miniMediaControlsViewController.delegate = nil;
-//        [[GCKCastContext sharedInstance].sessionManager removeListener: self];
-        [self.navigationController popViewControllerAnimated: YES];
-        [appDelegate appearExpandedControlWithNavigationitem: self.navigationItem];
+        _changeMediaButton.hidden = NO;
+//        [self.navigationController popViewControllerAnimated: YES];
+//        [appDelegate appearExpandedControlWithNavigationitem: self.navigationItem];
     }
 }
 
