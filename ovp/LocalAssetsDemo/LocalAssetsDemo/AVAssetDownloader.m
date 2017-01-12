@@ -208,6 +208,7 @@
                 return;
             } else {
                 
+                NSLog(@"Starting download of %@", option);
                 nextTask.taskDescription = someAssetName;
                 [nextTask resume];
             }
