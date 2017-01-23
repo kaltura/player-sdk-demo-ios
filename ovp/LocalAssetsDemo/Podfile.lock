@@ -1,0 +1,89 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DownloadToGo (2.0.0):
+    - AFNetworking
+    - FMDB
+    - M3U8Parser
+    - Reachability
+  - DownPicker (0.1.34)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - google-cast-sdk (3.2.0):
+    - google-cast-sdk/Core (= 3.2.0)
+  - google-cast-sdk/Core (3.2.0)
+  - KalturaPlayerSDK (2.6.0-dev):
+    - KalturaPlayerSDK/Core (= 2.6.0-dev)
+    - KalturaPlayerSDK/GoogleCast (= 2.6.0-dev)
+    - KalturaPlayerSDK/Widevine (= 2.6.0-dev)
+  - KalturaPlayerSDK/Core (2.6.0-dev)
+  - KalturaPlayerSDK/GoogleCast (2.6.0-dev):
+    - google-cast-sdk (~> 3.2.0)
+  - KalturaPlayerSDK/Widevine (2.6.0-dev)
+  - M3U8Parser (0.0.1)
+  - Reachability (3.2)
+
+DEPENDENCIES:
+  - DownloadToGo (from `https://github.com/kaltura/download-to-go-ios`, branch `Xcode8_v3`)
+  - DownPicker
+  - FMDB (from `https://github.com/srivkas/fmdb`, branch `rp_xcode8`)
+  - KalturaPlayerSDK (from `https://github.com/kaltura/player-sdk-native-ios.git`, branch `develop`)
+  - M3U8Parser (from `https://github.com/srivkas/M3U8Parser.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  DownloadToGo:
+    :branch: Xcode8_v3
+    :git: https://github.com/kaltura/download-to-go-ios
+  FMDB:
+    :branch: rp_xcode8
+    :git: https://github.com/srivkas/fmdb
+  KalturaPlayerSDK:
+    :branch: develop
+    :git: https://github.com/kaltura/player-sdk-native-ios.git
+  M3U8Parser:
+    :branch: master
+    :git: https://github.com/srivkas/M3U8Parser.git
+
+CHECKOUT OPTIONS:
+  DownloadToGo:
+    :commit: af5182b8b024ebcdb52e33b0438eb6fb9899c03f
+    :git: https://github.com/kaltura/download-to-go-ios
+  FMDB:
+    :commit: 017e6b5257b591216dbfc8301fc90d84975635d3
+    :git: https://github.com/srivkas/fmdb
+  KalturaPlayerSDK:
+    :commit: b7ea2f2edbfa14cdd721aca79739a910edc09755
+    :git: https://github.com/kaltura/player-sdk-native-ios.git
+  M3U8Parser:
+    :commit: 5e46ff7a1aa52709bb2c6ceb8a2687972cacc3a4
+    :git: https://github.com/srivkas/M3U8Parser.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DownloadToGo: 158b6ec63d2d2587d463b598ffec55a45e4dddb0
+  DownPicker: c00ea63f08ae82116cc93d0eba74e86bf3d4c68e
+  FMDB: 4a8bd568ad66314ca4275aea8a2de67a70a1a946
+  google-cast-sdk: f4c2a14214ad486cc26a8f8837e8481c906a0ea8
+  KalturaPlayerSDK: 3d65f06ef1f7678a96c14329e93926b12a9ca132
+  M3U8Parser: b9bc4ee469e7c806e58d472073d63766c235d456
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+
+PODFILE CHECKSUM: b58af3323cdae52d6edd96ee29a79f802cd03f64
+
+COCOAPODS: 1.1.1

@@ -9,10 +9,14 @@ target 'LocalAssetsDemo' do
     pod 'M3U8Parser', :git => 'https://github.com/srivkas/M3U8Parser.git', :branch => 'master'
     pod 'FMDB', :git => 'https://github.com/srivkas/fmdb', :branch => 'rp_xcode8'
     
-    #Please use DownloadToGo as local Framework,
-    #First, you should take access for project DovnloadToGo(https://github.com/kaltura/download-to-go-ios/tree/Xcode8_v3)
-    #Second, please clone it and save path
-    pod 'DownloadToGo', :path => '...Your Local Path'
+    # DownloadToGo is a private repository. Two options to get it:
+    
+    # Option 1: prepare a local copy of the library, for example '../../../download-to-go-ios'
+    # pod 'DownloadToGo', :path => '../../../download-to-go-ios'
+    # The compatible version is at branch 'Xcode8_v3'.
+    
+    # Option 2: make sure 'git' is authorized to read the repository.
+    pod 'DownloadToGo', :git=> 'https://github.com/kaltura/download-to-go-ios', :branch=>'Xcode8_v3'
 end
 
 post_install do |installer|
