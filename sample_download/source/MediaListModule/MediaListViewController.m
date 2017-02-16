@@ -17,6 +17,12 @@
 
 @implementation MediaListViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    
+    [self.navigationController.navigationBar setHidden: NO];
+}
+
 - (void) viewDidLoad {
     [super viewDidLoad];
     

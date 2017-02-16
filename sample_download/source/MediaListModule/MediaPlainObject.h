@@ -18,6 +18,7 @@
 @property (nonatomic, copy) NSString *flavorId;
 @property (nonatomic, copy) NSString *partnerId;
 @property (nonatomic, copy) NSString *uiconfId;
+@property (nonatomic, copy) NSString *format;
 
 @property (nonatomic, assign) BOOL downloaded;
 

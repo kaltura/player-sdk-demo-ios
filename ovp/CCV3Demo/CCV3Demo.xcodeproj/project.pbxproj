@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		10184A586FA5BC3D2CA1C114 /* libPods-CCV3Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEA4417FEBC9B85EABA697C /* libPods-CCV3Demo.a */; };
+		DF5388D41E1BC7BF00751D9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5388D21E1BC7BF00751D9C /* Main.storyboard */; };
 		DFE0B9CD1DD48A44000EB3F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE0B9CC1DD48A44000EB3F8 /* main.m */; };
 		DFE0B9D01DD48A44000EB3F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE0B9CF1DD48A44000EB3F8 /* AppDelegate.m */; };
 		DFE0B9D31DD48A44000EB3F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE0B9D21DD48A44000EB3F8 /* ViewController.m */; };
-		DFE0B9D61DD48A44000EB3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0B9D41DD48A44000EB3F8 /* Main.storyboard */; };
 		DFE0B9D81DD48A44000EB3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE0B9D71DD48A44000EB3F8 /* Assets.xcassets */; };
 		DFE0B9DB1DD48A44000EB3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE0B9D91DD48A44000EB3F8 /* LaunchScreen.storyboard */; };
 		DFE0B9EB1DD48EC1000EB3F8 /* MediaListDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE0B9E41DD48EC1000EB3F8 /* MediaListDataDisplayManager.m */; };
@@ -24,13 +24,13 @@
 		0FEA4417FEBC9B85EABA697C /* libPods-CCV3Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCV3Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A62AA8376130ADB9C2D568 /* Pods-CCV3Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCV3Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCV3Demo/Pods-CCV3Demo.release.xcconfig"; sourceTree = "<group>"; };
 		D040CD7AA76A23C9845FB89B /* Pods-CCV3Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCV3Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCV3Demo/Pods-CCV3Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		DF5388D31E1BC7BF00751D9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFE0B9C81DD48A44000EB3F8 /* CCV3Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCV3Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE0B9CC1DD48A44000EB3F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFE0B9CE1DD48A44000EB3F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DFE0B9CF1DD48A44000EB3F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DFE0B9D11DD48A44000EB3F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DFE0B9D21DD48A44000EB3F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DFE0B9D51DD48A44000EB3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFE0B9D71DD48A44000EB3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFE0B9DA1DD48A44000EB3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFE0B9DC1DD48A44000EB3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 				DFE0B9EF1DD494A7000EB3F8 /* ViewInput.h */,
 				DFE0B9D11DD48A44000EB3F8 /* ViewController.h */,
 				DFE0B9D21DD48A44000EB3F8 /* ViewController.m */,
-				DFE0B9D41DD48A44000EB3F8 /* Main.storyboard */,
 				DFE0B9D71DD48A44000EB3F8 /* Assets.xcassets */,
+				DF5388D21E1BC7BF00751D9C /* Main.storyboard */,
 				DFE0B9D91DD48A44000EB3F8 /* LaunchScreen.storyboard */,
 				DFE0B9DC1DD48A44000EB3F8 /* Info.plist */,
 				DFE0B9CB1DD48A44000EB3F8 /* Supporting Files */,
@@ -162,7 +162,7 @@
 		DFE0B9C01DD48A43000EB3F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Vitaliy Rusinov";
 				TargetAttributes = {
 					DFE0B9C71DD48A43000EB3F8 = {
@@ -195,9 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5388D41E1BC7BF00751D9C /* Main.storyboard in Resources */,
 				DFE0B9DB1DD48A44000EB3F8 /* LaunchScreen.storyboard in Resources */,
 				DFE0B9D81DD48A44000EB3F8 /* Assets.xcassets in Resources */,
-				DFE0B9D61DD48A44000EB3F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +269,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DFE0B9D41DD48A44000EB3F8 /* Main.storyboard */ = {
+		DF5388D21E1BC7BF00751D9C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DFE0B9D51DD48A44000EB3F8 /* Base */,
+				DF5388D31E1BC7BF00751D9C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -306,12 +306,14 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -354,12 +356,14 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-
-#import <GoogleCast/GoogleCast.h>
 #import <KalturaPlayerSDK/GoogleCastProvider.h>
 
 @interface AppDelegate ()<GCKLoggerDelegate>
@@ -16,19 +14,30 @@
 
 @implementation AppDelegate
 
+static NSString *const kKeyEntryId = @"entryid";
 static NSString *const kReceiverAppID = @"276999A7";
 static const BOOL kDebugLoggingEnabled = YES;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    GCKCastOptions *options =
-    [[GCKCastOptions alloc] initWithReceiverApplicationID:kReceiverAppID];
-    [GCKCastContext setSharedInstanceWithOptions:options];
+    //The Cast framework has a global singleton object, the CastContext, which coordinates all of the framework's activities. This object must be initialized early in the application's lifecycle, typically in the -[application:didFinishLaunchingWithOptions:] method of the app delegate, so that automatic session resumption on sender app restart can trigger properly.
+    GCKCastOptions *options = [[GCKCastOptions alloc] initWithReceiverApplicationID: kReceiverAppID];
     
+    //A GCKCastOptions object must be supplied when initializing the CastContext. This class contains options that affect the behavior of the framework. The most important of these is the receiver application ID, which is used to filter discovery results and to launch the receiver app when a Cast session is started.
+    [GCKCastContext setSharedInstanceWithOptions: options];
+    
+    //The -[application:didFinishLaunchingWithOptions:] method is also a good place to set up a logging delegate to receive the logging messages from the framework. These can be useful for debugging and troubleshooting.
     [GCKLogger sharedInstance].delegate = self;
     
+    //Configure a GoogleCastProvider shared instance, typically in your application’s application:didFinishLaunchingWithOptions: method, in AppDelegate class:
     [GoogleCastProvider sharedInstance];
+    
+    //The first thing you have to do is enable the default expanded controller in the cast context. Modify AppDelegate.m to enable the default expanded controller
+    [GCKCastContext sharedInstance].useDefaultExpandedMediaControls = YES;
+    
+    //Add Mini Controllers
+    [self p_miniControllerInitializer];
     
     return YES;
 }
@@ -58,6 +67,52 @@ static const BOOL kDebugLoggingEnabled = YES;
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Mini Controllers
+
+- (void)p_miniControllerInitializer {
+    
+    UIStoryboard *appStoryboard =
+    [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *navigationController = [appStoryboard instantiateViewControllerWithIdentifier:@"MainNavigation"];
+    GCKUICastContainerViewController *castContainerVC = [[GCKCastContext sharedInstance] createCastContainerControllerForViewController:navigationController];
+    castContainerVC.miniMediaControlsItemEnabled = YES;
+    self.miniMediaControlsViewController = castContainerVC.miniMediaControlsViewController;
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = castContainerVC;
+    [self.window makeKeyAndVisible];
+}
+
+- (void)setCastControlBarsEnabled:(BOOL)notificationsEnabled {
+    GCKUICastContainerViewController *castContainerVC = (GCKUICastContainerViewController *)self.window.rootViewController;
+    castContainerVC.miniMediaControlsItemEnabled = notificationsEnabled;
+}
+
+- (BOOL)castControlBarsEnabled {
+    GCKUICastContainerViewController *castContainerVC = (GCKUICastContainerViewController *)self.window.rootViewController;
+    return castContainerVC.miniMediaControlsItemEnabled;
+}
+
+
+//Add the following code to load the expanded controller when the user starts to cast a video:
+- (void)appearExpandedControlWithNavigationitem: (UINavigationItem *)navigationItem {
+    
+    navigationItem.backBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:@""
+                                     style:UIBarButtonItemStylePlain
+                                    target:nil
+                                    action:nil];
+    
+    [[GCKCastContext sharedInstance] presentDefaultExpandedMediaControls];
+}
+
+- (BOOL)shouldAppearExpandedControlWithCurrentEntryId:(NSString *)currentEntryId {
+    
+    GCKRemoteMediaClient *remoteMediaClient = [[[[GCKCastContext sharedInstance] sessionManager] currentSession] remoteMediaClient];
+    NSString *entryIdForCurrentCastMedia = [[[[remoteMediaClient mediaStatus] mediaInformation] metadata] objectForKey: kKeyEntryId];
+    BOOL showExpandedMediaControl = entryIdForCurrentCastMedia.length > 0 && [currentEntryId isEqualToString: entryIdForCurrentCastMedia];
+    return showExpandedMediaControl;
 }
 
 #pragma mark - GCKLoggerDelegate

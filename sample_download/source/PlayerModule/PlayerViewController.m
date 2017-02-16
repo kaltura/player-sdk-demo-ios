@@ -17,6 +17,7 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
 @property (nonatomic, strong) KPViewController *playerViewController;
 
 @property (nonatomic, strong) MediaPlainObject *plain;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @end
 
@@ -46,7 +47,7 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
                                          entryId: _plain.entryId
                                         uiconfId: _plain.uiconfId
                                        partnerId: _plain.partnerId
-                                  downloadEnable: _plain.downloaded];
+                                  downloadEnable: YES];
     
     self.playerViewController = [self p_playerWithConfigure: _config];
     [self p_addKalturaPlayerAsSubview];
@@ -60,9 +61,20 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
     [self.playerViewController.view removeFromSuperview];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    
+    [self.navigationController.navigationBar setHidden: YES];
+}
+
 - (void)shouldUpdateCurrentModuleWithMediaPlainObject:(MediaPlainObject *)plain {
     
     self.plain = plain;
+}
+
+- (IBAction)didClickBackButton:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated: YES];
 }
 
 #pragma mark - KPViewController Moderator
@@ -84,6 +96,8 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
     [self.view addSubview: _playerViewController.view];
     
     [self.view bringSubviewToFront: _downloadButton];
+    [self.view bringSubviewToFront: _backButton];
+    
 }
 
 
@@ -99,12 +113,20 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
                                                 uiConfID: uiconfId 
                                                partnerId: partnerId];
     
-    conf.cacheSize = downloadEnable ? 100 : 0.0;
-    conf.entryId = entryId;
-    conf.localContentId = localeName;
+//    conf.cacheSize = downloadEnable ? 100 : 0.0;
+//    conf.entryId = entryId;
+//    conf.localContentId = localeName;
     
+    conf.cacheSize = 100;
     
+    if (entryId.length > 0) {
+        conf.entryId = entryId;
+    }
     
+    if (localeName.length > 0) {
+        conf.localContentId = localeName;
+    }
+
     return conf;
 }
 
@@ -138,10 +160,10 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
 - (NSString *) p_downloadUrlWithMediaPlainObject: (MediaPlainObject *)plain {
     
     //https
-    NSString *downloadLink = [NSString stringWithFormat:@"https://cdnapisec.kaltura.com/p/%@/sp/%@00/playManifest/entryId/%@/flavorId/%@/format/url/protocol/https/a.mp4", plain.partnerId, plain.partnerId, plain.entryId, plain.flavorId];
+    NSString *downloadLink = [NSString stringWithFormat:@"https://cdnapisec.kaltura.com/p/%@/sp/%@00/playManifest/entryId/%@/flavorId/%@/format/url/protocol/https/a.%@", plain.partnerId, plain.partnerId, plain.entryId, plain.flavorId, plain.format];
     
     //http
-    downloadLink = [NSString stringWithFormat:@"http://cdnapi.kaltura.com/p/%@/sp/%@00/playManifest/entryId/%@/flavorId/%@/format/url/protocol/https/a.mp4", plain.partnerId, plain.partnerId, plain.entryId, plain.flavorId];
+    downloadLink = [NSString stringWithFormat:@"http://cdnapi.kaltura.com/p/%@/sp/%@00/playManifest/entryId/%@/flavorId/%@/format/url/protocol/https/a.%@", plain.partnerId, plain.partnerId, plain.entryId, plain.flavorId, plain.format];
     
     return downloadLink;
 }
@@ -157,6 +179,8 @@ static NSString * const kPlayerViewControllerServer = @"http://cdnapi.kaltura.co
     
     return target;
 }
+
+#pragma mark -
 
 - (void) p_startDownload {
     
