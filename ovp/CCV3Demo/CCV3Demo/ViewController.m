@@ -12,10 +12,10 @@
 #import <KALTURAPlayerSDK/KPViewController.h>
 #import <KalturaPlayerSDK/GoogleCastProvider.h>
 
-static NSString * const kViewControllerServer = @"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php";//
+static NSString * const kViewControllerServer = @"http://kgit.html5video.org/tags/v2.49/mwEmbedFrame.php";//
 
-static NSString * const kViewControllerUIConfId = @"35748121";
-static NSString * const kViewControllerPartnerId = @"2164401";
+static NSString * const kViewControllerUIConfId = @"31638861";
+static NSString * const kViewControllerPartnerId = @"1831271";
 
 @interface ViewController () < GCKSessionManagerListener, GCKUIMiniMediaControlsViewControllerDelegate >
 

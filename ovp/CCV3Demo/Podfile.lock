@@ -1,0 +1,24 @@
+PODS:
+  - google-cast-sdk (3.2.0):
+    - google-cast-sdk/Core (= 3.2.0)
+  - google-cast-sdk/Core (3.2.0)
+  - KalturaPlayerSDK (2.6.11):
+    - KalturaPlayerSDK/Core (= 2.6.11)
+    - KalturaPlayerSDK/GoogleCast (= 2.6.11)
+    - KalturaPlayerSDK/Widevine (= 2.6.11)
+  - KalturaPlayerSDK/Core (2.6.11)
+  - KalturaPlayerSDK/GoogleCast (2.6.11):
+    - google-cast-sdk (~> 3.2.0)
+  - KalturaPlayerSDK/Widevine (2.6.11)
+
+DEPENDENCIES:
+  - google-cast-sdk (~> 3.2.0)
+  - KalturaPlayerSDK
+
+SPEC CHECKSUMS:
+  google-cast-sdk: f4c2a14214ad486cc26a8f8837e8481c906a0ea8
+  KalturaPlayerSDK: 9324a9088f8ba8b3819862aa779a3e8aa6aa4a9c
+
+PODFILE CHECKSUM: 98b968cbb214f59db6623170be2dcbbbe9dda992
+
+COCOAPODS: 1.2.0

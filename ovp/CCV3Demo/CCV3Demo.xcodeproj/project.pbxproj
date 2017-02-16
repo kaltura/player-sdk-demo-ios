@@ -167,7 +167,7 @@
 				TargetAttributes = {
 					DFE0B9C71DD48A43000EB3F8 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = AMGTA68RNT;
+						DevelopmentTeam = X8RDCFJK95;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -388,10 +388,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = AMGTA68RNT;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = CCV3Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.CCV3Demo.CCV3Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kalruea.ccdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -402,10 +402,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = AMGTA68RNT;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = CCV3Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.synergetica.kaltura.CCV3Demo.CCV3Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kalruea.ccdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

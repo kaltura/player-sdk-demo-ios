@@ -33,7 +33,7 @@
     self.mediaListView.tableView.delegate = self.mediaListView.dataDisplayManager;
     self.mediaListView.tableView.dataSource = self.mediaListView.dataDisplayManager;
     
-    self.mediaListView.mediaList = [self p_generatePlainMediaObjsWithArrayOfEntryIds: @[@"1_jqt5xrs1"]];
+    self.mediaListView.mediaList = [self p_generatePlainMediaObjsWithArrayOfEntryIds: @[@"1_ng282arr"]];
 }
 
 - (NSArray *) p_generatePlainMediaObjsWithArrayOfEntryIds: (NSArray *)entryIds {
