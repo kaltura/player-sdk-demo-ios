@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		DEF9BF24E5029909296AFE7C /* Pods_LocalAssetsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A516505A2C924284A9339F0A /* Pods_LocalAssetsDemo.framework */; };
+=======
+		6D292C8F515705C40B5E325A /* libPods-LocalAssetsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A3428F7E03955CEC0FAC17 /* libPods-LocalAssetsDemo.a */; };
+		FB0F3DBE1E07C99B001DE2DC /* AVAssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9511D91BA2F00AC717F /* AVAssetDownloader.m */; };
+		FB19E9791D926CC000AC717F /* AssetDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E9781D926CC000AC717F /* AssetDownloader.m */; };
+>>>>>>> download-with-media-selection
 		FB19E97C1D927F6E00AC717F /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19E97B1D927F6E00AC717F /* Asset.m */; };
 		FB1DDC661CECBA5400DDA2BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC651CECBA5400DDA2BD /* main.m */; };
 		FB1DDC691CECBA5400DDA2BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DDC681CECBA5400DDA2BD /* AppDelegate.m */; };
@@ -238,6 +244,11 @@
 				FB1DDC6C1CECBA5400DDA2BD /* ViewController.m in Sources */,
 				FB1DDC691CECBA5400DDA2BD /* AppDelegate.m in Sources */,
 				FB1DDC661CECBA5400DDA2BD /* main.m in Sources */,
+<<<<<<< HEAD
+=======
+				FB0F3DBE1E07C99B001DE2DC /* AVAssetDownloader.m in Sources */,
+				FB19E9791D926CC000AC717F /* AssetDownloader.m in Sources */,
+>>>>>>> download-with-media-selection
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

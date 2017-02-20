@@ -26,18 +26,30 @@ static NSArray<Asset*>* demoAssets() {
     // TODO: modify the array of assets. 
     // Assets that are not meant to be downloaded can have nil as the flavor and url.
     return @[
+<<<<<<< HEAD
         [Asset assetWithName:@"kalturaVideoSolutions" entry:@"0_00qaakql" flavor:@"0_gempayqv" url:@"https://cdnapisec.kaltura.com/p/2066791/sp/206679100/playManifest/entryId/0_00qaakql/flavorIds/0_gempayqv,0_1w1ijvw6/format/applehttp/protocol/https/a.m3u8"]
     ];
+=======
+             [Asset assetWithName:@"kalturaVideoSolutions" entry:@"1_nzffqkbk" flavor:@"1_tebzcakx" url:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_nzffqkbk/flavorIds/1_fwqw0ess,1_yq43k0hz,1_7pjl2kat,1_tebzcakx/format/applehttp/protocol/https/a.m3u8"]
+             [Asset assetWithName:@"sintel.fps" entry:@"0_pl5lbfo0" flavor:nil   url:@"https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/format/applehttp/protocol/https/a/a.m3u8"],
+             [Asset assetWithName:@"count.fps" entry:@"0_uafvpmv8" flavor:nil   url:@"https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_uafvpmv8/format/applehttp/tags/mobile/protocol/https/f/a.m3u8"]
+             ];
+>>>>>>> download-with-media-selection
 }
 
 static KPPlayerConfig* configForDemoAsset(Asset* asset, BOOL forRegister) {
     // TODO: set server, uiconfid, partnerId
     KPPlayerConfig* config;
+<<<<<<< HEAD
     config = [KPPlayerConfig configWithServer:@"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php" uiConfID:@"37289212" partnerId:@"2066791"];
     
     [config addConfigKey:@"closedCaptions.showEmbeddedCaptions" withValue:@"true"];
     [config addConfigKey:@"audioSelector.plugin" withValue:@"true"];
     
+=======
+    config = [KPPlayerConfig configWithServer:@"https://cdnapisec.kaltura.com/html5/html5lib/v2.51/mwEmbedFrame.php" uiConfID:@"31956421" partnerId:@"1851571"];
+    [config addConfigKey:@"closedCaptions.showEmbeddedCaptions" withValue:@"true"];
+>>>>>>> download-with-media-selection
     // TODO (optional): set cachesize in MB
     config.cacheSize = 100; 
     
@@ -46,10 +58,13 @@ static KPPlayerConfig* configForDemoAsset(Asset* asset, BOOL forRegister) {
     config.localContentId = (asset.downloaded || forRegister) ? asset.localName : nil;
     
     return config;
-
 }
 
+<<<<<<< HEAD
 @interface ViewController () <KADownloadItemDelegate, KPViewControllerDelegate, KPSourceURLProvider>
+=======
+@interface ViewController ()
+>>>>>>> download-with-media-selection
 @property (nonatomic) KPViewController* kpv;
 @property (strong, nonatomic) DownPicker* picker;
 @property (nonatomic, readonly) Asset* selectedAsset;

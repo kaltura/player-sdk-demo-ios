@@ -38,14 +38,13 @@
             [config addConfigKey:@"chromecast.applicationID" withValue:@"48A28189"];
             [config addConfigKey:@"doubleClick.plugin" withValue:@"false"];
 //            [config addConfigKey:@"doubleClick.adTagUrl" withValue:@"http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]"];
-            
             NSString *adTag = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
-            [_config addConfigKey:@"doubleClick.plugin" withValue: @"true"];
-            [_config addConfigKey:@"doubleClick.adTagUrl" withValue: adTag];
+            [config addConfigKey:@"doubleClick.plugin" withValue: @"true"];
+            [config addConfigKey:@"doubleClick.adTagUrl" withValue: adTag];
 
-            
             _player = [[KPViewController alloc] initWithConfiguration:config];
 //            _player.castProvider = _castProvider;
+            
             [self addChildViewController:_player];
             _player.view.frame = _playerHolderView.bounds;
             [_player.playerController play];

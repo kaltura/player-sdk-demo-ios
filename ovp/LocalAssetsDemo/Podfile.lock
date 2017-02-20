@@ -20,6 +20,7 @@ PODS:
     - M3U8Parser
     - Reachability
   - DownPicker (0.1.34)
+<<<<<<< HEAD
   - FMDB (2.5):
     - FMDB/standard (= 2.5)
   - FMDB/common (2.5)
@@ -38,6 +39,19 @@ PODS:
   - KalturaPlayerSDK/Widevine (2.6.0-dev)
   - M3U8Parser (0.0.1)
   - Reachability (3.2)
+=======
+  - google-cast-sdk (3.2.0):
+    - google-cast-sdk/Core (= 3.2.0)
+  - google-cast-sdk/Core (3.2.0)
+  - KalturaPlayerSDK (2.6.8):
+    - KalturaPlayerSDK/Core (= 2.6.8)
+    - KalturaPlayerSDK/GoogleCast (= 2.6.8)
+    - KalturaPlayerSDK/Widevine (= 2.6.8)
+  - KalturaPlayerSDK/Core (2.6.8)
+  - KalturaPlayerSDK/GoogleCast (2.6.8):
+    - google-cast-sdk (~> 3.2.0)
+  - KalturaPlayerSDK/Widevine (2.6.8)
+>>>>>>> download-with-media-selection
 
 DEPENDENCIES:
   - DownloadToGo (from `https://github.com/kaltura/download-to-go-ios`, branch `Xcode8_v3`)
@@ -78,11 +92,16 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DownloadToGo: 158b6ec63d2d2587d463b598ffec55a45e4dddb0
   DownPicker: c00ea63f08ae82116cc93d0eba74e86bf3d4c68e
+<<<<<<< HEAD
   FMDB: 4a8bd568ad66314ca4275aea8a2de67a70a1a946
   google-cast-sdk: f4c2a14214ad486cc26a8f8837e8481c906a0ea8
   KalturaPlayerSDK: 3d65f06ef1f7678a96c14329e93926b12a9ca132
   M3U8Parser: b9bc4ee469e7c806e58d472073d63766c235d456
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+=======
+  google-cast-sdk: f4c2a14214ad486cc26a8f8837e8481c906a0ea8
+  KalturaPlayerSDK: 097f3d62de2928cdeee9f6a7f3595d606303f477
+>>>>>>> download-with-media-selection
 
 PODFILE CHECKSUM: b58af3323cdae52d6edd96ee29a79f802cd03f64
 

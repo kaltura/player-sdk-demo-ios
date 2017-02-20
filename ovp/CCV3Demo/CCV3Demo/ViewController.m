@@ -12,7 +12,11 @@
 #import <KALTURAPlayerSDK/KPViewController.h>
 #import <KalturaPlayerSDK/GoogleCastProvider.h>
 
+<<<<<<< HEAD
 static NSString * const kViewControllerServer = @"http://kgit.html5video.org/tags/v2.49/mwEmbedFrame.php";//
+=======
+static NSString * const kViewControllerServer = @"http://kgit.html5video.org/tags/v2.53/mwEmbedFrame.php";
+>>>>>>> download-with-media-selection
 
 static NSString * const kViewControllerUIConfId = @"31638861";
 static NSString * const kViewControllerPartnerId = @"1831271";
