@@ -19,10 +19,6 @@ SPEC CHECKSUMS:
   google-cast-sdk: f4c2a14214ad486cc26a8f8837e8481c906a0ea8
   KalturaPlayerSDK: 9324a9088f8ba8b3819862aa779a3e8aa6aa4a9c
 
-<<<<<<< HEAD
-PODFILE CHECKSUM: 98b968cbb214f59db6623170be2dcbbbe9dda992
-=======
 PODFILE CHECKSUM: 77d62595c761be51164ee0f16a53b3287842c3d5
->>>>>>> download-with-media-selection
 
 COCOAPODS: 1.2.0
