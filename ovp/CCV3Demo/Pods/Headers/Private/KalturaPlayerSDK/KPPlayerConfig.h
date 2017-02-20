@@ -1,0 +1,1 @@
+../../../KalturaPlayerSDK/KALTURAPlayerSDK/KPPlayerConfig.h

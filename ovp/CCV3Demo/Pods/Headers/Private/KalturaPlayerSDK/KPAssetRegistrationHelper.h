@@ -1,0 +1,1 @@
+../../../KalturaPlayerSDK/KALTURAPlayerSDK/KPAssetRegistrationHelper.h
